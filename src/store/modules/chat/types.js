@@ -1,0 +1,9 @@
+export const GET_CHATS = 'GET_CHATS';
+export const POST_CHAT = 'POST_CHAT';
+export const NEW_MSG = 'NEW_MSG';
+export const CREATE_CHAT = 'CREATE_CHAT';
+export const SEND_NOTIFICATION = 'SEND_NOTIFICATION';
+export const CHAT_ID = 'CHAT_ID';
+export const CHAT_COUNT = 'NEW_CHAT_COUNT';
+export const ALL_CHAT = 'ALL_CHAT';
+export const NOTIFICATION_TOKEN = 'NOTIFICATION_TOKEN';

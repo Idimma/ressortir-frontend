@@ -1,0 +1,10 @@
+export const IS_LOADING = 'app/isLoading';
+export const NEW_ORDERS = 'app/newOrders';
+export const SHOW_NAV_SETTING = 'app/navSettings';
+export const SHOW_TASK = 'app/show_task';
+export const SET_REFERER = 'app/referer';
+export const SHOW_OFFER = 'app/show_offer';
+export const SHOW_ACCOUNT_UPDATE = 'app/account_update';
+export const ERROR = 'app/error';
+export const IS_CONNECTED = 'app/isConnected';
+export const SHOW_LOADER = 'app/showLoader';

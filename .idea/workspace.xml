@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6ec640ec-2d97-497e-a93e-240ea646345e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ressortir.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/libraries.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/responsive1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont3e6e.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont3e6e.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont3e6e.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont3e6e.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont3e6e.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfontd41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/favicon/favicon-r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/favicon/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/account.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/diesel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/freight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/gas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/history.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/lpg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/mission.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/policy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/lightbox/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/lightbox/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/lightbox/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/lightbox/prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo/ressortir-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/12.5kg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/12.5kg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/20kg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/20kg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/25kg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/25kg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/50kg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/50kg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/1-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/1@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/dashboard.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/diesel-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/diesel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/diesel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/freight-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/freight.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/freight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/gas-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/gas.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/logistic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/lpg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/page-gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-1-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-diesel-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-diesel-m-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-diesel-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-diesel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-freight-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-freight.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-gas-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-gas.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-lpg-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-lpg-m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-lpg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-lpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/slider-gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sliders/slider1-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/google-map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/libraries.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/responsive1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont3e6e.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont3e6e.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont3e6e.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont3e6e.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont3e6e.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfontd41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/clip-payment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/empty-list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/favicon/favicon-r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/favicon/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/account.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/diesel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/freight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/gas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/history.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/lpg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/mission.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/policy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/lightbox/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/lightbox/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/lightbox/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/lightbox/prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/logo/ressortir-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/page-not-found-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/products/12.5kg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/products/12.5kg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/products/20kg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/products/20kg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/products/25kg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/products/25kg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/products/50kg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/products/50kg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/1-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/1@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/dashboard.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/diesel-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/diesel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/diesel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/freight-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/freight.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/freight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/gas-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/gas.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/logistic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/lpg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/page-gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-1-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-diesel-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-diesel-m-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-diesel-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-diesel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-freight-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-freight.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-gas-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-gas.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-lpg-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-lpg-m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-lpg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-lpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/slider-gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/slider1-m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/google-map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footers/AdminFooter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Headers/UnAuthenticatedHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modals/AccountStatus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modals/CancelAlert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modals/Loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modals/NewUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modals/PostATask.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Diesel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Freight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Lpg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/_404.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/app.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/app/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/app/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/app/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/app/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/auth/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/auth/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/auth/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/auth/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/chat/action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/chat/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/chat/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/chat/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/user/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/user/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/user/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/user/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Auth.Model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Colors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/EndPoints.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#77#0" expanded="true" />
+                <element signature="e#450#486#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#12396#15688#0" />
+                <element signature="e#15701#16651#0" />
+                <element signature="e#16664#18021#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Diesel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2181">
+              <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Freight.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="149" column="39" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/Lpg.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="114" column="52" lean-forward="true" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="52" />
+              <folding>
+                <element signature="e#590#764#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/AppRoute.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/Auth.Model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>img</find>
+      <find>&lt;img</find>
+      <find>url</find>
+      <find>policy.</find>
+      <find>./images</find>
+      <find>../images</find>
+      <find>style</find>
+      <find>createHistory</find>
+      <find>history</find>
+      <find>createLogger</find>
+      <find>App</find>
+      <find>input</find>
+      <find>banner</find>
+      <find>asset</find>
+      <find>&lt;!--</find>
+      <find>--&gt;</find>
+      <find>inpu</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>.jpg'</replace>
+      <replace>className=</replace>
+      <replace>../public/images</replace>
+      <replace>{/*</replace>
+      <replace>*/}</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/css/styles.css" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/components/AppRoute.js" />
+        <option value="$PROJECT_DIR$/src/store/index.js" />
+        <option value="$PROJECT_DIR$/src/utils/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/pages/Login.js" />
+        <option value="$PROJECT_DIR$/src/components/Layout.js" />
+        <option value="$PROJECT_DIR$/src/utils/Auth.Model.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/pages/Home.js" />
+        <option value="$PROJECT_DIR$/src/pages/Diesel.js" />
+        <option value="$PROJECT_DIR$/src/pages/Freight.js" />
+        <option value="$PROJECT_DIR$/src/pages/Lpg.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ressortir" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ressortir" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ressortir" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ressortir" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ressortir" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ressortir" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ressortir" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ressortir" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ressortir" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ressortir" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ressortir" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ressortir" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/public/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/utils" />
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/src/assets/css" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6ec640ec-2d97-497e-a93e-240ea646345e" name="Default Changelist" comment="" />
+      <created>1600407061468</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600407061468</updated>
+      <workItem from="1600407103894" duration="7624000" />
+      <workItem from="1600704409743" duration="3507000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="11131000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18820679" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="CSS-X-Fire" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3242424" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="RNConsole" order="13" show_stripe_button="false" weight="0.329927" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="Floobits" order="15" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" show_stripe_button="false" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" show_stripe_button="false" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Database" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Drawable Viewer" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="Android WiFi ADB" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Intent Sender" order="11" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="right" id="Json Parser" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="AdbCommander" order="13" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="right" id="SciView" order="14" />
+      <window_info anchor="right" id="Structure" order="15" side_tool="true" weight="0.24959612" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18578352" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="bottom" id="Floobits" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="CSS-X-Fire" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.32575756" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="RNConsole" order="14" show_stripe_button="false" weight="0.329927" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" show_stripe_button="false" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" show_stripe_button="false" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Database" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Drawable Viewer" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="Android WiFi ADB" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Intent Sender" order="11" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="right" id="Json Parser" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="AdbCommander" order="13" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="right" id="SciView" order="14" />
+      <window_info anchor="right" id="Structure" order="15" side_tool="true" weight="0.24959612" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/css/app.css" />
+    <entry file="file://$PROJECT_DIR$/public/css/owl.video.play.html" />
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/google-map.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="243" column="21" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/responsive1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-745">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/icons/mission.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/icons/gas.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/icons/policy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/styles.css" />
+    <entry file="file://$PROJECT_DIR$/node_modules/history/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="327" column="24" selection-start-line="327" selection-start-column="24" selection-end-line="327" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1004">
+          <caret line="5" column="7085" selection-start-line="5" selection-start-column="7085" selection-end-line="5" selection-end-column="7085" />
+          <folding>
+            <element signature="e#28247#28502#2" expanded="true" />
+            <element signature="e#29099#29273#1" expanded="true" />
+            <element signature="e#29313#29568#1" expanded="true" />
+            <element signature="e#31893#32207#2" expanded="true" />
+            <element signature="e#32816#32990#1" expanded="true" />
+            <element signature="e#33030#33344#1" expanded="true" />
+            <element signature="e#62359#62567#2" expanded="true" />
+            <element signature="e#62796#62953#2" expanded="true" />
+            <element signature="e#63356#63512#2" expanded="true" />
+            <element signature="e#64999#65173#1" expanded="true" />
+            <element signature="e#79034#79291#2" expanded="true" />
+            <element signature="e#80158#80421#2" expanded="true" />
+            <element signature="e#110707#110903#2" expanded="true" />
+            <element signature="e#110949#111146#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/libraries.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="5" column="131141" selection-start-line="5" selection-start-column="131083" selection-end-line="5" selection-end-column="131141" />
+          <folding>
+            <element signature="e#25768#26002#2" expanded="true" />
+            <element signature="e#26806#26959#1" expanded="true" />
+            <element signature="e#26999#27233#1" expanded="true" />
+            <element signature="e#30239#30515#2" expanded="true" />
+            <element signature="e#31347#31500#1" expanded="true" />
+            <element signature="e#31540#31816#1" expanded="true" />
+            <element signature="e#61072#61259#2" expanded="true" />
+            <element signature="e#61488#61624#2" expanded="true" />
+            <element signature="e#62027#62160#2" expanded="true" />
+            <element signature="e#63642#63795#1" expanded="true" />
+            <element signature="e#75788#76018#2" expanded="true" />
+            <element signature="e#76885#77121#2" expanded="true" />
+            <element signature="e#106714#106891#2" expanded="true" />
+            <element signature="e#106937#107114#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1264">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AppRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Auth.Model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#450#486#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#12396#15688#0" />
+            <element signature="e#15701#16651#0" />
+            <element signature="e#16664#18021#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Diesel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2181">
+          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Freight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="149" column="39" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Lpg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="114" column="52" lean-forward="true" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="52" />
+          <folding>
+            <element signature="e#590#764#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>13</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
