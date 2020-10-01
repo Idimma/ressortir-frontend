@@ -134,13 +134,17 @@ align-items: center;
     a{
         text-decoration: none;
         color: gray;
+        .active{
+            text-decoration: none;
+            color: black;
+        }
     }
     
     a:active{
         text-decoration: none;
         color: black;
     }
-    
+
     a .active{
         text-decoration: none;
         color: black;
@@ -149,5 +153,24 @@ align-items: center;
     a:hover{
         text-decoration: none;
         color: black;
+    }
+}
+
+.request-item {
+    display: flex;
+    box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.22);
+    padding: 25px 18px;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    img{
+        height: 50px;
+        width: 50px;
+        object-position: center;
+        object-fit: none;
+    }
+    h1{
+        margin: 0 7px 0 ;
     }
 }

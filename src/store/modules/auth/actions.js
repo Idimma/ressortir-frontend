@@ -27,7 +27,7 @@ export const login = (data, setSubmitting, replace) => async (dispatch, getState
         Auth.login(token);
         dispatch(setToken(token));
         toast.success('Login Successful');
-        replace(localStorage.redirectBackto || '/account');
+        replace(localStorage.redirectBackto || '/dashboard');
     }).catch(error => {
         catchError(error);
         setSubmitting(false);

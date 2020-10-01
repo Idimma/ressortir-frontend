@@ -211,6 +211,7 @@ class HomePage extends Component {
                             <div className="col-sm-6 col-md-4">
                                 <div className="service-item service-item-1">
                                     <div className="service__icon">
+                                        <i className="service__icon-gas"></i>
 
                                         <h1 className="service__title">LPG Tank Refill</h1>
                                     </div>

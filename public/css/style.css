@@ -3234,18 +3234,18 @@ textarea.form-control {
     }
     .dash-section .dash-nav.navbar {
         height: 50px;
-        min-height: 50px;
+        min-height: 10px;
         margin-top: 5px;
         margin-bottom: 5px;
     }
-    .dash-nav.navbar::before {
-        content: "Dashboard Menu";
-        color: #fff;
-        font-size: 18px;
-        display: block;
-        left: 60px;
-        position: absolute;
-    }
+    /*.dash-nav.navbar::before {*/
+    /*    content: "Dashboard Menu";*/
+    /*    color: #fff;*/
+    /*    font-size: 18px;*/
+    /*    display: block;*/
+    /*    left: 60px;*/
+    /*    position: absolute;*/
+    /*}*/
     .dash-nav.navbar .navbar-toggler {
         width: 100%;
     }

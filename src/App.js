@@ -10,6 +10,14 @@ import _404 from "./pages/_404";
 import HomePage from "./pages/Home";
 import RequestPage from "./pages/RequestPage";
 import AddToHomescreen from 'react-add-to-homescreen';
+import Diesel from './pages/Diesel';
+import Lpg from './pages/Lpg';
+import Freight from './pages/Freight';
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
+import DashFreight from "./pages/dashboard/Freight";
+import DashLpg from "./pages/dashboard/Lpg";
+import DashDiesel from "./pages/dashboard/Diesel";
 
 class AppRouter extends Component {
     handleAddToHomescreenClick = () => {
@@ -23,7 +31,16 @@ class AppRouter extends Component {
                 <BrowserRouter>
                     <Switch>
                         <GuestRoute exact path="/" component={HomePage} />
-                        <GuestRoute exact path="/requests" component={RequestPage} />
+                        <Route exact path="/requests" component={RequestPage} />
+                        <Route exact path="/dashboard" component={Dashboard} />
+                        <Route exact path="/dashboard/order/{id}" component={Dashboard} />
+                        <Route exact path="/dashboard/freight" component={DashFreight} />
+                        <Route exact path="/dashboard/lpg" component={DashLpg} />
+                        <Route exact path="/dashboard/diesel" component={DashDiesel} />
+                        <Route exact path="/profile" component={Profile} />
+                        <GuestRoute exact path="/diesel" component={Diesel} />
+                        <GuestRoute exact path="/lpg" component={Lpg} />
+                        <GuestRoute exact path="/freight" component={Freight} />
                         <GuestRoute exact path="/login" component={Login} />
                         <Route path="*" component={_404} />
                         <Redirect to="/" />

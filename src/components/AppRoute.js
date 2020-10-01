@@ -67,7 +67,7 @@ export const GuestRoute = ({component: Component, ...rest}) => {
                 if (!Auth.isAuthenticated()) {
                     return <Component {...props} />;
                 } else {
-                    return (<Redirect to={{pathname: "/account", state: {from: props.location}}}/>);
+                    return (<Redirect to={{pathname: "/dashboard", state: {from: props.location}}}/>);
                 }
             }}
         />

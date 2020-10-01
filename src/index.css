@@ -33,6 +33,16 @@ code {
     bottom: 0;
     height: 80px;
     background-color: white;
-    z-index: 1020,
+    z-index: 1020;
 
+}
+.form-control {
+    height: 50px;
+    line-height: 50px;
+    border: none;
+    border: 1px solid #eaeaea;
+    border-radius: 1px;
+    padding: 0 0 0 20px;
+    font-size: 14px;
+    border-radius: 2px;
 }

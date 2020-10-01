@@ -19,7 +19,7 @@ class Auth {
     }
 
     isAuthenticated() {
-        return (localStorage.hsjvajhhjs === 'ressortiriugnxoshxvvyewmmaokanabaa') && (!isNull(localStorage.zxcvbnm));
+        return true // (localStorage.hsjvajhhjs === 'ressortiriugnxoshxvvyewmmaokanabaa') && (!isNull(localStorage.zxcvbnm));
     }
 
     getStoredToken() {

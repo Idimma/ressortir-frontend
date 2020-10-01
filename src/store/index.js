@@ -1,5 +1,5 @@
 import {applyMiddleware, combineReducers, compose, createStore} from 'redux';
-import {createLogger} from 'redux-logger';
+// import {createLogger} from 'redux-logger';
 import promise from 'redux-promise-middleware';
 import {routerMiddleware, routerReducer} from 'react-router-redux'
 import {createBrowserHistory} from 'history';
@@ -14,7 +14,7 @@ import {User} from './modules/user';
 
 const persistConfig = {key: 'root', storage,}
 export const history = createBrowserHistory();
-const loggerMiddleware = createLogger();
+// const loggerMiddleware = createLogger();
 
 // Build the middleware for intercepting and dispatching navigation actions
 const myRouterMiddleware = routerMiddleware(history);

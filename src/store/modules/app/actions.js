@@ -14,11 +14,11 @@ import Auth from '../../../utils/Auth.Model'
 
 export const setConnected = isConnected => dispatch => dispatch({type: IS_CONNECTED, payload: isConnected});
 
-const setLoading = isLoading => dispatch => dispatch({type: IS_LOADING, payload: isLoading});
+export const setLoading = isLoading => dispatch => dispatch({type: IS_LOADING, payload: isLoading});
 
 const setShowLoader = show_loader => dispatch => dispatch({type: SHOW_LOADER, payload: show_loader});
 
-const setNewOrders = newOrders => dispatch => dispatch({type: NEW_ORDERS, payload: newOrders});
+export const setNewOrders = newOrders => dispatch => dispatch({type: NEW_ORDERS, payload: newOrders});
 
 const setNavSetting = state => dispatch => dispatch({type: SHOW_NAV_SETTING, payload: state});
 
@@ -71,4 +71,4 @@ export const toggleAccountUpdate = () => (dispatch, getState) => {
     dispatch({type: SHOW_ACCOUNT_UPDATE, payload: !showAccountUpdate});
 };
 
-const setError = error => dispatch => dispatch({type: ERROR, payload: error});
+export const setError = error => dispatch => dispatch({type: ERROR, payload: error});

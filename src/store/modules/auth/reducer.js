@@ -1,6 +1,6 @@
 import {
 	APP_TOKEN, EMAIL, ERROR, IS_LOADING, IS_LOGGEDIN,
-	MADA, PASSWORD, UID, DRIVER_NUMBER,  USER
+	MADA, PASSWORD, UID, DRIVER_NUMBER,
 } from './types';
 
 const initialState = {

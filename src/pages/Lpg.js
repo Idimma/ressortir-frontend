@@ -1,72 +1,51 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { isMobile } from 'react-device-detect';
 import Layout from "../components/Layout";
-
+import gas from '../assets/images/icons/gas.png';
+import { NavLink } from "react-router-dom";
 
 class Login extends Component {
     render() {
         return (
-            <Layout>
-                <section id="requestQuote" class="request-quote request-lpg pt-110 pb-90">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-                                <form   class="request-quote-form">
-
-                                    <div class="request-title">
+            <Layout noFooter={isMobile} title="LPG Tank Refill">
+                <section id="requestQuote" className="request-quote request-diesel">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                                <form method="POST" className="request-quote-form">
+                                    <div className="request-title">
                                         <h2>Request LPG Tank Refill</h2>
                                         <p>Kindly fill out the form below.</p>
                                     </div>
+                                    <div className="row mb-10">
+                                        <div className="col-12">
+                                            <h5 className="form__title">Personal / Company Data</h5>
 
-                                    <div class="row mb-10">
-                                        <div class="col-12">
-                                            <h5 class="form__title">Personal / Company Data</h5>
                                         </div>
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <input type="text"
-                                                       class="form-control @error('name') is-invalid @enderror"
-                                                       name="name" placeholder="Full Name"
-                                                       value="{{ old('name') }}"/>
-                                                <span
-                                                    class="invalid-feedback"> <strong>  </strong> </span>
+                                        <div className="col-12">
+                                            <div className="form-group">
+                                                <input type="text" className="form-control " name="name" placeholder="Full Name" value="" />
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <input type="email"
-                                                       class="form-control @error('email') is-invalid @enderror"
-                                                       name="email" placeholder="Email Address"
-                                                       value="{{ old('email') }}"/>
-                                                    <span
-                                                        class="invalid-feedback"> <strong> </strong> </span>
+                                        <div className="col-12">
+                                            <div className="form-group">
+                                                <input type="email" className="form-control " name="email" placeholder="Email Address" value="" />
                                             </div>
                                         </div>
-                                        {/* /.col-lg-4 */}
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <input type="tel"
-                                                       class="form-control @error('phone') is-invalid @enderror"
-                                                       name="phone" placeholder="Phone Number"
-                                                       value="{{ old('phone') }}"/>
-                                                    @error('phone')
-                                                    <span
-                                                        class="invalid-feedback"> <strong> {{$message}} </strong> </span>
-                                                    @enderror
+                                        <div className="col-12">
+                                            <div className="form-group">
+                                                <input type="tel" className="form-control " name="phone" placeholder="Phone Number" value="" />
                                             </div>
                                         </div>
-                                        {/* /.col-lg-4 */}
                                     </div>
-                                    {/* /.row */}
-                                    <div class="row mb-10">
-                                        <div class="col-sm-12 col-md-12 col-lg-12">
-                                            <h5 class="form__title">Order Specification </h5>
+                                    <div className="row mb-10">
+                                        <div className="col-sm-12 col-md-12 col-lg-12">
+                                            <h5 className="form__title">Order Specification </h5>
 
                                         </div>
-                                        {/* /.col-lg-12 */}
-                                        <div class="col-sm-12 col-md-12 col-lg-12">
-                                            <div class="form-group  form-group-select">
-                                                <select class="form-control @error('quantity') is-invalid @enderror"
-                                                        name="quantity" id="quantity">
+                                        <div className="col-sm-12 col-md-12 col-lg-12">
+                                            <div className="form-group  form-group-select">
+                                                <select className="form-control " name="quantity" id="quantity">
                                                     <option value="">Select Quantity</option>
                                                     <option value="2.0 tons">2.0 tons</option>
                                                     <option value="2.5 tons">2.5 tons</option>
@@ -74,80 +53,72 @@ class Login extends Component {
                                                     <option value="10 tons">10 tons</option>
                                                 </select>
 
-                                                @error('quantity')
-                                                <span
-                                                    class="invalid-feedback"> <strong> {{$message}} </strong> </span>
-                                                @enderror
                                             </div>
                                         </div>
-                                        {/* /.col-lg-4 */}
-                                        <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <div className="col-sm-12 col-md-12 col-lg-12">
 
                                         </div>
-                                        {/* /.col-lg-12 */}
                                     </div>
-                                    {/* /.row */}
-                                    <div class="row mb-10">
-                                        <div class="col-sm-12 col-md-12 col-lg-12">
-                                            <h5 class="form__title">Delivery Location</h5>
+                                    <div className="row mb-10">
+                                        <div className="col-sm-12 col-md-12 col-lg-12">
+                                            <h5 className="form__title">Delivery Location</h5>
 
                                         </div>
-                                        {/* /.col-lg-12 */}
-                                        <div class="col-sm-12 col-md-12 col-lg-12">
-                                            <div class="form-group">
-                                                <input type="text"
-                                                       class="form-control @error('delivery_address') is-invalid @enderror"
-                                                       name="delivery_address" placeholder="Full Delivery Address"
-                                                       value="{{ old('delivery_address') }}"/>
-                                                    @error('delivery_address')
-                                                    <span
-                                                        class="invalid-feedback"> <strong> {{$message}} </strong> </span>
-                                                    @enderror
+                                        <div className="col-sm-12 col-md-12 col-lg-12">
+                                            <div className="form-group">
+                                                <input type="text" className="form-control " name="delivery_address" placeholder="Full Delivery Address" value="" />
                                             </div>
                                         </div>
-                                        {/* /.col-lg-4 */}
                                     </div>
-                                    {/* /.row */}
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-                                            <button type="submit" class="btn btn__primary">Request A Quote</button>
+                                    <div className="row">
+                                        <div className="col-sm-12 col-md-12 col-lg-12 text-center">
+                                            <button type="submit" className="btn btn__primary">Request A Quote</button>
                                         </div>
-                                        {/* /.col-lg-12 */}
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section id="services" class="services pt-3">
-                    <div class="container">
 
-                        <div class="row text-center justify-content-center">
-
-
-                            <div class="col-sm-6 col-md-4 ">
-                                <div class="service-item service-item-3">
-                                    <div class="service__icon">
-                                        <i class="service__icon-gas"></i>
-                                        <h4 class="service__title">Domestic Gas Refill </h4>
-                                    </div>
-                                    <div class="service__content">
-                                        <a href="{{ route('home.gas') }}" class="btn btn__white">
+                <section className="mb-5 pb-5 pb-sm-0 mb-sm-0">
+                    <div className="container">
+                        <div className="row text-center justify-content-center">
+                            {isMobile ?
+                                <div className="col-sm-6 col-md-4">
+                                    <div className="request-item ">
+                                        <div className="aligned mr-auto">
+                                            <img src={gas} alt="Gas" />
+                                            <h1 className="fs-18">Domestic Gas Refill</h1>
+                                        </div>
+                                        <NavLink to="/gas"
+                                            className="btn btn-danger btn-round ml-auto"
+                                            title="Domestic Gas Refill">
                                             <span>Request</span>
-                                        </a>
+                                        </NavLink>
                                     </div>
                                 </div>
-
-                            </div>
-
+                                :
+                                <div className="col-sm-6 col-md-4 ">
+                                    <div className="service-item service-item-3">
+                                        <div className="service__icon">
+                                            <i className="service__icon-gas"></i>
+                                            <h4 className="service__title">Domestic Gas Refill </h4>
+                                        </div>
+                                        <div className="service__content">
+                                            <a href="https://ressortir.com/gas" className="btn btn__white">
+                                                <span>Request</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
                         </div>
-
                     </div>
-
                 </section>
             </Layout>
-    )
+        )
     }
-    }
+}
 
-    export default Login
+export default Login
