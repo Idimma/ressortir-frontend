@@ -18,6 +18,7 @@ import Profile from "./pages/Profile";
 import DashFreight from "./pages/dashboard/Freight";
 import DashLpg from "./pages/dashboard/Lpg";
 import DashDiesel from "./pages/dashboard/Diesel";
+import SingleOrder from "./pages/Single";
 
 class AppRouter extends Component {
     handleAddToHomescreenClick = () => {
@@ -33,7 +34,7 @@ class AppRouter extends Component {
                         <GuestRoute exact path="/" component={HomePage} />
                         <Route exact path="/requests" component={RequestPage} />
                         <Route exact path="/dashboard" component={Dashboard} />
-                        <Route exact path="/dashboard/order/{id}" component={Dashboard} />
+                        <Route exact path="/dashboard/order/:id" component={SingleOrder} />
                         <Route exact path="/dashboard/freight" component={DashFreight} />
                         <Route exact path="/dashboard/lpg" component={DashLpg} />
                         <Route exact path="/dashboard/diesel" component={DashDiesel} />

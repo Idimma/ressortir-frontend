@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Layout from "../components/Layout";
 import {isMobile} from 'react-device-detect';
+import {NavLink} from "react-router-dom";
 
 
 class Dashboard extends Component {
@@ -18,27 +19,29 @@ class Dashboard extends Component {
                                     <table className="table res-table res-table-current">
                                         <thead>
                                         <tr>
-                                            <th scope="col">Order No</th>
-                                            <th scope="col">Order</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col"/>
+                                            <th >Order No</th>
+                                            <th >Order</th>
+                                            <th >Status</th>
+                                            <th >Date</th>
+                                            <th />
                                         </tr>
                                         </thead>
                                         <tbody>
 
                                         <tr>
-                                            <td scope="row">10003</td>
-                                            <td><a className="order-type"
-                                                   href="http://127.0.0.1:8000/dashboard/order/10003">Diesel
-                                                Supply</a></td>
+                                            <td >10003</td>
+                                            <td>
+                                                <NavLink className="order-type" to="/dashboard/order/10003">
+                                                    Diesel Supply
+                                                </NavLink>
+                                            </td>
                                             <td>Quotation Pending</td>
                                             <td>Sep 23, 2020</td>
-                                            <td><a href="http://127.0.0.1:8000/dashboard/order/10003"
-                                                   className="btn btn__sm btn__outline">View Order</a></td>
+                                            <td><NavLink to="/dashboard/order/10003"
+                                                   className="btn btn__sm btn__outline">View Order</NavLink></td>
                                         </tr>
                                         <tr>
-                                            <td scope="row">10002</td>
+                                            <td >10002</td>
                                             <td><a className="order-type"
                                                    href="http://127.0.0.1:8000/dashboard/order/10002">Diesel
                                                 Supply</a></td>
@@ -48,7 +51,7 @@ class Dashboard extends Component {
                                                    className="btn btn__sm btn__outline">View Order</a></td>
                                         </tr>
                                         <tr>
-                                            <td scope="row">10001</td>
+                                            <td >10001</td>
                                             <td><a className="order-type"
                                                    href="http://127.0.0.1:8000/dashboard/order/10001">Diesel
                                                 Supply</a></td>

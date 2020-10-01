@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Layout from "../components/Layout";
 import { isMobile } from 'react-device-detect';
+import {Formik} from "formik";
 
 
 class Freight extends Component {
@@ -11,7 +12,17 @@ class Freight extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-                                <form method="POST" className="request-quote-form">
+                                <Formik
+                                    initialValues={{name: 'jared'}}
+                                    onSubmit={(values, actions) => {
+                                        setTimeout(() => {
+                                            alert(JSON.stringify(values, null, 2));
+                                            actions.setSubmitting(false);
+                                        }, 1000);
+                                    }}
+                                >
+                                    {({handleSubmit, handleChange, handleBlur, values, errors,}) => (
+                                        <form onSubmit={handleSubmit} className="request-quote-form">
                                     <input type="hidden" name="service" value="freight" />
                                     <div className="request-title">
                                         <h1>Request Freight</h1>
@@ -101,7 +112,7 @@ class Freight extends Component {
                                                 </button>
                                         </div>
                                     </div>
-                                </form>
+                                        </form>)}</Formik>
                             </div>
                         </div>
                     </div>

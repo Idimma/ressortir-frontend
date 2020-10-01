@@ -9,10 +9,11 @@ import Auth from "../utils/Auth.Model";
 class MobileFooter extends React.Component {
     componentDidMount() {
         const toggler = document.querySelector('.toggler-nav');
-        toggler.addEventListener('click', function () {
-            toggler.classList.toggle('actived');
-            document.querySelector('.navbar-collapse').classList.toggle('menu-opened');
-        })
+        if (toggler)
+            toggler.addEventListener('click', function () {
+                toggler.classList.toggle('actived');
+                document.querySelector('.navbar-collapse').classList.toggle('menu-opened');
+            })
 
     }
 
@@ -51,7 +52,7 @@ class MobileFooter extends React.Component {
 
 class _MobileHeader extends React.Component {
     goBack = () => {
-        if(this.props.hasOwnProperty('onBack')){
+        if (this.props.hasOwnProperty('onBack')) {
             return this.props.onBack();
         }
 
@@ -196,7 +197,7 @@ class Layout extends React.Component {
 
 
     render() {
-        const {noFooter, noMobileFooter} = this.props;
+        const {noFooter, noMobileFooter, noSideBar} = this.props;
         return (
             <div>
                 <div className="wrapper home">
@@ -206,16 +207,17 @@ class Layout extends React.Component {
                         paddingTop: this.props.padded ? 80 : 0,
                         paddingBottom: this.props.padded ? 80 : 0
                     }}>
-                        <section id="requestQuote" className={!this.props.noBg && "request-quote dash-section"}>
+                        <section id="requestQuote"
+                                 className={this.props.innerClass ? this.props.innerClass : !this.props.noBg ? " request-quote dash-section" : ''}>
                             <div className="container">
                                 <div className="row">
-                                    {Auth.isAuthenticated() &&
+                                    {(!noSideBar && Auth.isAuthenticated()) &&
                                     <div className="col-12 col-md-2 dash-nav__col">
                                         <div className="dash-nav navbar navbar-expand-lg">
                                             <div className="collapse navbar-collapse" id="mainNavigation">
                                                 <ul className="navbar-nav">
                                                     <li className="nav__item">
-                                                        <NavLink to="dashboard"
+                                                        <NavLink to="/dashboard"
                                                                  className="nav__item-link nav-icon-orders ">Orders</NavLink>
                                                     </li>
                                                     <li className="nav__item">
@@ -225,11 +227,11 @@ class Layout extends React.Component {
                                                     </li>
                                                     <li className="nav__item">
                                                         <NavLink to="/dashboard/lpg"
-                                                                 className="nav__item-link nav-icon-order_lpg">
-                                                            Request LPG
+                                                                 className="nav__item-link nav-icon-order_lpg">Request
+                                                            LPG
                                                         </NavLink>
                                                     </li>
-                                                    <li className=" nav__item">
+                                                    <li className="nav__item">
                                                         <NavLink to="/dashboard/freight"
                                                                  className="nav__item-link nav-icon-order_freight ">Request
                                                             Freight</NavLink>
@@ -240,8 +242,9 @@ class Layout extends React.Component {
                                                             Info</NavLink>
                                                     </li>
                                                     <li className=" nav__item">
-                                                        <a href="http://127.0.0.1:8000/dashboard/gas"
-                                                           className="nav__item-link nav-icon-order_gas ">Order Gas</a>
+                                                        <NavLink to="/dashboard/gas"
+                                                                 className="nav__item-link nav-icon-order_gas ">Order
+                                                            Gas</NavLink>
                                                     </li>
                                                 </ul>
                                             </div>

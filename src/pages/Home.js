@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 class HomePage extends Component {
     render() {
         return (
-            <Layout home>
+            <Layout home noBg>
                 <section id="slider2" className="slider slider-2">
                     <div className="carousel owl-carousel carousel-arrows carousel-dots carousel-dots-white"
                          data-slide="1"

@@ -10,10 +10,10 @@ import Auth from "../utils/Auth.Model";
 class RequestPage extends Component {
     render() {
         return (
-            <Layout noFooter noBg title="Enquieries">
+            <Layout noFooter noBg title="Enquire">
                 {
                     isMobile ?
-                        <div className="container">
+                        <div className="container pt-5 pt-sm-0">
                             <div className="mb-4 text-center">
                                 <p className="p-0 ">
                                     Please select the order type you will like to have an estimate for.
