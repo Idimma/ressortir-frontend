@@ -1,0 +1,37 @@
+{
+	"short_name": "Ressortir",
+	"name": "Ressortir App",
+	"icons": [
+		{
+			"src": "pwa/favicon-16x16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "images/favicon/favicon.png",
+			"sizes": "30x30",
+			"type": "image/png"
+		},
+		{
+			"src": "pwa/apple-touch-icon-60x60.png",
+			"sizes": "60x60",
+			"type": "image/png"
+		},
+		{
+			"src": "192x192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"scope": "/",
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff",
+	"splash_pages": null
+}
