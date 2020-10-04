@@ -5,23 +5,23 @@ import {isMobile} from 'react-device-detect';
 import {NavLink} from "react-router-dom";
 import {FormField} from "../components/FormElements";
 import {Formik} from "formik";
+import {AuthService} from "../services";
+import {connect} from "react-redux";
+import {login} from "../store/modules/auth";
 
 
 class Login extends Component {
     render() {
         return (
-            <Layout noFooter={isMobile} title="Profile" innerClass="request-quote  login-form">
+            <Layout noFooter={isMobile} padded={isMobile} title="My Account" innerClass="request-quote  login-form">
                 <div className="container pt-5 p-sm-0">
                     <div className="row justify-content-center">
                         <div className="col-md-6">
                             <div className="card">
                                 <Formik
-                                    initialValues={{name: 'jared'}}
-                                    onSubmit={(values, actions) => {
-                                        setTimeout(() => {
-                                            alert(JSON.stringify(values, null, 2));
-                                            actions.setSubmitting(false);
-                                        }, 1000);
+                                    initialValues={{}}
+                                    onSubmit={(values, {setSubmitting}) => {
+                                        this.props.login(values,setSubmitting, this.props.replace);
                                     }}
                                 >
                                     {({handleSubmit, handleChange, handleBlur, values, errors,}) => (
@@ -30,28 +30,9 @@ class Login extends Component {
                                                 <h2>Login</h2>
                                             </div>
 
-                                            <div className="form-group row">
-                                                {/* <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label> */}
+                                            <FormField type="email" placeholder="Email Address" name="email"/>
+                                            <FormField type="password" placeholder="Password" name="password"/>
 
-                                                <div className="col-md-10 mx-auto">
-                                                    <FormField id="email" type="email" placeholder="Email Address"
-                                                               className="form-control " name="email" value=""
-                                                               required=""
-                                                               autoComplete="email" autoFocus/>
-
-                                                </div>
-                                            </div>
-
-                                            <div className="form-group row">
-                                                {/* <label for="password" class="col-md-4 col-form-label text-md-right">Password</label> */}
-
-                                                <div className="col-md-10 mx-auto">
-                                                    <FormField id="password" type="password" placeholder="Password"
-                                                               className="form-control " name="password" required=""
-                                                               autoComplete="current-password"/>
-
-                                                </div>
-                                            </div>
 
                                             <div className="form-group row">
                                                 <div className="col-5 col-md-4 offset-md-1">
@@ -94,4 +75,4 @@ class Login extends Component {
     }
 }
 
-export default Login
+export default connect(() => {}, {login})( Login)

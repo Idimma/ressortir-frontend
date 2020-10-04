@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import Layout from "../components/Layout";
+import { isMobile } from 'react-device-detect';
+import {NavLink} from "react-router-dom";
 
 
 class HomePage extends Component {
     render() {
         return (
-            <Layout home noBg>
-                <section id="slider2" className="slider slider-2">
+            <Layout innerClass="w-100" home noSideBar={!isMobile} noBg>
+                <section id="slider2" className="slider mt-60 mt-sm-0 slider-2">
                     <div className="carousel owl-carousel carousel-arrows carousel-dots carousel-dots-white"
                          data-slide="1"
                          data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="true" data-dots="true"
@@ -14,7 +16,9 @@ class HomePage extends Component {
                          data-loop="true" data-speed="5000" data-transition="fade" data-animate-out="fadeOut"
                          data-animate-in="fadeIn">
                         <div className="slide-item slide-item-1 align-v-h bg-overlay">
-                            <div className="bg-img"><img src="images/sliders/s-1.jpg" alt="slide img"/></div>
+                            <div className="bg-img">
+                                <img src="images/sliders/s-1.jpg" alt="slide img"/>
+                            </div>
                             <div className="container">
                                 <div className="row">
                                     <div className="col-sm-12 col-md-12 col-lg-8">
@@ -37,16 +41,11 @@ class HomePage extends Component {
                                                 other
                                                 multinationals.
                                             </p>
-                                            {/* <a href="#" className="btn btn__primary btn__hover2 mr-30">Our Services</a> */}
 
                                         </div>
-                                        {/* /.slide-content */}
                                     </div>
-                                    {/* /.col-lg-8 */}
                                 </div>
-                                {/* /.row */}
                             </div>
-                            {/* /.container */}
                         </div>
                         <div className="slide-item slide-item-3 align-v-h bg-overlay">
                             <div className="bg-img"><img src="images/sliders/s-diesel.jpg" alt="slide img"/></div>
@@ -185,25 +184,22 @@ class HomePage extends Component {
                             {/* /.container */}
                         </div>
                     </div>
-                    {/* /.carousel */}
                 </section>
                 <section id="services" className="services">
                     <h2 className="services-title">Our Services</h2>
                     <div className="container">
-
                         <div className="row text-center">
-
                             <div className="col-sm-6 col-md-4">
                                 <div className="service-item service-item-1">
                                     <div className="service__icon">
-                                        <i className="service__icon-diesel"></i>
+                                        <i className="service__icon-diesel"/>
                                         <h1 className="service__title">Diesel Supply</h1>
                                     </div>
                                     <div className="service__content">
-                                        <a href="https://ressortir.com/diesel" className="btn btn__white"
+                                        <NavLink to="/diesel" className="btn btn__white"
                                            title="Diesel Supply">
                                             <span>Request</span>
-                                        </a>
+                                        </NavLink>
                                     </div>
                                 </div>
 
@@ -211,15 +207,14 @@ class HomePage extends Component {
                             <div className="col-sm-6 col-md-4">
                                 <div className="service-item service-item-1">
                                     <div className="service__icon">
-                                        <i className="service__icon-gas"></i>
-
+                                        <i className="service__icon-gas"/>
                                         <h1 className="service__title">LPG Tank Refill</h1>
                                     </div>
                                     <div className="service__content">
-                                        <a href="https://ressortir.com/lpg" className="btn btn__white"
+                                        <NavLink to="/lpg" className="btn btn__white"
                                            title="LPG Tank Refill">
                                             <span>Request</span>
-                                        </a>
+                                        </NavLink>
                                     </div>
                                 </div>
 
@@ -228,14 +223,14 @@ class HomePage extends Component {
                             <div className="col-sm-6 col-md-4">
                                 <div className="service-item service-item-2">
                                     <div className="service__icon">
-                                        <i className="service__icon-freight"></i>
+                                        <i className="service__icon-freight"/>
                                         <h1 className="service__title">Freight Distribution</h1>
                                     </div>
                                     <div className="service__content">
-                                        <a href="https://ressortir.com/freight" className="btn btn__white"
+                                        <NavLink to="/freight" className="btn btn__white"
                                            title="Freight Distribution">
                                             <span>Request</span>
-                                        </a>
+                                        </NavLink>
                                     </div>
                                 </div>
 
@@ -284,9 +279,7 @@ class HomePage extends Component {
                 </section>
                 <section id="mission" className="mission pt-30 pb-60">
                     <div className="container">
-
                         <div className="row heading heading-2">
-
                             <div className="col-12">
                                 <h2 className="heading__title">
                                     <i className="heading__title-icon-policy"></i> Company Policy
@@ -309,7 +302,6 @@ class HomePage extends Component {
                         </div>
                         {/* /.row */}
                     </div>
-                    {/* /.container */}
                 </section>
             </Layout>
         )

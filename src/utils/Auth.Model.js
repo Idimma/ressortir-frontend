@@ -1,29 +1,28 @@
 import {createBrowserHistory,} from 'history'
-import {isNull} from './index';
-import {persistor} from "../store";
+import store, {persistor,} from "../store";
 
 const history = createBrowserHistory();
 
 class Auth {
 
     login(token = '') {
-        localStorage.zxcvbnm = token;
-        return localStorage.hsjvajhhjs = 'ressortiriugnxoshxvvyewmmaokanabaa';
+        localStorage.setItem('ressottirtoknizer', token);
+        return localStorage.setItem('ressottirtoknizerstructure', 'ressortiriugnxoshxvvyewmmaokanabaa');
     }
 
     logout() {
-        localStorage.hsjvajhhjs = null;
-        localStorage.zxcvbnm = null;
+        localStorage.setItem('ressottirtoknizerstructure', null);
+        localStorage.setItem('ressottirtoknizer', null);
         history.replace('/login')
         persistor.purge();
     }
 
     isAuthenticated() {
-        return (localStorage.hsjvajhhjs === 'ressortiriugnxoshxvvyewmmaokanabaa') && (!isNull(localStorage.zxcvbnm));
+        return store.getState().Auth ? store.getState().Auth.isLoggenin : false // (localStorage.getItem('ressottirtoknizerstructure') === 'ressortiriugnxoshxvvyewmmaokanabaa') && (!isNull(localStorage.getItem('ressottirtoknizer')));
     }
 
     getStoredToken() {
-        return localStorage.zxcvbnm;
+        return localStorage.getItem('ressottirtoknizer');
     }
 }
 
