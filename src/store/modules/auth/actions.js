@@ -4,6 +4,7 @@ import Auth from "../../../utils/Auth.Model";
 import {toast} from "react-toastify";
 import {closeLoaderModal, openLoaderModal} from "../app";
 import {catchError} from "../../../utils";
+import {persistor} from "../../index";
 
 export const setLoading = isLoading => dispatch => dispatch({type: IS_LOADING, payload: isLoading});
 
@@ -24,7 +25,6 @@ export const login = (data, setSubmitting, replace) => async (dispatch, getState
         const {data: {token, user}} = response.data;
         dispatch(setUser(user));
         dispatch(setLoggedin(true));
-        Auth.login(token);
         dispatch(setToken(token));
         toast.success('Login Successful');
         replace(localStorage.redirectBackto || '/dashboard');
@@ -32,6 +32,24 @@ export const login = (data, setSubmitting, replace) => async (dispatch, getState
         catchError(error);
         setSubmitting(false);
     });
+};
+
+
+
+export const logout = (data, setSubmitting, replace) => async (dispatch, getState) => {
+    persistor.purge()
+    // AuthService.login(data).then((response) => {
+    //     setSubmitting(false);
+    //     const {data: {token, user}} = response.data;
+    //     dispatch(setUser(user));
+    //     dispatch(setLoggedin(true));
+    //     dispatch(setToken(token));
+    //     toast.success('Login Successful');
+    //     replace(localStorage.redirectBackto || '/dashboard');
+    // }).catch(error => {
+    //     catchError(error);
+    //     setSubmitting(false);
+    // });
 };
 let email = ''
 export const forgetPassword = (data, setSubmitting, replace) => async (dispatch, getState) => {

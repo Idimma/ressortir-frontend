@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Layout from "../components/Layout";
-import { isMobile } from 'react-device-detect';
+import {isMobile} from 'react-device-detect';
 import {NavLink} from "react-router-dom";
 
 
@@ -8,7 +8,7 @@ class HomePage extends Component {
     render() {
         return (
             <Layout innerClass="w-100" home noSideBar={!isMobile} noBg>
-                <section id="slider2" className="slider mt-60 mt-sm-0 slider-2">
+                <section id="slider2" style={{marginTop: isMobile ? 65 : 0}} className={`slider slider-2`}>
                     <div className="carousel owl-carousel carousel-arrows carousel-dots carousel-dots-white"
                          data-slide="1"
                          data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="true" data-dots="true"
@@ -197,7 +197,7 @@ class HomePage extends Component {
                                     </div>
                                     <div className="service__content">
                                         <NavLink to="/diesel" className="btn btn__white"
-                                           title="Diesel Supply">
+                                                 title="Diesel Supply">
                                             <span>Request</span>
                                         </NavLink>
                                     </div>
@@ -212,7 +212,7 @@ class HomePage extends Component {
                                     </div>
                                     <div className="service__content">
                                         <NavLink to="/lpg" className="btn btn__white"
-                                           title="LPG Tank Refill">
+                                                 title="LPG Tank Refill">
                                             <span>Request</span>
                                         </NavLink>
                                     </div>
@@ -228,7 +228,7 @@ class HomePage extends Component {
                                     </div>
                                     <div className="service__content">
                                         <NavLink to="/freight" className="btn btn__white"
-                                           title="Freight Distribution">
+                                                 title="Freight Distribution">
                                             <span>Request</span>
                                         </NavLink>
                                     </div>

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Provider} from 'react-redux';
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 import './assets/scss/main.scss';
 import store from "./store";
 import {GuestRoute} from "./components/AppRoute";

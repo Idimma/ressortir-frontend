@@ -128,7 +128,7 @@
   width: 100%;
   z-index: 43537;
   background-color: white;
-         color: rgb(23, 91, 170);
+  color: rgb(23, 91, 170);
   box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.22);
 }
 
@@ -332,4 +332,14 @@ textarea {
   background: #0000ff;
   color: #ffffff;
 
+}
+
+@media screen and (max-width: 500px) {
+  .Toastify {
+    margin-top: 68px;
+    z-index: 30000;
+    position: absolute;
+    width: 100%;
+    background: white;
+  }
 }

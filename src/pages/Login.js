@@ -21,7 +21,7 @@ class Login extends Component {
                                 <Formik
                                     initialValues={{}}
                                     onSubmit={(values, {setSubmitting}) => {
-                                        this.props.login(values,setSubmitting, this.props.replace);
+                                        this.props.login(values,setSubmitting, this.props.history.replace);
                                     }}
                                 >
                                     {({handleSubmit, handleChange, handleBlur, values, errors,}) => (

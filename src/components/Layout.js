@@ -1,6 +1,7 @@
 import React from 'react';
 import {CgProfile} from "react-icons/cg";
 import {ImCart, ImHome} from "react-icons/im";
+import {connect} from "react-redux";
 import {IoIosArrowBack, IoIosMenu, IoIosShare, IoMdClose} from "react-icons/io";
 import {AiOutlineClose} from 'react-icons/ai'
 import {NavLink, withRouter} from "react-router-dom";
@@ -9,13 +10,12 @@ import Auth from "../utils/Auth.Model";
 // import AddHomeScreen from "@ideasio/add-to-homescreen-react";
 let installPromptEvent;
 
-class MobileFooter extends React.Component {
+class _MobileFooter extends React.Component {
     state = {
         showInstallMessage: false, online: true, showAndroidInstaller: false
     }
 
     componentDidMount() {
-
         // Detects if device is on iOS
         const isIos = () => {
             const userAgent = window.navigator.userAgent.toLowerCase();
@@ -36,7 +36,10 @@ class MobileFooter extends React.Component {
         if (toggler) {
             toggler.addEventListener('click', function () {
                 toggler.classList.toggle('actived');
-                document.querySelector('.navbar-collapse').classList.toggle('menu-opened');
+                const nav = document.querySelector('.navbar-collapse')
+                if (nav) {
+                    nav.classList.toggle('menu-opened');
+                }
             })
         }
 
@@ -79,23 +82,23 @@ class MobileFooter extends React.Component {
                         <span className="fs-12">My Account</span>
                     </NavLink>
                     {Auth.isAuthenticated() &&
-                    <NavLink to="#" className="text-center toggler-nav">
+                    <NavLink to="#" exact  className="text-center toggler-nav">
                         <IoIosMenu className="fs-24"/>
                         <br/>
                         <span className="fs-12">Menu</span>
                     </NavLink>
                     }
                 </div>
-                    <div id="androidInstaller"
-                         className="d-none position-relative px-4 py-1 m-2 aligned bg-info text-white"
-                         style={{borderRadius: 8,}}>
-                        <img width={30} height={30} src="/images/favicon/favicon-r.png" alt="Ressortir App"/>
-                        <p className="my-0 mx-3 fs-12" style={{color: '#fff'}}>
-                            Install Ressortir App on your phone: tap install
-                        </p>
-                        <button id="androidInstallerBtn" className="btn btn-success mr-3">Install</button>
-                        <AiOutlineClose id="androidInstallerClose" className="text-white fs-34"/>
-                    </div>
+                <div id="androidInstaller"
+                     className="d-none position-relative px-4 py-1 m-2 aligned bg-info text-white"
+                     style={{borderRadius: 8,}}>
+                    <img width={30} height={30} src="/images/favicon/favicon-r.png" alt="Ressortir App"/>
+                    <p className="my-0 mx-3 fs-12" style={{color: '#fff'}}>
+                        Install Ressortir App on your phone: tap install
+                    </p>
+                    <button id="androidInstallerBtn" className="btn btn-success mr-3">Install</button>
+                    <AiOutlineClose id="androidInstallerClose" className="text-white fs-34"/>
+                </div>
 
 
                 {showInstallMessage && (
@@ -122,6 +125,9 @@ class MobileFooter extends React.Component {
         );
     }
 }
+
+const MobileFooter = connect(({User: user, Auth: auth, Application: application}) => ({...auth}), null)(_MobileFooter);
+
 
 class _MobileHeader extends React.Component {
     goBack = () => {
@@ -179,7 +185,7 @@ class _WebHeader extends React.Component {
                             <img src="/images/logo/ressortir-logo.png" className="logo-light" alt="logo"/>
                             <img src="/images/logo/ressortir-logo.png" className="logo-dark" alt="logo"/>
                         </NavLink>
-                        {Auth.isAuthenticated() ?
+                        {!Auth.isAuthenticated() ?
                             <div className="nav-form">
                                 <NavLink to="/login" className="nav-form-btn btn-login-mobile"
                                          title="Login">Login</NavLink>
@@ -206,7 +212,7 @@ const WebHeader = withRouter(_WebHeader);
 class Contact extends React.Component {
     render() {
         return (
-            <section id="contact" className="contact mb-30 pb-40 mb-sm-0 contact-2">
+            <section id="contact" className="contact contact-2">
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12 col-md-4 col-lg-4">
@@ -225,10 +231,8 @@ class Contact extends React.Component {
                         <div className="col-sm-12 col-md-4 col-lg-4">
                             <div className="contact-panel">
                                 <div className="contact__panel-header">
-                                    {/* /.contact-panel-icon */}
                                     <h4 className="contact__panel-title">Branch Office</h4>
                                 </div>
-                                {/* /.contact-panel-header */}
                                 <ul className="contact__list list-unstyled">
                                     <li>21, Marine Road, Liverpool Apapa, Lagos state.</li>
                                     <li>Phone number: +234 905 123 7664</li>
@@ -237,22 +241,19 @@ class Contact extends React.Component {
                         </div>
                         <div className="col-sm-12 col-md-4 col-lg-4">
                             <div className="contact-panel social-panel">
-
                                 <div className="social__icons justify-content-center">
                                     <h5 className="social__title">Contact us on Social Media:</h5>
                                     <a href="https://api.whatsapp.com/send?phone=2348063096005"
                                        rel="noopener noreferrer"
                                        target="_blank"
-                                       title="Contact us on whatsapp"><i className="fa fa-whatsapp "></i></a>
+                                       title="Contact us on whatsapp"><i className="fa fa-whatsapp "/></a>
                                     <a href="https://twitter.com/RessortirGlobal" target="_blank"
                                        rel="noopener noreferrer"
-                                       title="Follow us on Twitter"><i className="fa fa-twitter "></i></a>
+                                       title="Follow us on Twitter"><i className="fa fa-twitter "/></a>
                                     <a href="https://www.instagram.com/ressortirglobal/" target="_blank"
                                        rel="noopener noreferrer"
-                                       title="Follow us on Instagram"><i className="fa fa-instagram "></i></a>
+                                       title="Follow us on Instagram"><i className="fa fa-instagram "/></a>
                                 </div>
-                                {/* /.social-icons */}
-
                                 <div className="footer__copyright">
                                     <span>Copyright © 2020 Ressortir</span>
                                 </div>
@@ -271,7 +272,7 @@ class Layout extends React.Component {
     render() {
         const {noFooter, noMobileFooter, noSideBar, padded, home} = this.props;
         return (
-            <div>
+            <div className="m-0 position-relative">
                 <div className="wrapper home">
                     {isMobile ? <MobileHeader  {...this.props}/> : <WebHeader {...this.props}/>}
                     {home ? this.props.children :
@@ -311,11 +312,11 @@ class Layout extends React.Component {
                                                                      className="nav__item-link nav-icon-account ">Account
                                                                 Info</NavLink>
                                                         </li>
-                                                        <li className=" nav__item">
-                                                            <NavLink to="/dashboard/gas"
-                                                                     className="nav__item-link nav-icon-order_gas ">Order
-                                                                Gas</NavLink>
-                                                        </li>
+                                                        {/*<li className=" nav__item">*/}
+                                                        {/*    <NavLink to="/dashboard/gas"*/}
+                                                        {/*             className="nav__item-link nav-icon-order_gas ">Order*/}
+                                                        {/*        Gas</NavLink>*/}
+                                                        {/*</li>*/}
                                                     </ul>
                                                 </div>
                                             </div>
@@ -324,7 +325,6 @@ class Layout extends React.Component {
                                         {this.props.children}
                                     </div>
                                 </div>
-
                             </section>
                         </div>}
                     {!noFooter && <Contact/>}

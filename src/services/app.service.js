@@ -1,5 +1,5 @@
 import {
-    ALL_TASK,
+    ALL_ORDERS,
     CREATE_TASK,
     RESEND_VERIFICATION,
     SEND_COMMENT,
@@ -10,7 +10,7 @@ import Request from "../utils/Request";
 
 class AppService {
     createTask = form_data => Request().post(CREATE_TASK, form_data);
-    allTask = () => Request().get(ALL_TASK);
+    allOrders = () => Request().get(ALL_ORDERS);
     getSingleTask = id => Request().get(SHOW_TASK(id));
     updateSingleTask = (id, form_data) => Request().post(SHOW_TASK(id), form_data);
     deleteSingleTask = id => Request().delete(SHOW_TASK(id));
