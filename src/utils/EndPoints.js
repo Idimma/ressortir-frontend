@@ -7,7 +7,7 @@ export const REGISTER = EndPoints + "register";
 
 export const LOGIN = EndPoints + "login";
 
-export const CREATE_TASK = `${EndPoints}tasks`;
+export const CREATE_ORDER = `${EndPoints}orders`;
 export const ALL_ORDERS = `${EndPoints}orders/all`;
 export const GET_TASK = `${EndPoints}tasks/all`;
 export const SHOW_TASK = (id) => `${EndPoints}tasks/${id}`;

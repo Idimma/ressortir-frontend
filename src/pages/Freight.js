@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import Layout from "../components/Layout";
 import {isMobile} from 'react-device-detect';
 import {Formik} from "formik";
+import * as Yup from "yup";
+import {AppService} from "../services";
+import {toast} from "react-toastify";
+import {catchError} from "../utils";
+import {Spinner} from "reactstrap";
 
 
 class Freight extends Component {
@@ -13,15 +18,23 @@ class Freight extends Component {
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                             <Formik
-                                initialValues={{name: 'jared'}}
+                                validationSchema={Yup.object().shape({
+                                    phone: Yup.string().min(9, 'Phone number is too short').required('Phone number is required'),
+                                    delivery_address: Yup.string().required('Email is required'),
+                                    quantity: Yup.string().required('Email is required'),
+                                    name: Yup.string().min(3, 'Name is too short').required('Name is required'),
+                                })}
+                                enableReinitialize
                                 onSubmit={(values, actions) => {
-                                    setTimeout(() => {
-                                        alert(JSON.stringify(values, null, 2));
+                                    AppService.createOrder(values).then(() => {
+                                        toast.success('Order Created Successfully');
+                                        this.props.history.replace('/')
+                                    }).catch(catchError).finally(() => {
                                         actions.setSubmitting(false);
-                                    }, 1000);
+                                    });
                                 }}
                             >
-                                {({handleSubmit, handleChange, handleBlur, values, errors,}) => (
+                                {({handleSubmit, isSubmitting}) => (
                                     <form onSubmit={handleSubmit} className="request-quote-form">
                                         <input type="hidden" name="service" value="freight"/>
                                         <div className="request-title">
@@ -108,11 +121,13 @@ class Freight extends Component {
                                         </div>
                                         <div className="row">
                                             <div className="col-sm-12 col-md-12 col-lg-12 text-center">
-                                                <button type="submit" className="btn btn__primary">Request A Quote
+                                                <button type="submit" className="btn btn__primary">
+                                                    {isSubmitting ? <Spinner/> : 'Request A Quote'}
                                                 </button>
                                             </div>
                                         </div>
-                                    </form>)}</Formik>
+                                    </form>)}
+                            </Formik>
                         </div>
                     </div>
                 </div>

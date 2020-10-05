@@ -1,17 +1,23 @@
 import auth from './Auth.Model'
 import {toast as _toast} from 'react-toastify';
+import {push} from "react-router-redux";
+import store from '../store'
+import {logout} from "../store/modules/auth";
 export const toast = _toast;
 export const Auth = auth;
 export const isNull = (value) => (value === null || value === undefined || value === '' || value === 'null');
-export const ReportError = (a, b = 'error') => {
-    console.log(b, a);
-}
 export const Naira = '₦';
 
 export const catchError = (error) => {
-    // console.log(error.response);
+    console.log(error.response);
     if (error.response) {
         const data = error.response.data;
+        if (error.response.status === 401) {
+            store.dispatch(logout());
+            store.dispatch(push('/login'));
+            return toast.error('Login again')
+        }
+
         if (data.errors) {
             const arr = Object.keys(data.errors);
             arr.forEach(e => {

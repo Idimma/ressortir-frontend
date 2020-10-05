@@ -4,6 +4,11 @@ import Layout from "../components/Layout";
 import gas from '../assets/images/icons/gas.png';
 import {NavLink} from "react-router-dom";
 import {Formik} from "formik";
+import {Spinner} from "reactstrap";
+import * as Yup from "yup";
+import {AppService} from "../services";
+import {toast} from "react-toastify";
+import {catchError} from "../utils";
 
 class Login extends Component {
     render() {
@@ -14,15 +19,23 @@ class Login extends Component {
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                             <Formik
-                                initialValues={{name: 'jared'}}
+                                validationSchema={Yup.object().shape({
+                                    phone: Yup.string().min(9, 'Phone number is too short').required('Phone number is required'),
+                                    delivery_address: Yup.string().required('Email is required'),
+                                    quantity: Yup.string().required('Email is required'),
+                                    name: Yup.string().min(3, 'Name is too short').required('Name is required'),
+                                })}
+                                enableReinitialize
                                 onSubmit={(values, actions) => {
-                                    setTimeout(() => {
-                                        alert(JSON.stringify(values, null, 2));
+                                    AppService.createOrder(values).then(() => {
+                                        toast.success('Order Created Successfully');
+                                        this.props.history.replace('/')
+                                    }).catch(catchError).finally(() => {
                                         actions.setSubmitting(false);
-                                    }, 1000);
+                                    });
                                 }}
                             >
-                                {({handleSubmit, handleChange, handleBlur, values, errors,}) => (
+                                {({handleSubmit, isSubmitting}) => (
                                     <form onSubmit={handleSubmit} className="request-quote-form">
                                         <div className="request-title">
                                             <h2>Request LPG Tank Refill</h2>
@@ -88,7 +101,8 @@ class Login extends Component {
                                         </div>
                                         <div className="row">
                                             <div className="col-sm-12 col-md-12 col-lg-12 text-center">
-                                                <button type="submit" className="btn btn__primary">Request A Quote
+                                                <button type="submit" className="btn btn__primary">
+                                                    {isSubmitting ? <Spinner/> : 'Request A Quote'}
                                                 </button>
                                             </div>
                                         </div>
@@ -99,39 +113,39 @@ class Login extends Component {
                 </div>
 
                 <section className="mb-5 pb-5 pb-sm-0 mb-sm-0">
-                    <div className="container">
-                        <div className="row text-center justify-content-center">
-                            {isMobile ?
-                                <div className="col-sm-6 col-md-4">
-                                    <div className="request-item bg-white ">
-                                        <div className="aligned mr-auto">
-                                            <img src={gas} alt="Gas"/>
-                                            <h1 className="fs-18">Domestic Gas Refill</h1>
-                                        </div>
-                                        <NavLink to="/gas"
-                                                 className="btn btn-danger btn-round ml-auto"
-                                                 title="Domestic Gas Refill">
-                                            <span>Request</span>
-                                        </NavLink>
-                                    </div>
-                                </div>
-                                :
-                                <div className="col-sm-6 col-md-4 ">
-                                    <div className="service-item service-item-3">
-                                        <div className="service__icon">
-                                            <i className="service__icon-gas"></i>
-                                            <h4 className="service__title">Domestic Gas Refill </h4>
-                                        </div>
-                                        <div className="service__content">
-                                            <a href="https://ressortir.com/gas" className="btn btn__white">
-                                                <span>Request</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            }
-                        </div>
-                    </div>
+                    {/*<div className="container">*/}
+                    {/*    <div className="row text-center justify-content-center">*/}
+                    {/*        {isMobile ?*/}
+                    {/*            <div className="col-sm-6 col-md-4">*/}
+                    {/*                <div className="request-item bg-white ">*/}
+                    {/*                    <div className="aligned mr-auto">*/}
+                    {/*                        <img src={gas} alt="Gas"/>*/}
+                    {/*                        <h1 className="fs-18">Domestic Gas Refill</h1>*/}
+                    {/*                    </div>*/}
+                    {/*                    <NavLink to="/gas"*/}
+                    {/*                             className="btn btn-danger btn-round ml-auto"*/}
+                    {/*                             title="Domestic Gas Refill">*/}
+                    {/*                        <span>Request</span>*/}
+                    {/*                    </NavLink>*/}
+                    {/*                </div>*/}
+                    {/*            </div>*/}
+                    {/*            :*/}
+                    {/*            <div className="col-sm-6 col-md-4 ">*/}
+                    {/*                <div className="service-item service-item-3">*/}
+                    {/*                    <div className="service__icon">*/}
+                    {/*                        <i className="service__icon-gas"></i>*/}
+                    {/*                        <h4 className="service__title">Domestic Gas Refill </h4>*/}
+                    {/*                    </div>*/}
+                    {/*                    <div className="service__content">*/}
+                    {/*                        <a href="https://ressortir.com/gas" className="btn btn__white">*/}
+                    {/*                            <span>Request</span>*/}
+                    {/*                        </a>*/}
+                    {/*                    </div>*/}
+                    {/*                </div>*/}
+                    {/*            </div>*/}
+                    {/*        }*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </section>
             </Layout>
         )

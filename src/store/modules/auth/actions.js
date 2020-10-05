@@ -27,7 +27,7 @@ export const login = (data, setSubmitting, replace) => async (dispatch, getState
         dispatch(setLoggedin(true));
         dispatch(setToken(token));
         toast.success('Login Successful');
-        replace(localStorage.redirectBackto || '/dashboard');
+        replace('/dashboard');
     }).catch(error => {
         catchError(error);
         setSubmitting(false);
@@ -35,21 +35,11 @@ export const login = (data, setSubmitting, replace) => async (dispatch, getState
 };
 
 
-
-export const logout = (data, setSubmitting, replace) => async (dispatch, getState) => {
+export const logout = () => async (dispatch, getState) => {
     persistor.purge()
-    // AuthService.login(data).then((response) => {
-    //     setSubmitting(false);
-    //     const {data: {token, user}} = response.data;
-    //     dispatch(setUser(user));
-    //     dispatch(setLoggedin(true));
-    //     dispatch(setToken(token));
-    //     toast.success('Login Successful');
-    //     replace(localStorage.redirectBackto || '/dashboard');
-    // }).catch(error => {
-    //     catchError(error);
-    //     setSubmitting(false);
-    // });
+    dispatch(setUser({}));
+    dispatch(setLoggedin(false));
+    dispatch(setToken(''));
 };
 let email = ''
 export const forgetPassword = (data, setSubmitting, replace) => async (dispatch, getState) => {

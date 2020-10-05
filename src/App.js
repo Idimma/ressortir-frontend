@@ -5,7 +5,7 @@ import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import './assets/scss/main.scss';
 import store from "./store";
-import {GuestRoute} from "./components/AppRoute";
+import { GuestRoute} from "./components/AppRoute";
 import Login from "./pages/Login";
 import _404 from "./pages/_404";
 import HomePage from "./pages/Home";
@@ -23,7 +23,7 @@ import {isMobile, isMobileSafari} from "react-device-detect";
 
 let installPromptEvent;
 
-class AppRouter extends Component {
+class Router extends Component {
     componentDidMount() {
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -48,14 +48,14 @@ class AppRouter extends Component {
             const androidClose = document.getElementById('androidInstallerClose');
 
             if (androidView) {
-                androidView.classList.remove('d-none',  'm-2', 'py-1');
-                androidView.classList.add('d-flex',  'm-2', 'py-1');
+                androidView.classList.remove('d-none', 'm-2', 'py-1');
+                androidView.classList.add('d-flex', 'm-2', 'py-1');
             }
             if (androidClose) {
                 androidClose.addEventListener('click', (event) => {
                     event.preventDefault();
                     androidView.classList.add('d-none');
-                    androidView.classList.remove('d-flex',  'm-2', 'py-1');
+                    androidView.classList.remove('d-flex', 'm-2', 'py-1');
                 })
             }
             if (androidBtn) {
@@ -73,11 +73,11 @@ class AppRouter extends Component {
                         if (choiceResult.outcome === 'accepted') {
                             console.log('User accepted the A2HS prompt');
                             androidView.classList.add('d-none');
-                            androidView.classList.remove('d-flex',  'm-2', 'py-1');
+                            androidView.classList.remove('d-flex', 'm-2', 'py-1');
                         } else {
                             console.log('User dismissed the A2HS prompt');
                             androidView.classList.add('d-none');
-                            androidView.classList.remove('d-flex',  'm-2', 'py-1');
+                            androidView.classList.remove('d-flex', 'm-2', 'py-1');
                         }
                         // deferredPrompt = null;
                     });
@@ -119,7 +119,7 @@ function App() {
         <Provider store={store}>
             <>
                 <ToastContainer/>
-                <AppRouter/>
+                <Router/>
             </>
         </Provider>
     );

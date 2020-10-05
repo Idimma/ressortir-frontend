@@ -2,28 +2,43 @@ import React, {Component} from 'react';
 import Layout from "../components/Layout";
 import {isMobile} from 'react-device-detect';
 import {Formik} from "formik";
+import {connect} from "react-redux";
 import {FormField} from "../components/FormElements";
+import * as Yup from "yup";
+import {AuthService} from "../services";
+import {catchError} from "../utils";
+import {Spinner} from "reactstrap";
+import {toast} from "react-toastify";
 
 
-class Dashboard extends Component {
+class ProfileScreen extends Component {
     render() {
+        const {user: {email, phone, name}} = this.props
         return (
-            <Layout noFooter={isMobile} title="Profile" innerClass="">
-
-
+            <Layout noFooter={isMobile} padded={isMobile} title="Profile" innerClass="">
                 <div className=" col-12 col-md-10 dash-section__col">
                     <div className="dash-section__content">
 
                         <Formik
-                            initialValues={{name: 'jared'}}
+                            initialValues={{current_password: '', password: '', password_confirmation: ''}}
+                            validationSchema={Yup.object().shape({
+                                current_password: Yup.string().min(5, 'Current Password cannot be less than 6 characters')
+                                    .required('Current password is required'),
+                                password: Yup.string().min(6, 'Password cannot be less than 6 characters')
+                                    .required('Password is required'),
+                                password_confirmation: Yup.string().min(6, 'Password cannot be less than 6 characters')
+                                    .required('Password confirmation is required'),
+
+                            })}
                             onSubmit={(values, actions) => {
-                                setTimeout(() => {
-                                    alert(JSON.stringify(values, null, 2));
+                                AuthService.editPassword(values).then(() => {
+                                    toast.success('Password updated successfully')
+                                }).catch(catchError).finally(() => {
                                     actions.setSubmitting(false);
-                                }, 1000);
+                                });
                             }}
                         >
-                            {({handleSubmit, handleChange, handleBlur, values, errors,}) => (
+                            {({handleSubmit, handleChange, handleBlur, values, errors, isSubmitting}) => (
                                 <form onSubmit={handleSubmit} className="request-quote-form mb-50">
                                     <div className="request-title mb-20">
                                         <h2>Update Password</h2>
@@ -34,7 +49,7 @@ class Dashboard extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="col-12 col-md-6">
-                                            <FormField title="Old Password" id="password" type="password"
+                                            <FormField title="Old Password" id="old-password" type="password"
                                                        name="current_password" autoComplete="new-password"/>
 
                                         </div>
@@ -58,7 +73,9 @@ class Dashboard extends Component {
 
                                     <div className="row">
                                         <div className="col-sm-12 col-md-12 col-lg-12">
-                                            <button type="submit" className="btn btn-primary btn-md">Update Password
+                                            <button type="submit" className="btn btn-primary btn-md">
+                                                {isSubmitting ? <Spinner/> :
+                                                    'Update Password'}
                                             </button>
                                         </div>
                                     </div>
@@ -67,15 +84,22 @@ class Dashboard extends Component {
                         </Formik>
 
                         <Formik
-                            initialValues={{name: 'jared'}}
+                            initialValues={{phone, email, name}}
+                            validationSchema={Yup.object().shape({
+                                phone: Yup.string().min(9, 'Phone number is too short').required('Phone number is required'),
+                                email: Yup.string().required('Email is required'),
+                                name: Yup.string().min(3, 'Name is too short').required('Name is required'),
+                            })}
+                            enableReinitialize
                             onSubmit={(values, actions) => {
-                                setTimeout(() => {
-                                    alert(JSON.stringify(values, null, 2));
+                                AuthService.update(values).then(() => {
+                                    toast.success('You has been updated successfully')
+                                }).catch(catchError).finally(() => {
                                     actions.setSubmitting(false);
-                                }, 1000);
+                                });
                             }}
                             component={
-                                ({handleSubmit, handleChange, handleBlur, values, errors,}) =>
+                                ({handleSubmit, isSubmitting}) =>
                                     (
                                         <form onSubmit={handleSubmit} className="request-quote-form mb-50">
                                             <div className="request-title">
@@ -85,29 +109,24 @@ class Dashboard extends Component {
                                             <div className="row mb-10">
                                                 <div className="col-12 col-md-12">
                                                     <FormField title={"Name"} type="text" className="form-control "
-                                                               name="name"
-                                                               placeholder="Name"
-                                                               value="Test Account"/>
+                                                               name="name" placeholder="Name"/>
                                                 </div>
                                                 <div className="col-12 col-md-6">
                                                     <FormField title={"Phone"} type="tel" className="form-control "
-                                                               name="phone"
-                                                               placeholder="Phone"
-                                                               value="08133691990"/>
+                                                               name="phone" placeholder="Phone" />
                                                 </div>
                                                 <div className="col-12 col-md-6">
                                                     <FormField title={"Email"} type="email" className="form-control"
-                                                               placeholder="Email"
-                                                               value="gidicodes@gmail.com" readOnly=""/>
+                                                               placeholder="Email" readOnly name="email"/>
                                                     <small className="d-block mb-10">* Your email cannot be changed
                                                     </small>
                                                 </div>
                                             </div>
                                             <div className="row">
                                                 <div className="col-sm-12 col-md-12 col-lg-12">
-                                                    <button type="submit" className="btn btn-primary btn-md">Update
-                                                        Personal
-                                                        Info
+                                                    <button type="submit" className="btn btn-primary btn-md">
+                                                        {isSubmitting ? <Spinner/> :
+                                                            'Update Personal Info'}'
                                                     </button>
                                                 </div>
                                             </div>
@@ -123,4 +142,4 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard
+export default connect(({Application, Auth, User}) => ({user: User}))(ProfileScreen)

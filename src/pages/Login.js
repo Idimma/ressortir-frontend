@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import Layout from "../components/Layout";
-
 import {isMobile} from 'react-device-detect';
 import {NavLink} from "react-router-dom";
 import {FormField} from "../components/FormElements";
 import {Formik} from "formik";
-import {AuthService} from "../services";
 import {connect} from "react-redux";
 import {login} from "../store/modules/auth";
 
@@ -75,4 +73,4 @@ class Login extends Component {
     }
 }
 
-export default connect(() => {}, {login})( Login)
+export default connect(null, {login})( Login)

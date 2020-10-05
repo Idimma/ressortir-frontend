@@ -337,9 +337,10 @@ textarea {
 @media screen and (max-width: 500px) {
   .Toastify {
     margin-top: 68px;
-    z-index: 30000;
+    z-index: 3099000;
     position: absolute;
     width: 100%;
+    top: 0;
     background: white;
   }
 }

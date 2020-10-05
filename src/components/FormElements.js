@@ -1,12 +1,12 @@
 import React from "react";
-import {ErrorMessage, Field} from "formik";
+import {Field} from "formik";
 import className from 'classname'
 
 export const FormElements = ({message}) => (<span className="invalid-feedback"><strong>{message}</strong></span>);
 export const FormField = (props) => <Field component={CustomInputComponent} {...props} />
 export const FormSelect = (props) => <Field component={CustomSelectComponent} {...props} />
 
-const CustomInputComponent = ({ field, form: { touched, errors, isValid }, title, ...props }) => {
+const CustomInputComponent = ({field, form: {touched, errors, isValid}, title, ...props}) => {
     const inputClass = className('form-control', {
         'is-invalid': touched[field.name] && errors[field.name]
     });
@@ -14,24 +14,25 @@ const CustomInputComponent = ({ field, form: { touched, errors, isValid }, title
         <div className="form-group">
             {title && <h5 className="form__title">{title}</h5>}
             <input type="text" className={inputClass} {...field} {...props} />
-            <ErrorMessage component={FormElements} name={field.name}/>
+            {errors[field.name] && touched[field.name] && <FormElements message={errors[field.name]}/>}
         </div>
     );
 }
-const CustomSelectComponent = ({ field, form: { touched, errors, isValid }, title, ...props }) => {
+const CustomSelectComponent = ({field, form: {touched, errors, isValid}, title, ...props}) => {
     const inputClass = className('form-control', {
         'is-invalid': touched[field.name] && errors[field.name]
     });
     return (
         <div className="form-group form-group-select">
             {title && <h5 className="form__title">{title}</h5>}
-            <select  className={inputClass} {...field} {...props} />
-            <ErrorMessage component={FormElements} name={field.name}/>
+            <select className={inputClass} {...field} {...props} />
+            {errors[field.name] && touched[field.name] && <FormElements message={errors[field.name]}/>}
+
         </div>
     );
 }
 
-export const DetailsForm = ({service}) => <>
+export const DetailsForm = ({service, hideProfile, onClick}) => <div style={{display: hideProfile ? 'none' : 'block'}}>
     <input type="hidden" name="service" value={service}/>
     <div className="request-title">
         <h2>{service} Request Info</h2>
@@ -53,10 +54,10 @@ export const DetailsForm = ({service}) => <>
 
     <div className="row">
         <div className="col-sm-12 col-md-12 col-lg-12 text-center">
-            <button type="submit" className="btn btn__primary">Request a
-                Quote
+            <button type="button" onClick={onClick} className="btn btn__primary">
+                Request a Quote
             </button>
         </div>
     </div>
-</>;
+</div>;
 

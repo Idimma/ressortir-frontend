@@ -7,8 +7,6 @@ import {AiOutlineClose} from 'react-icons/ai'
 import {NavLink, withRouter} from "react-router-dom";
 import {isMobile, isMobileSafari} from 'react-device-detect';
 import Auth from "../utils/Auth.Model";
-// import AddHomeScreen from "@ideasio/add-to-homescreen-react";
-let installPromptEvent;
 
 class _MobileFooter extends React.Component {
     state = {
@@ -23,6 +21,7 @@ class _MobileFooter extends React.Component {
         }
         // Detects if device is in standalone mode
         const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
 
         // Checks if should display install popup notification:
         if (isMobileSafari && isIos() && !isInStandaloneMode()) {
@@ -52,19 +51,13 @@ class _MobileFooter extends React.Component {
     }
 
     setOnlineStatus = isOnline => this.setState({online: isOnline})
-    installAndroid = () => {
-        if (installPromptEvent) {
-            installPromptEvent.prompt()
-        }
-    }
+
 
     render() {
-        const {showInstallMessage, online, showAndroidInstaller} = this.state;
-
-
+        const {showInstallMessage, online} = this.state;
         return (
             <div className="sticky-bottom d-sm-none bg-white mobile-footer">
-                <div className="d-flex text-gray justify-content-between px-5 py-3">
+                <div className="d-flex text-gray justify-content-between container py-3">
                     <NavLink className="text-center" exact to="/">
                         <ImHome className="fs-24"/>
                         <br/>
@@ -82,7 +75,7 @@ class _MobileFooter extends React.Component {
                         <span className="fs-12">My Account</span>
                     </NavLink>
                     {Auth.isAuthenticated() &&
-                    <NavLink to="#" exact  className="text-center toggler-nav">
+                    <NavLink to="#" exact className="text-center text-black-50 toggler-nav">
                         <IoIosMenu className="fs-24"/>
                         <br/>
                         <span className="fs-12">Menu</span>
@@ -134,7 +127,6 @@ class _MobileHeader extends React.Component {
         if (this.props.hasOwnProperty('onBack')) {
             return this.props.onBack();
         }
-
         this.props.history.goBack();
     };
 
