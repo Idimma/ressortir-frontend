@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Layout from "../components/Layout";
-import {isMobile} from 'react-device-detect';
+import {isMobileOnly} from 'react-device-detect';
 import {NavLink} from "react-router-dom";
 import {FormField} from "../components/FormElements";
 import {Formik} from "formik";
@@ -11,7 +11,7 @@ import {login} from "../store/modules/auth";
 class Login extends Component {
     render() {
         return (
-            <Layout noFooter={isMobile} padded={isMobile} title="My Account" innerClass="request-quote  login-form">
+            <Layout noFooter={isMobileOnly} padded title="My Accounts" innerClass="request-quote  login-form">
                 <div className="container pt-5 p-sm-0">
                     <div className="row justify-content-center">
                         <div className="col-md-6">

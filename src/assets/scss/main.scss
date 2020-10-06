@@ -334,6 +334,27 @@ textarea {
 
 }
 
+.sliderdesc {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  padding-right: 50px;
+  margin-bottom: 35px;
+}
+
+@media screen and (min-width: 991px) {
+  .slide-show-item{
+    height: calc(100vh - 90px);
+    min-height: 750px;
+    background-position: top center; //!important;
+  }
+}
+.slide-show-img{
+  position: absolute;
+  z-index: -1;
+}
+
 @media screen and (max-width: 500px) {
   .Toastify {
     margin-top: 68px;
@@ -343,4 +364,25 @@ textarea {
     top: 0;
     background: white;
   }
+  .sliderdesc {
+    margin-top: 40px;
+    font-size: 14px;
+  }
+
+}
+
+.navbar .nav__item .nav__item-click {
+  font-size: 12px;
+  font-weight: 500;
+  //text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  background-color: #EDF8FF;
+
+  position: relative;
+  height: 45px;
+  padding-left: 18px;
+  color: #333;
+  //line-height: 80px;
+  //letter-spacing: .4px
 }

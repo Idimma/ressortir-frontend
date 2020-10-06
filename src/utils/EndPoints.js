@@ -1,5 +1,5 @@
-// export const SERVER = 'https://api.cititasker.com/';
-export const SERVER = 'http://127.0.0.1:8000/api/';
+export const SERVER = 'https://admin.ressortir.com/';
+// export const SERVER = 'http://127.0.0.1:8000/api/';
 
 const EndPoints = SERVER;
 

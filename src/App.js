@@ -21,7 +21,7 @@ import DashDiesel from "./pages/dashboard/Diesel";
 import SingleOrder from "./pages/Single";
 import {isMobile, isMobileSafari} from "react-device-detect";
 
-let installPromptEvent;
+let installPromptEvent, notificationEvents;
 
 class Router extends Component {
     componentDidMount() {
@@ -36,6 +36,42 @@ class Router extends Component {
             });
         }
         window.addEventListener('beforeinstallprompt', this.installPrompt);
+        window.addEventListener('appinstalled', this.notificationPrompt);
+    }
+
+
+    notificationPrompt = (event) => {
+        event.preventDefault();
+        console.log(event);
+        notificationEvents = event;
+
+
+
+        const notification = document.getElementById("notificationBtn");
+        if(notification){
+            notification.addEventListener('click', function(e) {
+                Notification.requestPermission().then(function(result) {
+                    if(result === 'granted') {
+                        // randomNotification();
+                    }
+                });
+            });
+        }
+
+//
+// // Setting up random Notification
+//         function randomNotification() {
+//             var randomItem = Math.floor(Math.random()*games.length);
+//             var notifTitle = games[randomItem].name;
+//             var notifBody = 'Created by '+games[randomItem].author+'.';
+//             var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
+//             var options = {
+//                 body: notifBody,
+//                 icon: notifImg
+//             }
+//             var notif = new Notification(notifTitle, options);
+//             setTimeout(randomNotification, 30000);
+//         };
     }
 
 

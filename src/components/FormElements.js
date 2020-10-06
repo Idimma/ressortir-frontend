@@ -27,7 +27,6 @@ const CustomSelectComponent = ({field, form: {touched, errors, isValid}, title, 
             {title && <h5 className="form__title">{title}</h5>}
             <select className={inputClass} {...field} {...props} />
             {errors[field.name] && touched[field.name] && <FormElements message={errors[field.name]}/>}
-
         </div>
     );
 }

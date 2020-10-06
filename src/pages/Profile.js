@@ -9,6 +9,7 @@ import {AuthService} from "../services";
 import {catchError} from "../utils";
 import {Spinner} from "reactstrap";
 import {toast} from "react-toastify";
+import {setUser} from "../store/modules/user";
 
 
 class ProfileScreen extends Component {
@@ -92,8 +93,9 @@ class ProfileScreen extends Component {
                             })}
                             enableReinitialize
                             onSubmit={(values, actions) => {
-                                AuthService.update(values).then(() => {
+                                AuthService.update(values).then(({data}) => {
                                     toast.success('You has been updated successfully')
+                                    this.props.setUser(data.data)
                                 }).catch(catchError).finally(() => {
                                     actions.setSubmitting(false);
                                 });
@@ -142,4 +144,4 @@ class ProfileScreen extends Component {
     }
 }
 
-export default connect(({Application, Auth, User}) => ({user: User}))(ProfileScreen)
+export default connect(({Application, Auth, User}) => ({user: User}), {setUser})(ProfileScreen)

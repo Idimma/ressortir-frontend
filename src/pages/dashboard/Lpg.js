@@ -5,28 +5,29 @@ import {Formik} from "formik";
 import {DetailsForm, FormField, FormSelect} from "../../components/FormElements";
 import * as Yup from "yup";
 import {AppService} from "../../services";
-import {toast} from "react-toastify";
 import {catchError} from "../../utils";
 import {Spinner} from "reactstrap";
 import {connect} from "react-redux";
+import * as SweetAlert from "sweetalert2";
 
 
 class DashLpg extends Component {
     state = {
         showProfile: false
     }
-    goBack =() =>{
-        if(this.state.showProfile){
+    goBack = () => {
+        if (this.state.showProfile) {
             return this.setState({showProfile: false})
         }
         this.props.history.goBack();
     };
+
     render() {
         const {showProfile} = this.state;
-        const {user: {name,email, phone}} = this.props;
+        const {user: {name, email, phone}} = this.props;
 
         return (
-            <Layout onBack={this.goBack}  noFooter={isMobile} padded={isMobile} title="Request Freight">
+            <Layout onBack={this.goBack} noFooter={isMobile} padded={isMobile} title="Request Freight">
                 <div className=" col-12 col-md-10 dash-section__col">
                     <div className="dash-section__content">
                         <Formik
@@ -36,14 +37,14 @@ class DashLpg extends Component {
                             }}
                             validationSchema={Yup.object().shape({
                                 phone: Yup.string().min(9, 'Phone number is too short').required('Phone number is required'),
-                                delivery_address: Yup.string().required('Email is required'),
+                                delivery_address: Yup.string().required('Delivery address is required'),
                                 quantity: Yup.string().required('Quantity is required'),
                                 name: Yup.string().min(3, 'Name is too short').required('Name is required'),
                             })}
                             enableReinitialize
                             onSubmit={(values, actions) => {
                                 AppService.createOrder(values).then(() => {
-                                    toast.success('Order Created Successfully');
+                                    SweetAlert.fire('Success', 'Order Created Successfully', 'success');
                                     this.props.history.replace('/dashboard')
                                 }).catch(catchError).finally(() => {
                                     actions.setSubmitting(false);

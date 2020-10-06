@@ -21,10 +21,43 @@
 
  ----------------------------*/
 
+function loadCarousel(){
+    // $('.carousel').each(function() {
+    //     $(this).owlCarousel({
+    //         nav: $(this).data('nav'),
+    //         dots: $(this).data('dots'),
+    //         loop: $(this).data('loop'),
+    //         margin: $(this).data('space'),
+    //         center: $(this).data('center'),
+    //         dotsSpeed: $(this).data('speed'),
+    //         autoplay: $(this).data('autoplay'),
+    //         transitionStyle: $(this).data('transition'),
+    //         animateOut: $(this).data('animate-out'),
+    //         animateIn: $(this).data('animate-in'),
+    //         autoplayTimeout: 4000,
+    //         responsive: {
+    //             0: {
+    //                 items: 1,
+    //             },
+    //             400: {
+    //                 items: $(this).data('slide-sm'),
+    //             },
+    //             700: {
+    //                 items: $(this).data('slide-md'),
+    //             },
+    //             1000: {
+    //                 items: $(this).data('slide'),
+    //             }
+    //         }
+    //     });
+    // });
+
+}
 $(function() {
 
     // Global variables
     var $win = $(window);
+    $win.loadCarousel = loadCarousel
 
     /*==========   Mobile Menu   ==========*/
     var $navToggler = $('.navbar-toggler');
@@ -149,35 +182,35 @@ $(function() {
     }
 
     /*==========   Owl Carousel  ==========*/
-    $('.carousel').each(function() {
-        $(this).owlCarousel({
-            nav: $(this).data('nav'),
-            dots: $(this).data('dots'),
-            loop: $(this).data('loop'),
-            margin: $(this).data('space'),
-            center: $(this).data('center'),
-            dotsSpeed: $(this).data('speed'),
-            autoplay: $(this).data('autoplay'),
-            transitionStyle: $(this).data('transition'),
-            animateOut: $(this).data('animate-out'),
-            animateIn: $(this).data('animate-in'),
-            autoplayTimeout: 4000,
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                400: {
-                    items: $(this).data('slide-sm'),
-                },
-                700: {
-                    items: $(this).data('slide-md'),
-                },
-                1000: {
-                    items: $(this).data('slide'),
-                }
-            }
-        });
-    });
+    // $('.carousel').each(function() {
+    //     $(this).owlCarousel({
+    //         nav: $(this).data('nav'),
+    //         dots: $(this).data('dots'),
+    //         loop: $(this).data('loop'),
+    //         margin: $(this).data('space'),
+    //         center: $(this).data('center'),
+    //         dotsSpeed: $(this).data('speed'),
+    //         autoplay: $(this).data('autoplay'),
+    //         transitionStyle: $(this).data('transition'),
+    //         animateOut: $(this).data('animate-out'),
+    //         animateIn: $(this).data('animate-in'),
+    //         autoplayTimeout: 4000,
+    //         responsive: {
+    //             0: {
+    //                 items: 1,
+    //             },
+    //             400: {
+    //                 items: $(this).data('slide-sm'),
+    //             },
+    //             700: {
+    //                 items: $(this).data('slide-md'),
+    //             },
+    //             1000: {
+    //                 items: $(this).data('slide'),
+    //             }
+    //         }
+    //     });
+    // });
     // Owl Carousel With Thumbnails
     $('.thumbs-carousel').owlCarousel({
         thumbs: true,
@@ -245,3 +278,4 @@ $(function() {
     });
 
 });
+

@@ -7,16 +7,16 @@ import * as Yup from "yup";
 import {AppService} from "../../services";
 import {catchError} from "../../utils";
 import {connect} from "react-redux";
-import {toast} from "react-toastify";
 import {Spinner} from "reactstrap";
+import * as SweetAlert from "sweetalert2";
 
 class DashFreight extends Component {
     state = {
         showProfile: false
     };
 
-    goBack =() =>{
-        if(this.state.showProfile){
+    goBack = () => {
+        if (this.state.showProfile) {
             return this.setState({showProfile: false})
         }
         this.props.history.goBack();
@@ -37,14 +37,17 @@ class DashFreight extends Component {
                             }}
                             validationSchema={Yup.object().shape({
                                 phone: Yup.string().min(9, 'Phone number is too short').required('Phone number is required'),
-                                delivery_address: Yup.string().required('Email is required'),
-                                quantity: Yup.string().required('Email is required'),
+                                delivery_address: Yup.string().required('Delivery Address is required'),
+                                pickup_address: Yup.string().required('Pickup Address is required'),
+                                quantity: Yup.string().required('Quantity is required'),
+                                goods_type: Yup.string().required('Good Type is required'),
+                                goods_size: Yup.mixed().required('Good Size is required'),
                                 name: Yup.string().min(3, 'Name is too short').required('Name is required'),
                             })}
                             enableReinitialize
                             onSubmit={(values, actions) => {
                                 AppService.createOrder(values).then(() => {
-                                    toast.success('Order Created Successfully');
+                                    SweetAlert.fire('Success', 'Order Created Successfully', 'success');
                                     this.props.history.replace('/dashboard')
                                 }).catch(catchError).finally(() => {
                                     actions.setSubmitting(false);

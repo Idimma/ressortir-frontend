@@ -1,34 +1,33 @@
 import React, {Component} from 'react';
 import {isMobile} from 'react-device-detect';
 import Layout from "../components/Layout";
-import gas from '../assets/images/icons/gas.png';
-import {NavLink} from "react-router-dom";
 import {Formik} from "formik";
 import {Spinner} from "reactstrap";
 import * as Yup from "yup";
 import {AppService} from "../services";
-import {toast} from "react-toastify";
 import {catchError} from "../utils";
+import {FormField, FormSelect} from "../components/FormElements";
+import * as SweetAlert from "sweetalert2";
 
 class Login extends Component {
     render() {
         return (
             <Layout noFooter={isMobile} padded={isMobile}
                     innerClass={`request-quote request-diesel`} title="LPG Tank Refill">
-                <div  className={`container  ${!isMobile && 'pt-110'} mb-5 pb-90`}>
+                <div className={`container  ${!isMobile && 'pt-110'} mb-5 pb-90`}>
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                             <Formik
+                                initialValues={{name: '', service: 'lpg'}}
                                 validationSchema={Yup.object().shape({
                                     phone: Yup.string().min(9, 'Phone number is too short').required('Phone number is required'),
-                                    delivery_address: Yup.string().required('Email is required'),
-                                    quantity: Yup.string().required('Email is required'),
+                                    delivery_address: Yup.string().required('Delivery address is required'),
+                                    quantity: Yup.string().required('Quantity is required'),
                                     name: Yup.string().min(3, 'Name is too short').required('Name is required'),
                                 })}
-                                enableReinitialize
                                 onSubmit={(values, actions) => {
                                     AppService.createOrder(values).then(() => {
-                                        toast.success('Order Created Successfully');
+                                        SweetAlert.fire('Success', 'Order Created Successfully', 'success');
                                         this.props.history.replace('/')
                                     }).catch(catchError).finally(() => {
                                         actions.setSubmitting(false);
@@ -47,22 +46,14 @@ class Login extends Component {
 
                                             </div>
                                             <div className="col-12">
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control " name="name"
-                                                           placeholder="Full Name" value=""/>
-                                                </div>
+                                                <FormField type="text" name="name" placeholder="Full Name"/>
                                             </div>
                                             <div className="col-12">
-                                                <div className="form-group">
-                                                    <input type="email" className="form-control " name="email"
-                                                           placeholder="Email Address" value=""/>
-                                                </div>
+                                                <FormField type="email" name="email" required
+                                                           placeholder="Email Address"/>
                                             </div>
                                             <div className="col-12">
-                                                <div className="form-group">
-                                                    <input type="tel" className="form-control " name="phone"
-                                                           placeholder="Phone Number" value=""/>
-                                                </div>
+                                                <FormField type="tel" name="phone" placeholder="Phone Number"/>
                                             </div>
                                         </div>
                                         <div className="row mb-10">
@@ -71,16 +62,13 @@ class Login extends Component {
 
                                             </div>
                                             <div className="col-sm-12 col-md-12 col-lg-12">
-                                                <div className="form-group  form-group-select">
-                                                    <select className="form-control " name="quantity" id="quantity">
-                                                        <option value="">Select Quantity</option>
-                                                        <option value="2.0 tons">2.0 tons</option>
-                                                        <option value="2.5 tons">2.5 tons</option>
-                                                        <option value="5 tons">5 tons</option>
-                                                        <option value="10 tons">10 tons</option>
-                                                    </select>
-
-                                                </div>
+                                                <FormSelect className="form-control " name="quantity" id="quantity">
+                                                    <option>Select Quantity</option>
+                                                    <option value="2.0 tons">2.0 tons</option>
+                                                    <option value="2.5 tons">2.5 tons</option>
+                                                    <option value="5 tons">5 tons</option>
+                                                    <option value="10 tons">10 tons</option>
+                                                </FormSelect>
                                             </div>
                                             <div className="col-sm-12 col-md-12 col-lg-12">
 
@@ -92,11 +80,8 @@ class Login extends Component {
 
                                             </div>
                                             <div className="col-sm-12 col-md-12 col-lg-12">
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control "
-                                                           name="delivery_address"
-                                                           placeholder="Full Delivery Address" value=""/>
-                                                </div>
+                                                <FormField type="text" name="delivery_address"
+                                                           placeholder="Full Delivery Address"/>
                                             </div>
                                         </div>
                                         <div className="row">

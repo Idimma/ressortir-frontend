@@ -4,9 +4,10 @@ import {isMobile} from 'react-device-detect';
 import {Formik} from "formik";
 import * as Yup from "yup";
 import {AppService} from "../services";
-import {toast} from "react-toastify";
 import {catchError} from "../utils";
 import {Spinner} from "reactstrap";
+import {FormField} from "../components/FormElements";
+import * as SweetAlert from "sweetalert2";
 
 
 class Diesel extends Component {
@@ -18,16 +19,22 @@ class Diesel extends Component {
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                             <Formik
+                                initialValues={{
+                                    name: '',
+                                    phone: '',
+                                    quantity: '',
+                                    delivery_address: '',
+                                    service: 'diesel'
+                                }}
                                 validationSchema={Yup.object().shape({
                                     phone: Yup.string().min(9, 'Phone number is too short').required('Phone number is required'),
-                                    delivery_address: Yup.string().required('Email is required'),
-                                    quantity: Yup.string().required('Email is required'),
+                                    delivery_address: Yup.string().required('Delivery Address is required'),
+                                    quantity: Yup.string().required('Quantity is required'),
                                     name: Yup.string().min(3, 'Name is too short').required('Name is required'),
                                 })}
-                                enableReinitialize
                                 onSubmit={(values, actions) => {
                                     AppService.createOrder(values).then(() => {
-                                        toast.success('Order Created Successfully');
+                                        SweetAlert.fire('Success', 'Order Created Successfully', 'success');
                                         this.props.history.replace('/')
                                     }).catch(catchError).finally(() => {
                                         actions.setSubmitting(false);
@@ -45,22 +52,13 @@ class Diesel extends Component {
                                                 <h5 className="form__title">Personal / Company Data</h5>
                                             </div>
                                             <div className="col-12">
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control " name="name"
-                                                           placeholder="Full Name" value=""/>
-                                                </div>
+                                                <FormField type="text" name="name" placeholder="Full Name"/>
                                             </div>
                                             <div className="col-12">
-                                                <div className="form-group">
-                                                    <input type="email" className="form-control " name="email"
-                                                           placeholder="Email Address" value=""/>
-                                                </div>
+                                                <FormField type="email" name="email" placeholder="Email Address"/>
                                             </div>
                                             <div className="col-12">
-                                                <div className="form-group">
-                                                    <input type="tel" className="form-control " name="phone"
-                                                           placeholder="Phone Number" value=""/>
-                                                </div>
+                                                <FormField type="tel" name="phone" placeholder="Phone Number"/>
                                             </div>
                                         </div>
                                         <div className="row mb-10">
@@ -72,8 +70,8 @@ class Diesel extends Component {
                                             </div>
                                             <div className="col-sm-12 col-md-12 col-lg-12">
                                                 <div className="form-group">
-                                                    <input type="text" className="form-control " name="quantity"
-                                                           placeholder="Diesel Quantity (min: 2000 litres)"/>
+                                                    <FormField type="text" name="quantity"
+                                                               placeholder="Diesel Quantity (min: 2000 litres)"/>
                                                 </div>
                                             </div>
                                             <div className="col-sm-12 col-md-12 col-lg-12">
@@ -83,12 +81,11 @@ class Diesel extends Component {
                                         <div className="row mb-10">
                                             <div className="col-sm-12 col-md-12 col-lg-12">
                                                 <h5 className="form__title">Delivery Location</h5>
-
                                             </div>
                                             <div className="col-sm-12 col-md-12 col-lg-12">
                                                 <div className="form-group">
-                                                    <input type="text" className="form-control " name="delivery_address"
-                                                           placeholder="Full Delivery Address"/>
+                                                    <FormField type="text" name="delivery_address"
+                                                               placeholder="Full Delivery Address"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -100,7 +97,8 @@ class Diesel extends Component {
                                                 </button>
                                             </div>
                                         </div>
-                                    </form>)}</Formik>
+                                    </form>)}
+                            </Formik>
                         </div>
                     </div>
                 </div>

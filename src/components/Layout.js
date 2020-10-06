@@ -7,6 +7,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 import {NavLink, withRouter} from "react-router-dom";
 import {isMobile, isMobileSafari} from 'react-device-detect';
 import Auth from "../utils/Auth.Model";
+import {logout} from "../store/modules/auth";
 
 class _MobileFooter extends React.Component {
     state = {
@@ -82,14 +83,26 @@ class _MobileFooter extends React.Component {
                     </NavLink>
                     }
                 </div>
-                <div id="androidInstaller"
+                <div id="notifications"
                      className="d-none position-relative px-4 py-1 m-2 aligned bg-info text-white"
                      style={{borderRadius: 8,}}>
                     <img width={30} height={30} src="/images/favicon/favicon-r.png" alt="Ressortir App"/>
                     <p className="my-0 mx-3 fs-12" style={{color: '#fff'}}>
+                        Allow Notifications
+                    </p>
+                    <button id="notificationBtn" className="btn btn-success mr-3 btn-sm fs-12">Install</button>
+                    <AiOutlineClose id="notificationClose" className="text-white fs-34"/>
+                </div>
+
+
+                <div id="androidInstaller"
+                     className="d-none position-relative px-4 py-1 m-2 aligned bg-info text-white"
+                     style={{borderRadius: 8,}}>
+                    <img width={30} height={30} src="/images/favicon/favicon-r.png" alt="Ressortir App"/>
+                    <p className="my-0 mx-3 fs-12 " style={{color: '#fff'}}>
                         Install Ressortir App on your phone: tap install
                     </p>
-                    <button id="androidInstallerBtn" className="btn btn-success mr-3">Install</button>
+                    <button id="androidInstallerBtn" className="btn btn-success btn-sm fs-12 mr-3">Install</button>
                     <AiOutlineClose id="androidInstallerClose" className="text-white fs-34"/>
                 </div>
 
@@ -169,6 +182,7 @@ const MobileHeader = withRouter(_MobileHeader);
 
 class _WebHeader extends React.Component {
     render() {
+        const {user} = this.props
         return (
             <header id="header" className="header">
                 <nav className="navbar navbar-expand-lg">
@@ -185,8 +199,11 @@ class _WebHeader extends React.Component {
                             :
                             <div className="nav-form dash-head-link">
                                 <div className="dash-link">
-                                    <div className="dash-message mr-3">Welcome, Test Account</div>
-                                    <NavLink to="/logout" className="logout-link">
+                                    <div className="dash-message mr-3">Welcome, {user ? user.name : ' '}</div>
+                                    <NavLink to="#" onClick={()=>{
+                                        this.props.logout();
+                                        this.props.history.replace();
+                                    }} className="logout-link">
                                         <i className="fa fa-power-off "/> Logout</NavLink>
                                 </div>
                             </div>
@@ -198,7 +215,7 @@ class _WebHeader extends React.Component {
     }
 }
 
-const WebHeader = withRouter(_WebHeader);
+const WebHeader = connect(({User}) => ({user: User}), {logout})(withRouter(_WebHeader));
 
 
 class Contact extends React.Component {
@@ -269,7 +286,7 @@ class Layout extends React.Component {
                     {isMobile ? <MobileHeader  {...this.props}/> : <WebHeader {...this.props}/>}
                     {home ? this.props.children :
                         <div className="mt-5 mt-sm-0">
-                            <section style={{paddingTop: padded ? 130 : 0, paddingBottom: padded ? 100 : 0}}
+                            <section style={{paddingTop: 130, paddingBottom: 100}}
                                      className={this.props.innerClass ? this.props.innerClass :
                                          !this.props.noBg ? " request-quote dash-section" : ''}>
                                 <div className="container">
@@ -309,6 +326,18 @@ class Layout extends React.Component {
                                                         {/*             className="nav__item-link nav-icon-order_gas ">Order*/}
                                                         {/*        Gas</NavLink>*/}
                                                         {/*</li>*/}
+
+                                                        {
+                                                            isMobile &&
+                                                            <li className=" nav__item">
+                                                                <NavLink to="#" onClick={() => {
+                                                                    this.props.logout()
+                                                                    this.props.history.replace('/')
+                                                                }}
+                                                                         className="nav__item-click px-6">
+                                                                    <i className="fa fa-power-off fs-18 mr-2"/>Log Out
+                                                                </NavLink>
+                                                            </li>}
                                                     </ul>
                                                 </div>
                                             </div>
@@ -327,4 +356,4 @@ class Layout extends React.Component {
     }
 }
 
-export default Layout;
+export default connect(null, {logout})(Layout);

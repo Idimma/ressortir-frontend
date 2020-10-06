@@ -1,191 +1,122 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import Layout from "../components/Layout";
-import {isMobile} from 'react-device-detect';
+import {isMobileOnly} from 'react-device-detect';
 import {NavLink} from "react-router-dom";
+import {Carousel, CarouselIndicators, CarouselItem} from "reactstrap";
+
+const items = [
+    {
+        src: 'images/sliders/s-1.jpg',
+        altText: 'Slide 0',
+    },
+    {
+        src: 'images/sliders/s-diesel.jpg',
+        altText: 'Slide 1',
+    }, {
+        src: 'images/sliders/s-lpg.jpg',
+        altText: 'Slide 2',
+    }, {
+        src: 'images/sliders/s-diesel-2.jpg',
+        altText: 'Slide 3',
+    }, {
+        src: 'images/sliders/s-freight.jpg',
+        altText: 'Slide 4',
+    },
+
+];
+
+const Sliders = (props) => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [animating, setAnimating] = useState(false);
+
+    const next = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+    }
+
+    const previous = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+        setActiveIndex(nextIndex);
+    }
+
+    const goToIndex = (newIndex) => {
+        if (animating) return;
+        setActiveIndex(newIndex);
+    }
+
+    const slides = items.map((item, index) => {
+        return (
+            <CarouselItem
+                className={'slide-show position-relative'}
+                onExiting={() => setAnimating(true)}
+                onExited={() => setAnimating(false)}
+                key={item.src}
+                slide
+            >
+                <div className="slide-show-item bg-overlay">
+                    <div className="slide-show-img">
+                        <img src={item.src} alt="slide img"/>
+                    </div>
+                    <div className="container d-flex align-items-center h-100 ">
+
+                        <div className="col-sm-12 col-md-12 col-lg-8 ">
+                            {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
+                            <p  className="sliderdesc">
+                                Our core business at Ressortir is the sole-distribution of Automotive
+                                Gas Oil and
+                                Liquefied Petroleum Gas. In addition, Ressortir offers freight
+                                distribution across
+                                cities in Nigeria.
+                            </p>
+                            <p className="sliderdesc d-none d-sm-block" >
+                                With reputable years of experience and reliable channel of distribution
+                                across the
+                                country, we always ensure fast and accurate delivery of your products.
+                                We can handle
+                                long and short term contracts for restaurants, factories, schools,
+                                offices, and
+                                other
+                                multinationals.
+                            </p>
+                            {/* <a href="#" className="btn btn__primary btn__hover2 mr-30">Our Services</a> */}
+
+                        </div>
+                    </div>
+                </div>
+            </CarouselItem>
+        );
+    });
+
+    return (
+        <Carousel
+            activeIndex={activeIndex}
+            next={next}
+            interval={3000}
+            previous={previous}
+        >
+            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex}/>
+            {slides}
+            {/*<CarouselControl direction="prev" directionText="Previous" onClickHandler={previous}/>*/}
+            {/*<CarouselControl direction="next" directionText="Next" onClickHandler={next}/>*/}
+        </Carousel>
+    );
+}
 
 
 class HomePage extends Component {
+    componentDidMount() {
+
+    }
+
     render() {
         return (
-            <Layout innerClass="w-100" home noSideBar={!isMobile} noBg>
-                <section id="slider2" style={{marginTop: isMobile ? 65 : 0}} className={`slider slider-2`}>
-                    <div className="carousel owl-carousel carousel-arrows carousel-dots carousel-dots-white"
-                         data-slide="1"
-                         data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="true" data-dots="true"
-                         data-space="0"
-                         data-loop="true" data-speed="5000" data-transition="fade" data-animate-out="fadeOut"
-                         data-animate-in="fadeIn">
-                        <div className="slide-item slide-item-1 align-v-h bg-overlay">
-                            <div className="bg-img">
-                                <img src="images/sliders/s-1.jpg" alt="slide img"/>
-                            </div>
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-sm-12 col-md-12 col-lg-8">
-                                        <div className="slide__content">
-                                            {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
-                                            <p className="slide__desc">
-                                                Our core business at Ressortir is the sole-distribution of Automotive
-                                                Gas Oil and
-                                                Liquefied Petroleum Gas. In addition, Ressortir offers freight
-                                                distribution across
-                                                cities in Nigeria.
-                                            </p>
-                                            <p className="slide__desc">
-                                                With reputable years of experience and reliable channel of distribution
-                                                across the
-                                                country, we always ensure fast and accurate delivery of your products.
-                                                We can handle
-                                                long and short term contracts for restaurants, factories, schools,
-                                                offices, and
-                                                other
-                                                multinationals.
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="slide-item slide-item-3 align-v-h bg-overlay">
-                            <div className="bg-img"><img src="images/sliders/s-diesel.jpg" alt="slide img"/></div>
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-sm-12 col-md-12 col-lg-8">
-                                        <div className="slide__content">
-                                            {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
-                                            <p className="slide__desc">
-                                                Our core business at Ressortir is the sole-distribution of Automotive
-                                                Gas Oil and
-                                                Liquefied Petroleum Gas. In addition, Ressortir offers freight
-                                                distribution across
-                                                cities in Nigeria.
-                                            </p>
-                                            <p className="slide__desc">
-                                                With reputable years of experience and reliable channel of distribution
-                                                across the
-                                                country, we always ensure fast and accurate delivery of your products.
-                                                We can handle
-                                                long and short term contracts for restaurants, factories, schools,
-                                                offices, and
-                                                other
-                                                multinationals.
-                                            </p>
-                                            {/* <a href="#" className="btn btn__primary btn__hover2 mr-30">Our Services</a> */}
-
-                                        </div>
-                                        {/* /.slide-content */}
-                                    </div>
-                                    {/* /.col-lg-8 */}
-                                </div>
-                                {/* /.row */}
-                            </div>
-                            {/* /.container */}
-                        </div>
-                        <div className="slide-item slide-item-4 align-v-h bg-overlay">
-                            <div className="bg-img"><img src="images/sliders/s-lpg.jpg?v=2" alt="slide img"/></div>
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-sm-12 col-md-12 col-lg-8">
-                                        <div className="slide__content">
-                                            {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
-                                            <p className="slide__desc">
-                                                Our core business at Ressortir is the sole-distribution of Automotive
-                                                Gas Oil and
-                                                Liquefied Petroleum Gas. In addition, Ressortir offers freight
-                                                distribution across
-                                                cities in Nigeria.
-                                            </p>
-                                            <p className="slide__desc">
-                                                With reputable years of experience and reliable channel of distribution
-                                                across the
-                                                country, we always ensure fast and accurate delivery of your products.
-                                                We can handle
-                                                long and short term contracts for restaurants, factories, schools,
-                                                offices, and
-                                                other
-                                                multinationals.
-                                            </p>
-                                            {/* <a href="#" className="btn btn__primary btn__hover2 mr-30">Our Services</a> */}
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="slide-item slide-item-5 align-v-h bg-overlay">
-                            <div className="bg-img"><img src="images/sliders/s-diesel-2.jpg" alt="slide img"/></div>
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-sm-12 col-md-12 col-lg-8">
-                                        <div className="slide__content">
-                                            {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
-                                            <p className="slide__desc">
-                                                Our core business at Ressortir is the sole-distribution of Automotive
-                                                Gas Oil and
-                                                Liquefied Petroleum Gas. In addition, Ressortir offers freight
-                                                distribution across
-                                                cities in Nigeria.
-                                            </p>
-                                            <p className="slide__desc">
-                                                With reputable years of experience and reliable channel of distribution
-                                                across the
-                                                country, we always ensure fast and accurate delivery of your products.
-                                                We can handle
-                                                long and short term contracts for restaurants, factories, schools,
-                                                offices, and
-                                                other
-                                                multinationals.
-                                            </p>
-                                            {/* <a href="#" className="btn btn__primary btn__hover2 mr-30">Our Services</a> */}
-
-                                        </div>
-                                        {/* /.slide-content */}
-                                    </div>
-                                    {/* /.col-lg-8 */}
-                                </div>
-                                {/* /.row */}
-                            </div>
-                            {/* /.container */}
-                        </div>
-                        <div className="slide-item slide-item-4 align-v-h bg-overlay">
-                            <div className="bg-img"><img src="images/sliders/s-freight.jpg" alt="slide img"/></div>
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-sm-12 col-md-12 col-lg-8">
-                                        <div className="slide__content">
-                                            {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
-                                            <p className="slide__desc">
-                                                Our core business at Ressortir is the sole-distribution of Automotive
-                                                Gas Oil and
-                                                Liquefied Petroleum Gas. In addition, Ressortir offers freight
-                                                distribution across
-                                                cities in Nigeria.
-                                            </p>
-                                            <p className="slide__desc">
-                                                With reputable years of experience and reliable channel of distribution
-                                                across the
-                                                country, we always ensure fast and accurate delivery of your products.
-                                                We can handle
-                                                long and short term contracts for restaurants, factories, schools,
-                                                offices, and
-                                                other
-                                                multinationals.
-                                            </p>
-                                            {/* <a href="#" className="btn btn__primary btn__hover2 mr-30">Our Services</a> */}
-
-                                        </div>
-                                        {/* /.slide-content */}
-                                    </div>
-                                    {/* /.col-lg-8 */}
-                                </div>
-                                {/* /.row */}
-                            </div>
-                            {/* /.container */}
-                        </div>
-                    </div>
+            <Layout innerClass="w-100" home noSideBar noBg>
+                <section id="slider2" style={{marginTop: isMobileOnly ? 65 : 0}} className="slider p-0 slider-2">
+                    <Sliders/>
                 </section>
-                <section id="services" className="services">
+                <section className="p-0">
                     <h2 className="services-title">Our Services</h2>
                     <div className="container">
                         <div className="row text-center">
@@ -256,9 +187,8 @@ class HomePage extends Component {
                     </div>
 
                 </section>
-                <section id="mission" className="mission pt-40 pb-30">
+                <section className="mission pt-40 pb-30">
                     <div className="container">
-
                         <div className="row heading heading-2">
 
                             <div className="col-12">
@@ -302,6 +232,7 @@ class HomePage extends Component {
                         </div>
                         {/* /.row */}
                     </div>
+
                 </section>
             </Layout>
         )
@@ -309,3 +240,4 @@ class HomePage extends Component {
 }
 
 export default HomePage
+

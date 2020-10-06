@@ -4,9 +4,10 @@ import {isMobile} from 'react-device-detect';
 import {Formik} from "formik";
 import * as Yup from "yup";
 import {AppService} from "../services";
-import {toast} from "react-toastify";
+import * as SweetAlert from "sweetalert2";
 import {catchError} from "../utils";
 import {Spinner} from "reactstrap";
+import {FormField} from "../components/FormElements";
 
 
 class Freight extends Component {
@@ -18,16 +19,19 @@ class Freight extends Component {
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                             <Formik
+                                initialValues={{service: 'freight'}}
                                 validationSchema={Yup.object().shape({
                                     phone: Yup.string().min(9, 'Phone number is too short').required('Phone number is required'),
-                                    delivery_address: Yup.string().required('Email is required'),
-                                    quantity: Yup.string().required('Email is required'),
+                                    delivery_address: Yup.string().required('Delivery Address is required'),
+                                    pickup_address: Yup.string().required('Pickup Address is required'),
+                                    quantity: Yup.string().required('Quantity is required'),
+                                    goods_type: Yup.string().required('Good Type is required'),
+                                    goods_size: Yup.mixed().required('Good Size is required'),
                                     name: Yup.string().min(3, 'Name is too short').required('Name is required'),
                                 })}
-                                enableReinitialize
                                 onSubmit={(values, actions) => {
                                     AppService.createOrder(values).then(() => {
-                                        toast.success('Order Created Successfully');
+                                        SweetAlert.fire('Success', 'Order Created Successfully', 'success');
                                         this.props.history.replace('/')
                                     }).catch(catchError).finally(() => {
                                         actions.setSubmitting(false);
@@ -47,30 +51,14 @@ class Freight extends Component {
                                                 <h5 className="form__title">Personal / Company Data</h5>
                                             </div>
                                             <div className="col-12">
-                                                <div className="form-group">
-                                                    <input type="text"
-                                                           className="form-control @error('name') is-invalid @enderror"
-                                                           name="name" placeholder="Full Name"/>
-                                                    <span
-                                                        className="invalid-feedback"> <strong> </strong> </span>
-                                                </div>
+                                                <FormField type="text" name="name" placeholder="Full Name"/>
                                             </div>
                                             {/* /.col-lg-4 */}
                                             <div className="col-12">
-                                                <div className="form-group">
-                                                    <input type="email"
-                                                           className="form-control @error('email') is-invalid @enderror"
-                                                           name="email" placeholder="Email Address"
-                                                    />
-                                                </div>
+                                                <FormField type="email" name="email" placeholder="Email Address"/>
                                             </div>
                                             <div className="col-12">
-                                                <div className="form-group">
-                                                    <input type="tel"
-                                                           className="form-control @error('phone') is-invalid @enderror"
-                                                           name="phone" placeholder="Phone Number"
-                                                    />
-                                                </div>
+                                                <FormField type="tel" name="phone" placeholder="Phone Number"/>
                                             </div>
                                         </div>
                                         {/* /.row */}
@@ -84,39 +72,24 @@ class Freight extends Component {
 
                                             </div>
                                             <div className="col-sm-12 col-md-6">
-                                                <div className="form-group">
-                                                    <input type="text"
-                                                           className="form-control"
-                                                           name="goods_type" placeholder="Type of Goods"/>
-                                                </div>
+                                                <FormField type="text" name="goods_type" placeholder="Type of Goods"/>
                                             </div>
                                             <div className="col-sm-12 col-md-6">
-                                                <div className="form-group">
-                                                    <input type="text"
-                                                           className="form-control "
-                                                           name="goods_size" placeholder="Size of Goods"/>
-                                                </div>
+                                                <FormField type="text" name="goods_size" placeholder="Size of Goods"/>
                                             </div>
                                         </div>
                                         <div className="row mb-10">
                                             <div className="col-sm-12 col-md-12 col-lg-12">
                                                 <h5 className="form__title">Pick up and Delivery Location</h5>
-
                                             </div>
                                             <div className="col-sm-12 col-md-12">
-                                                <div className="form-group">
-                                                    <input type="text"
-                                                           className="form-control "
-                                                           name="pickup_address" placeholder="Full Pick up Address"/>
-
-                                                </div>
+                                                <FormField type="text" name="pickup_address"
+                                                           placeholder="Full Pick up Address"/>
                                             </div>
                                             <div className="col-sm-12 col-md-12">
-                                                <div className="form-group">
-                                                    <input type="text"
-                                                           className="form-control "
-                                                           name="delivery_address" placeholder="Full Delivery Address"/>
-                                                </div>
+                                                <FormField type="text" name="delivery_address"
+                                                           placeholder="Full Delivery Address"/>
+
                                             </div>
                                         </div>
                                         <div className="row">
