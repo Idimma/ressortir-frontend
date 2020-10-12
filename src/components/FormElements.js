@@ -31,7 +31,7 @@ const CustomSelectComponent = ({field, form: {touched, errors, isValid}, title, 
     );
 }
 
-export const DetailsForm = ({service, hideProfile, onClick}) => <div style={{display: hideProfile ? 'none' : 'block'}}>
+export const DetailsForm = ({service, hideProfile, onClick, addEmail}) => <div style={{display: hideProfile ? 'none' : 'block'}}>
     <input type="hidden" name="service" value={service}/>
     <div className="request-title">
 
@@ -50,6 +50,13 @@ export const DetailsForm = ({service, hideProfile, onClick}) => <div style={{dis
                 <FormField type="tel" className="form-control " name="phone" placeholder="Phone Number"/>
             </div>
         </div>
+        {
+           addEmail &&
+                <div className="col-12">
+            <div className="form-group">
+                <FormField type="email" className="form-control " name="email" placeholder="Email Address"/>
+            </div>
+        </div>}
     </div>
 
     <div className="row">

@@ -31,10 +31,36 @@ class Router extends Component {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js')
                     .then(registration => {
+                        registration.onupdatefound = () => {
+                            const installingWorker = registration.installing;
+                            if (installingWorker == null) {
+                                return;
+                            }
+                            installingWorker.onstatechange = () => {
+                                if (installingWorker.state === 'installed') {
+                                    if (navigator.serviceWorker.controller) {
+                                        // We will use this callback to present button to allow user to refresh
+                                        // the application
+
+                                        // Execute callback
+                                        navigator.serviceWorker.ready.then(registration => {
+                                            registration.update().then(() => {
+
+                                            });
+                                        });
+
+                                    } else {
+                                        // Not necessary for this example
+                                    }
+                                }
+                            };
+                        };
                     })
                     .catch(registrationError => {
                         console.log('SW registration failed: ', registrationError);
                     });
+
+
             });
         }
         window.addEventListener('beforeinstallprompt', this.installPrompt);
@@ -135,6 +161,7 @@ class Router extends Component {
                         <Route exact path="/dashboard/order/:id" component={SingleOrder}/>
                         <Route exact path="/dashboard/freight" component={DashFreight}/>
                         <Route exact path="/dashboard/lpg" component={DashLpg}/>
+                        <Route exact path="/dashboard/gas" component={DashGas}/>
                         <Route exact path="/dashboard/diesel" component={DashDiesel}/>
                         <Route exact path="/profile" component={Profile}/>
                         <GuestRoute exact path="/diesel" component={Diesel}/>

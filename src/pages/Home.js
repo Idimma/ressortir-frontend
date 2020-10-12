@@ -13,10 +13,10 @@ const items = [
     //     src: 'images/sliders/s-diesel.jpg',
     //     altText: 'Slide 1',
     // },
-    {
-        src: 'images/sliders/bdressortir-team.jpg',
-        altText: 'Slide 1',
-    },
+    // {
+    //     src: 'images/sliders/bdressortir-team.jpg',
+    //     altText: 'Slide 1',
+    // },
     {
         src: 'images/sliders/bdressortir-team2.jpg',
         altText: 'Slide 1',
@@ -125,7 +125,7 @@ class HomePage extends Component {
                     <Sliders/>
 
                 </section>
-                <div className="container  d-sm-none py-5">
+                <div className="container  d-sm-none ">
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-8 ">
                             {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
@@ -168,12 +168,25 @@ class HomePage extends Component {
                                         </NavLink>
                                     </div>
                                 </div>
-
+                            </div>
+                            <div className="col-sm-6 col-md-4">
+                                <div className="service-item service-item-2">
+                                    <div className="service__icon">
+                                        <i className="service__icon-gas"/>
+                                        <h1 className="service__title">Domestic Gas Refill</h1>
+                                    </div>
+                                    <div className="service__content">
+                                        <NavLink to="/gas" className="btn btn__white"
+                                                 title="Domestic Gas Refill">
+                                            <span>Request</span>
+                                        </NavLink>
+                                    </div>
+                                </div>
                             </div>
                             <div className="col-sm-6 col-md-4">
                                 <div className="service-item service-item-1">
                                     <div className="service__icon">
-                                        <i className="service__icon-gas"/>
+                                        <i className="service__icon-lpg"/>
                                         <h1 className="service__title">LPG Tank Refill</h1>
                                     </div>
                                     <div className="service__content">
@@ -200,36 +213,6 @@ class HomePage extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-sm-6 col-md-4">
-                                <div className="service-item service-item-2">
-                                    <div className="service__icon">
-                                        <i className="service__icon-gas"/>
-                                        <h1 className="service__title">Domestic Gas Refill</h1>
-                                    </div>
-                                    <div className="service__content">
-                                        <NavLink to="/gas" className="btn btn__white"
-                                                 title="Domestic Gas Refill">
-                                            <span>Request</span>
-                                        </NavLink>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* <div className="col-sm-6 col-md-3">
-        <div className="service-item service-item-3">
-            <div className="service__icon">
-                <i className="service__icon-gas"></i>
-                <h4 className="service__title">Domestic Gas Refill </h4>
-            </div>
-            <div className="service__content">
-                <a href="https://ressortir.com/gas" className="btn btn__white">
-                    <span>Request</span>
-                </a>
-            </div>
-        </div>
-
-    </div> */}
-
                         </div>
 
                     </div>
@@ -241,7 +224,7 @@ class HomePage extends Component {
 
                             <div className="col-12">
                                 <h2 className="heading__title">
-                                    <i className="heading__title-icon-mission"></i> Our Mission
+                                    <i className="heading__title-icon-mission"/> Our Mission
                                 </h2>
                             </div>
                             {/* /.col-lg-5 */}

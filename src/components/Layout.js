@@ -156,8 +156,7 @@ class _MobileHeader extends React.Component {
                                     <img src="/images/logo/ressortir-logo.png" className="logo-dark" alt="logo"/>
                                 </NavLink>
                                 <div className="nav-form">
-                                    <NavLink to="/login" className="nav-form-btn btn-login-mobile"
-                                             title="Login">Login</NavLink>
+
                                 </div>
                             </div>
                         </nav>

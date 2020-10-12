@@ -34,6 +34,19 @@ class RequestPage extends Component {
                                     </NavLink>
                                 </div>
                             </div>
+                            <div className="col-sm-6 col-md-4">
+                                <div className="request-item ">
+                                    <div className="aligned mr-auto">
+                                        <img src={gas} alt=""/>
+                                        <h1 className="fs-18">Domestic Gas Refill</h1>
+                                    </div>
+                                    <NavLink to={Auth.isAuthenticated() ? "/dashboard/gas" : "/gas"}
+                                             className="btn btn-danger btn-round ml-auto"
+                                             title="Gas Distribution">
+                                        <span>Request</span>
+                                    </NavLink>
+                                </div>
+                            </div>
 
                             <div className="col-sm-6 col-md-4">
                                 <div className="request-item ">
@@ -48,7 +61,6 @@ class RequestPage extends Component {
                                     </NavLink>
                                 </div>
                             </div>
-
                             <div className="col-sm-6 col-md-4">
                                 <div className="request-item ">
                                     <div className="aligned mr-auto">
@@ -62,23 +74,7 @@ class RequestPage extends Component {
                                     </NavLink>
                                 </div>
                             </div>
-                            <div className="col-sm-6 col-md-4">
-                                <div className="request-item ">
-                                    <div className="aligned mr-auto">
-                                        <img src={gas} alt=""/>
-                                        <h1 className="fs-18">Gas Distribution</h1>
-                                    </div>
-                                    <NavLink to={Auth.isAuthenticated() ? "/dashboard/gas" : "/gas"}
-                                             className="btn btn-danger btn-round ml-auto"
-                                             title="Gas Distribution">
-                                        <span>Request</span>
-                                    </NavLink>
-                                </div>
-                            </div>
-
-
                         </div>
-
                     </div>
                 </Layout>
             )
