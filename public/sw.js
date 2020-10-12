@@ -47,7 +47,7 @@ var PRECACHE_URLS = [
     '/512.png'
 ];
 
-const PRECACHE = 'ressortirpwa-1devtt';
+const PRECACHE = 'ressortirpwa-prod';
 const RUNTIME = 'runtime';
 
 
