@@ -12,13 +12,32 @@ const items = [
     {
         src: 'images/sliders/s-diesel.jpg',
         altText: 'Slide 1',
-    }, {
+    },
+    {
+        src: 'images/sliders/bdressortir-team.jpg',
+        altText: 'Slide 1',
+    },
+    {
+        src: 'images/sliders/bdressortir-team2.jpg',
+        altText: 'Slide 1',
+    },
+    {
+        src: 'images/sliders/bdressortir-team3.jpg',
+        altText: 'Slide 1',
+    },
+    {
+        src: 'images/sliders/bdressortir-team4.jpg',
+        altText: 'Slide 1',
+    },
+    {
         src: 'images/sliders/s-lpg.jpg',
         altText: 'Slide 2',
-    }, {
+    },
+    {
         src: 'images/sliders/s-diesel-2.jpg',
         altText: 'Slide 3',
-    }, {
+    },
+    {
         src: 'images/sliders/s-freight.jpg',
         altText: 'Slide 4',
     },
@@ -57,20 +76,20 @@ const Sliders = (props) => {
             >
                 <div className="slide-show-item bg-overlay">
                     <div className="slide-show-img">
-                        <img src={item.src} alt="slide img"/>
+                        <img src={item.src}  alt="slide img"/>
                     </div>
-                    <div className="container d-flex align-items-center h-100 ">
-
+                    <div className="container d-flex align-items-center h-100">
                         <div className="col-sm-12 col-md-12 col-lg-8 ">
                             {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
-                            <p  className="sliderdesc">
+                            <div className="slide-img"/>
+                            <p className="sliderdesc d-none d-sm-block">
                                 Our core business at Ressortir is the sole-distribution of Automotive
                                 Gas Oil and
                                 Liquefied Petroleum Gas. In addition, Ressortir offers freight
                                 distribution across
                                 cities in Nigeria.
                             </p>
-                            <p className="sliderdesc d-none d-sm-block" >
+                            <p className="sliderdesc d-none d-sm-block">
                                 With reputable years of experience and reliable channel of distribution
                                 across the
                                 country, we always ensure fast and accurate delivery of your products.
@@ -115,7 +134,34 @@ class HomePage extends Component {
             <Layout innerClass="w-100" home noSideBar noBg>
                 <section id="slider2" style={{marginTop: isMobileOnly ? 65 : 0}} className="slider p-0 slider-2">
                     <Sliders/>
+
                 </section>
+                <div className="container  d-sm-none py-5">
+                    <div className="row">
+                        <div className="col-sm-12 col-md-12 col-lg-8 ">
+                            {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
+                            <p className="sliderdesc ">
+                                Our core business at Ressortir is the sole-distribution of Automotive
+                                Gas Oil and
+                                Liquefied Petroleum Gas. In addition, Ressortir offers freight
+                                distribution across
+                                cities in Nigeria.
+                            </p>
+                            <p className="sliderdesc ">
+                                With reputable years of experience and reliable channel of distribution
+                                across the
+                                country, we always ensure fast and accurate delivery of your products.
+                                We can handle
+                                long and short term contracts for restaurants, factories, schools,
+                                offices, and
+                                other
+                                multinationals.
+                            </p>
+                            {/* <a href="#" className="btn btn__primary btn__hover2 mr-30">Our Services</a> */}
+
+                        </div>
+                    </div>
+                </div>
                 <section className="p-0">
                     <h2 className="services-title">Our Services</h2>
                     <div className="container">

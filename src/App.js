@@ -12,10 +12,12 @@ import HomePage from "./pages/Home";
 import RequestPage from "./pages/RequestPage";
 import Diesel from './pages/Diesel';
 import Lpg from './pages/Lpg';
+import Gas from './pages/Gas';
 import Freight from './pages/Freight';
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import DashFreight from "./pages/dashboard/Freight";
+import DashGas from "./pages/dashboard/Freight";
 import DashLpg from "./pages/dashboard/Lpg";
 import DashDiesel from "./pages/dashboard/Diesel";
 import SingleOrder from "./pages/Single";
@@ -137,6 +139,7 @@ class Router extends Component {
                         <Route exact path="/profile" component={Profile}/>
                         <GuestRoute exact path="/diesel" component={Diesel}/>
                         <GuestRoute exact path="/lpg" component={Lpg}/>
+                        <GuestRoute exact path="/gas" component={Gas}/>
                         <GuestRoute exact path="/freight" component={Freight}/>
                         <GuestRoute exact path="/login" component={Login}/>
                         <Route path="*" component={_404}/>

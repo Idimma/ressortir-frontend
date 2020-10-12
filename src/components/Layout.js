@@ -279,7 +279,7 @@ class Layout extends React.Component {
 
 
     render() {
-        const {noFooter, noMobileFooter, noSideBar, padded, home} = this.props;
+        const {noFooter, noMobileFooter, noSideBar,  home} = this.props;
         return (
             <div className="m-0 position-relative">
                 <div className="wrapper home">
@@ -321,11 +321,11 @@ class Layout extends React.Component {
                                                                      className="nav__item-link nav-icon-account ">Account
                                                                 Info</NavLink>
                                                         </li>
-                                                        {/*<li className=" nav__item">*/}
-                                                        {/*    <NavLink to="/dashboard/gas"*/}
-                                                        {/*             className="nav__item-link nav-icon-order_gas ">Order*/}
-                                                        {/*        Gas</NavLink>*/}
-                                                        {/*</li>*/}
+                                                        <li className=" nav__item">
+                                                            <NavLink to="/dashboard/gas"
+                                                                     className="nav__item-link nav-icon-order_gas ">Order
+                                                                Gas</NavLink>
+                                                        </li>
 
                                                         {
                                                             isMobile &&

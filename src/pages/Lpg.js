@@ -9,7 +9,7 @@ import {catchError} from "../utils";
 import {FormField, FormSelect} from "../components/FormElements";
 import * as SweetAlert from "sweetalert2";
 
-class Login extends Component {
+class LpgPage extends Component {
     render() {
         return (
             <Layout noFooter={isMobile} padded={isMobile}
@@ -137,4 +137,4 @@ class Login extends Component {
     }
 }
 
-export default Login
+export default LpgPage
