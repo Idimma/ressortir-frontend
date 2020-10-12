@@ -1,4 +1,4 @@
-export const SERVER = 'https://admin.ressortir.com/';
+export const SERVER = 'https://admin.ressortir.com/api/';
 // export const SERVER = 'http://127.0.0.1:8000/api/';
 
 const EndPoints = SERVER;

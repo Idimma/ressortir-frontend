@@ -202,7 +202,7 @@ class _WebHeader extends React.Component {
                                     <div className="dash-message mr-3">Welcome, {user ? user.name : ' '}</div>
                                     <NavLink to="#" onClick={()=>{
                                         this.props.logout();
-                                        this.props.history.replace();
+                                        this.props.history.replace('/');
                                     }} className="logout-link">
                                         <i className="fa fa-power-off "/> Logout</NavLink>
                                 </div>

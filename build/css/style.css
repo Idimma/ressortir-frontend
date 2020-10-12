@@ -5882,7 +5882,7 @@ section.mission-policy {
 }
 
 .request-quote.request-gas {
-    background-image: url(../images/sliders/gas.jpg);
+    background-image: url(../images/sliders/gas-refill.jpeg);
     background-position: center;
     background-size: cover;
 }
@@ -7481,7 +7481,7 @@ section#services .row>div[class^="col"] {
 }
 
 .service-item .service__icon .service__icon-gas {
-    background: url(../images/icons/gas.png) no-repeat;
+    background: url(../images/icons/gas.svg) no-repeat;
 }
 
 .service-item .service__img {

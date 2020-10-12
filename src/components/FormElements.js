@@ -34,6 +34,7 @@ const CustomSelectComponent = ({field, form: {touched, errors, isValid}, title, 
 export const DetailsForm = ({service, hideProfile, onClick}) => <div style={{display: hideProfile ? 'none' : 'block'}}>
     <input type="hidden" name="service" value={service}/>
     <div className="request-title">
+
         <h2>{service} Request Info</h2>
         <p>Please make sure the details below are correct for this
             particular order </p>

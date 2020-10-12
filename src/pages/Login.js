@@ -6,6 +6,7 @@ import {FormField} from "../components/FormElements";
 import {Formik} from "formik";
 import {connect} from "react-redux";
 import {login} from "../store/modules/auth";
+import {Spinner} from "reactstrap";
 
 
 class Login extends Component {
@@ -22,7 +23,7 @@ class Login extends Component {
                                         this.props.login(values,setSubmitting, this.props.history.replace);
                                     }}
                                 >
-                                    {({handleSubmit, handleChange, handleBlur, values, errors,}) => (
+                                    {({handleSubmit, isSubmitting}) => (
                                         <form onSubmit={handleSubmit} className="request-quote-form">
                                             <div className="request-title">
                                                 <h2>Login</h2>
@@ -55,7 +56,7 @@ class Login extends Component {
                                             <div className="form-group row mb-0">
                                                 <div className="col-md-10 offset-md-1">
                                                     <button type="submit" className="btn btn__block btn__primary">
-                                                        Login
+                                                        {isSubmitting ? <Spinner/> : 'Login'}
                                                     </button>
 
                                                 </div>

@@ -5,14 +5,14 @@ import {NavLink} from "react-router-dom";
 import {Carousel, CarouselIndicators, CarouselItem} from "reactstrap";
 
 const items = [
-    {
-        src: 'images/sliders/s-1.jpg',
-        altText: 'Slide 0',
-    },
-    {
-        src: 'images/sliders/s-diesel.jpg',
-        altText: 'Slide 1',
-    },
+    // {
+    //     src: 'images/sliders/s-1.jpg',
+    //     altText: 'Slide 0',
+    // },
+    // {
+    //     src: 'images/sliders/s-diesel.jpg',
+    //     altText: 'Slide 1',
+    // },
     {
         src: 'images/sliders/bdressortir-team.jpg',
         altText: 'Slide 1',
@@ -23,10 +23,6 @@ const items = [
     },
     {
         src: 'images/sliders/bdressortir-team3.jpg',
-        altText: 'Slide 1',
-    },
-    {
-        src: 'images/sliders/bdressortir-team4.jpg',
         altText: 'Slide 1',
     },
     {
@@ -52,18 +48,18 @@ const Sliders = (props) => {
         if (animating) return;
         const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
         setActiveIndex(nextIndex);
-    }
+    };
 
     const previous = () => {
         if (animating) return;
         const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
         setActiveIndex(nextIndex);
-    }
+    };
 
     const goToIndex = (newIndex) => {
         if (animating) return;
         setActiveIndex(newIndex);
-    }
+    };
 
     const slides = items.map((item, index) => {
         return (
@@ -76,7 +72,7 @@ const Sliders = (props) => {
             >
                 <div className="slide-show-item bg-overlay">
                     <div className="slide-show-img">
-                        <img src={item.src}  alt="slide img"/>
+                        <img src={item.src} alt="slide img"/>
                     </div>
                     <div className="container d-flex align-items-center h-100">
                         <div className="col-sm-12 col-md-12 col-lg-8 ">
@@ -84,23 +80,16 @@ const Sliders = (props) => {
                             <div className="slide-img"/>
                             <p className="sliderdesc d-none d-sm-block">
                                 Our core business at Ressortir is the sole-distribution of Automotive
-                                Gas Oil and
-                                Liquefied Petroleum Gas. In addition, Ressortir offers freight
-                                distribution across
-                                cities in Nigeria.
+                                Gas Oil and Liquefied Petroleum Gas. In addition, Ressortir offers freight
+                                distribution across cities in Nigeria.
                             </p>
                             <p className="sliderdesc d-none d-sm-block">
                                 With reputable years of experience and reliable channel of distribution
-                                across the
-                                country, we always ensure fast and accurate delivery of your products.
-                                We can handle
-                                long and short term contracts for restaurants, factories, schools,
-                                offices, and
-                                other
-                                multinationals.
+                                across the country, we always ensure fast and accurate delivery of your products.
+                                We can handle long and short term contracts for restaurants, factories, schools,
+                                offices, and other multinationals.
                             </p>
                             {/* <a href="#" className="btn btn__primary btn__hover2 mr-30">Our Services</a> */}
-
                         </div>
                     </div>
                 </div>
@@ -165,7 +154,7 @@ class HomePage extends Component {
                 <section className="p-0">
                     <h2 className="services-title">Our Services</h2>
                     <div className="container">
-                        <div className="row text-center">
+                        <div className="row text-center justify-content-sm-center">
                             <div className="col-sm-6 col-md-4">
                                 <div className="service-item service-item-1">
                                     <div className="service__icon">
@@ -210,7 +199,20 @@ class HomePage extends Component {
                                         </NavLink>
                                     </div>
                                 </div>
-
+                            </div>
+                            <div className="col-sm-6 col-md-4">
+                                <div className="service-item service-item-2">
+                                    <div className="service__icon">
+                                        <i className="service__icon-gas"/>
+                                        <h1 className="service__title">Domestic Gas Refill</h1>
+                                    </div>
+                                    <div className="service__content">
+                                        <NavLink to="/gas" className="btn btn__white"
+                                                 title="Domestic Gas Refill">
+                                            <span>Request</span>
+                                        </NavLink>
+                                    </div>
+                                </div>
                             </div>
 
                             {/* <div className="col-sm-6 col-md-3">

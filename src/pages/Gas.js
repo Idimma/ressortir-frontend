@@ -25,8 +25,8 @@ class Gas extends Component {
         const {showProfile} = this.state;
         const {user: {name, email, phone}} = this.props;
         return (
-            <Layout onBack={this.goBack} noFooter={isMobile} padded={isMobile} title="Request Freight"
-                    innerClass={`request-quote request-diesel`}>
+            <Layout onBack={this.goBack} noFooter={isMobile} padded={isMobile} title="Request Gas"
+                    innerClass={`request-quote request-gas`}>
                 <div className={`container  ${!isMobile && 'pt-110'} mb-5 pb-90`}>
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
@@ -49,28 +49,13 @@ class Gas extends Component {
                             >
                                 {({handleSubmit, isSubmitting}) => (
                                     <form onSubmit={handleSubmit} className="request-quote-form">
-                                        <div className="request-title">
-                                            <h1>Order Gas Refill</h1>
-                                            <p>kindly fill out the form below</p>
-                                        </div>
-                                        <div className="row mb-10">
-                                            <div className="col-12">
-                                                <h5 className="form__title">Personal Data</h5>
+                                        {/*<div className="request-title">*/}
+                                        {/*    <h1>Order Gas Refill</h1>*/}
+                                        {/*    <p>kindly fill out the form below</p>*/}
+                                        {/*</div>*/}
 
-                                            </div>
-                                            <div className="col-12">
-                                                <FormField type="text" name="name" placeholder="Full Name"/>
-                                            </div>
-                                            <div className="col-12">
-                                                <FormField type="email" name="email" required
-                                                           placeholder="Email Address"/>
-                                            </div>
-                                            <div className="col-12">
-                                                <FormField type="tel" name="phone" placeholder="Phone Number"/>
-                                            </div>
-                                        </div>
                                         <DetailsForm
-                                            hideProfile={showProfile} service="lpg"
+                                            hideProfile={showProfile} service="gas"
                                             onClick={() => this.setState({showProfile: true})}
                                         />
                                         <div style={{display: showProfile ? 'block' : 'none'}}>
@@ -149,12 +134,9 @@ class Gas extends Component {
                                                                 data-size="12.5KG+cylinder"
                                                                 data-amount="15750"
                                                                 className="check-text"/>
-                                                            <div
-                                                                className="label-check_text-meta">
-                                                                                                                    <span
-                                                                                                                        className="label-check_text-descr">Purchase 12.5kg Ressortir branded Gas Cylinder </span>
-                                                                <span
-                                                                    className="price">₦15,750</span>
+                                                            <div className="label-check_text-meta">
+                                                                <span className="label-check_text-descr">Purchase 12.5kg Ressortir branded Gas Cylinder </span>
+                                                                <span  className="price">₦15,750</span>
                                                             </div>
                                                         </label>
                                                     </div>
@@ -310,13 +292,7 @@ class Gas extends Component {
                                             </div>
                                         </div>
 
-                                        <div className="row">
-                                            <div className="col-sm-12 text-center">
-                                                <button type="submit" className="btn btn__primary">
-                                                    {isSubmitting ? <Spinner/> : 'Request A Quote'}
-                                                </button>
-                                            </div>
-                                        </div>
+
                                     </form>
 
                                 )}

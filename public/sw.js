@@ -35,6 +35,10 @@ var PRECACHE_URLS = [
     'images/icons/policy.png',
     'images/sliders/dashboard.jpg',
     'images/sliders/diesel.png',
+    'images/sliders/bdressortir-team.jpg',
+    'images/sliders/bdressortir-team2.jpg',
+    'images/sliders/bdressortir-team3.jpg',
+    'images/sliders/bdressortir-team4.jpg',
     'images/sliders/diesel.jpg',
     'images/sliders/page-gradient.png',
 
@@ -47,7 +51,7 @@ var PRECACHE_URLS = [
     '/512.png'
 ];
 
-const PRECACHE = 'ressortirpwa-prod';
+const PRECACHE = 'ressortir-pwa-prod';
 const RUNTIME = 'runtime';
 
 
