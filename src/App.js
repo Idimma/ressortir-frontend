@@ -22,6 +22,7 @@ import DashLpg from "./pages/dashboard/Lpg";
 import DashDiesel from "./pages/dashboard/Diesel";
 import SingleOrder from "./pages/Single";
 import {isMobile, isMobileSafari} from "react-device-detect";
+import Forget from "./pages/Forget";
 
 let installPromptEvent, notificationEvents;
 
@@ -168,6 +169,7 @@ class Router extends Component {
                         <GuestRoute exact path="/lpg" component={Lpg}/>
                         <GuestRoute exact path="/gas" component={Gas}/>
                         <GuestRoute exact path="/freight" component={Freight}/>
+                        <GuestRoute exact path="/password/reset" component={Forget}/>
                         <GuestRoute exact path="/login" component={Login}/>
                         <Route path="*" component={_404}/>
                         <Redirect to="/"/>

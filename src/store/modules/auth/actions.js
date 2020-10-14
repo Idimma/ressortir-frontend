@@ -10,7 +10,10 @@ export const setLoading = isLoading => dispatch => dispatch({type: IS_LOADING, p
 
 export const setEmail = email => dispatch => dispatch({type: EMAIL, payload: email});
 
-export const setToken = token => dispatch => dispatch({type: APP_TOKEN, payload: token});
+export const setToken = token => dispatch => {
+    window.localStorage.setItem('ressortir-token', token);
+    dispatch({type: APP_TOKEN, payload: token});
+}
 
 export const setUser = user => dispatch => dispatch({type: USER, payload: user});
 
@@ -40,10 +43,11 @@ export const logout = () => async (dispatch, getState) => {
     dispatch(setUser({}));
     dispatch(setLoggedin(false));
     dispatch(setToken(''));
+    window.localStorage.clear();
 };
-let email = ''
+let email = '';
 export const forgetPassword = (data, setSubmitting, replace) => async (dispatch, getState) => {
-    email = data.email
+    email = data.email;
     AuthService.forgetPassword(data).then((response) => {
         setSubmitting(false);
         toast.success('Check your mail we have sent a password reset link', {

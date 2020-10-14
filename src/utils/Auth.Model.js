@@ -1,8 +1,10 @@
 import store from "../store";
+import {isNull} from "./helper";
 
 class Auth {
     isAuthenticated() {
-        return store.getState().Auth ? store.getState().Auth.isLoggedin ===  true : false
+        return window.localStorage ? !isNull(window.localStorage.getItem('ressortir-token')) :
+            store.getState().Auth ? store.getState().Auth.isLoggedin === true : false
     }
 }
 

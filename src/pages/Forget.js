@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 import {FormField} from "../components/FormElements";
 import {Formik} from "formik";
 import {connect} from "react-redux";
-import {login} from "../store/modules/auth";
+import {forgetPassword, login} from "../store/modules/auth";
 
 
 class Login extends Component {
@@ -19,7 +19,7 @@ class Login extends Component {
                                 <Formik
                                     initialValues={{email: ''}}
                                     onSubmit={(values, {setSubmitting}) => {
-                                        this.props.login(values,setSubmitting, this.props.history.replace);
+                                        this.props.forgetPassword(values,setSubmitting, this.props.history.replace);
                                     }}
                                 >
                                     {({handleSubmit, handleChange, handleBlur, values, errors,}) => (
@@ -51,4 +51,4 @@ class Login extends Component {
     }
 }
 
-export default connect(null, {login})( Login)
+export default connect(null, {forgetPassword})( Login)

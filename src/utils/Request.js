@@ -8,15 +8,22 @@ const baseURL = SERVER;
  * Configure axios to automatically add baseUrl and authorization to needed api request
  */
 let TOKEN = '';
-export default (tkn) => {
+export default (tkn = window.localStorage.getItem('ressortir-token')) => {
     const token = tkn || store.getState().Auth.token;
-    if (token) {
-        TOKEN = token;
-        return axios.create({
-            baseURL,
-            headers: {Authorization: `Bearer ${token}`}
-        })
-    } else return axios.create({baseURL})
+    try {
+        if (token) {
+            if (!tkn) {
+                window.localStorage.setItem('ressortir-token', token)
+            }
+            TOKEN = token;
+            return axios.create({
+                baseURL,
+                headers: {Authorization: `Bearer ${token}`}
+            })
+        } else return axios.create({baseURL})
+    }catch (e) {
+        return axios.create({baseURL})
+    }
 }
 
 export const token = TOKEN;

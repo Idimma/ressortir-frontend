@@ -14,8 +14,8 @@ class RequestPage extends Component {
         if (isMobile) {
             return (
                 <Layout noFooter={isMobile} noBg title="Order Request">
-                    <div className="container pt-30 mt-60 pt-sm-0">
-                        <div className="mb-4 mt-20 text-center">
+                    <div className="container ">
+                        <div className="mb-4  text-center">
                             <p className="p-0 ">
                                 Please select the order type you will like to have an estimate for.
                             </p>

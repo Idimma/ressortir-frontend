@@ -15,8 +15,7 @@ class Dashboard extends Component {
     }
 
     componentDidMount() {
-        // this.loadAllOrders();
-
+        this.loadAllOrders();
     }
 
     loadAllOrders() {
@@ -24,7 +23,7 @@ class Dashboard extends Component {
         AppService.allOrders().then(({data: {data}}) => {
             this.setState({isLoading: false, ...data})
         }).catch((error) => {
-            this.setState({isLoading: false})
+            this.setState({isLoading: false});
             catchError(error)
         });
     }

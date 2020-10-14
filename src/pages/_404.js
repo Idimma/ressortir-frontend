@@ -10,7 +10,7 @@ class _404 extends Component {
                 <div style={{paddingTop: 0, paddingBottom: 180, textAlign: 'center'}}>
                     <img src={not_found} alt="404" className="mx-auto col-10 col-sm-7"/>
                     <h2 style={{textTransform: 'uppercase'}}>
-                        {this.props.history.location.pathname.replace('/', ' ')} PAGE NOT FOUND
+                        PAGE NOT FOUND
                     </h2>
                 </div>
             </Layout>

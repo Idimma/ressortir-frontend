@@ -19,12 +19,15 @@ class Freight extends Component {
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                             <Formik
-                                initialValues={{service: 'freight'}}
+                                initialValues={{
+                                    service: 'freight', phone: '', pickup_address: '', email:'',
+                                    goods_size: '', name: '', goods_type: '', delivery_address: ''
+                                }}
                                 validationSchema={Yup.object().shape({
                                     phone: Yup.string().min(9, 'Phone number is too short').required('Phone number is required'),
                                     delivery_address: Yup.string().required('Delivery Address is required'),
                                     pickup_address: Yup.string().required('Pickup Address is required'),
-                                    quantity: Yup.string().required('Quantity is required'),
+                                    email: Yup.string().email().required('Email is required'),
                                     goods_type: Yup.string().required('Good Type is required'),
                                     goods_size: Yup.mixed().required('Good Size is required'),
                                     name: Yup.string().min(3, 'Name is too short').required('Name is required'),
@@ -94,7 +97,7 @@ class Freight extends Component {
                                         </div>
                                         <div className="row">
                                             <div className="col-sm-12 col-md-12 col-lg-12 text-center">
-                                                <button type="submit" className="btn btn__primary">
+                                                <button type="submit" className="btn btn-round b btn__primary">
                                                     {isSubmitting ? <Spinner/> : 'Request A Quote'}
                                                 </button>
                                             </div>

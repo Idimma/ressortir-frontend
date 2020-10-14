@@ -17,8 +17,17 @@ const items = [
     //     src: 'images/sliders/bdressortir-team.jpg',
     //     altText: 'Slide 1',
     // },
+
     {
-        src: 'images/sliders/bdressortir-team2.jpg',
+        src: 'images/sliders/s-diesel-2.jpg',
+        altText: 'Slide 3',
+    },
+    {
+        src: 'images/sliders/s-freight.jpg',
+        altText: 'Slide 4',
+    },
+    {
+        src: 'images/sliders/bd.res.banner2.jpg',
         altText: 'Slide 1',
     },
     {
@@ -28,14 +37,6 @@ const items = [
     {
         src: 'images/sliders/s-lpg.jpg',
         altText: 'Slide 2',
-    },
-    {
-        src: 'images/sliders/s-diesel-2.jpg',
-        altText: 'Slide 3',
-    },
-    {
-        src: 'images/sliders/s-freight.jpg',
-        altText: 'Slide 4',
     },
 
 ];

@@ -9,13 +9,20 @@ export const isNull = (value) => (value === null || value === undefined || value
 export const Naira = '₦';
 
 export const catchError = (error) => {
-    console.log(error.response);
+    // console.log(error.response);
     if (error.response) {
         const data = error.response.data;
         if (error.response.status === 401) {
             store.dispatch(logout());
             store.dispatch(push('/login'));
             return toast.error('Login again')
+        }
+
+        if (error.response.status === 404) {
+            return toast.dark('Something went wrong ')
+        }
+        if (error.response.status === 500) {
+            return toast.dark('Something went wrong ')
         }
 
         if (data.errors) {
