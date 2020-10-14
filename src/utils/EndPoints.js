@@ -1,5 +1,5 @@
-export const SERVER = 'https://admin.ressortir.com/api/';
-// export const SERVER = 'http://127.0.0.1:8000/api/';
+// export const SERVER = 'https://admin.ressortir.com/api/';
+export const SERVER = 'http://localhost:8000/api/';
 
 const EndPoints = SERVER;
 
@@ -10,7 +10,7 @@ export const LOGIN = EndPoints + "login";
 export const CREATE_ORDER = `${EndPoints}orders`;
 export const ALL_ORDERS = `${EndPoints}orders/all`;
 export const GET_TASK = `${EndPoints}tasks/all`;
-export const SHOW_TASK = (id) => `${EndPoints}tasks/${id}`;
+export const SHOW_TASK = (id) => `${EndPoints}order/${id}`;
 export const SHOW_TASK_COMMENTS = (id) => `${EndPoints}tasks/comments/${id}`;
 export const SEND_COMMENT =  `${EndPoints}comment`;
 

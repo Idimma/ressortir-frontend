@@ -4,7 +4,7 @@ import {ImCart, ImHome} from "react-icons/im";
 import {connect} from "react-redux";
 import {IoIosArrowBack, IoIosMenu, IoIosShare, IoMdClose} from "react-icons/io";
 import {AiOutlineClose} from 'react-icons/ai'
-import {NavLink, withRouter} from "react-router-dom";
+import {NavLink, withRouter,  } from "react-router-dom";
 import {isMobile, isMobileSafari} from 'react-device-detect';
 import Auth from "../utils/Auth.Model";
 import {logout} from "../store/modules/auth";
@@ -201,7 +201,9 @@ class _WebHeader extends React.Component {
                                     <div className="dash-message mr-3">Welcome, {user ? user.name : ' '}</div>
                                     <NavLink to="#" onClick={()=>{
                                         this.props.logout();
-                                        this.props.history.replace('/');
+                                        console.log(this.props)
+
+                                        // history.replace('/');
                                     }} className="logout-link">
                                         <i className="fa fa-power-off "/> Logout</NavLink>
                                 </div>

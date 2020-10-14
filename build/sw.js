@@ -40,6 +40,7 @@ var PRECACHE_URLS = [
     'images/sliders/bdressortir-team3.jpg',
     'images/sliders/bdressortir-team4.jpg',
     'images/sliders/diesel.jpg',
+    'images/sliders/workers.jpeg',
     'images/sliders/page-gradient.png',
 
 
@@ -51,8 +52,8 @@ var PRECACHE_URLS = [
     '/512.png'
 ];
 
-const PRECACHE = 'ressortir-pwa-prod';
-const RUNTIME = 'runtime-2';
+const PRECACHE = 'ressortir-pwa-prod1';
+const RUNTIME = 'runtime-3';
 
 
 // The install handler takes care of precaching the resources we always need.
