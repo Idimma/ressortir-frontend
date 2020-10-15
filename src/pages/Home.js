@@ -26,10 +26,10 @@ const items = [
         src: 'images/sliders/s-freight.jpg',
         altText: 'Slide 4',
     },
-    {
-        src: 'images/sliders/bd.res.banner2.jpg',
-        altText: 'Slide 1',
-    },
+    // {
+        // src: 'images/sliders/bd.res.banner2.jpg',
+        // altText: 'Slide 1',
+    // },
     {
         src: 'images/sliders/workers.png',
         altText: 'Slide 1',
@@ -65,15 +65,15 @@ const Sliders = (props) => {
     const slides = items.map((item, index) => {
         return (
             <CarouselItem
-                className={'slide-show position-relative'}
+                className={'slide-show w-100 position-relative'}
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
                 key={item.src}
                 slide
             >
-                <div className="slide-show-item bg-overlay">
-                    <div className="slide-show-img">
-                        <img src={item.src} alt="slide img"/>
+                <div className="slide-show-item w-100 bg-overlay">
+                    <div className="slide-show-img w-100">
+                        <img src={item.src} className="imager" width="100%" height="100%" alt="slide img"/>
                     </div>
                     <div className="container d-flex align-items-center h-100">
                         <div className="col-sm-12 col-md-12 col-lg-8 ">
@@ -122,7 +122,7 @@ class HomePage extends Component {
     render() {
         return (
             <Layout innerClass="w-100" home noSideBar noBg>
-                <section id="slider2" style={{marginTop: isMobileOnly ? 65 : 0}} className="slider p-0 slider-2">
+                <section id="slider2" style={{marginTop: isMobileOnly ? 65 : 0}} className="slider p-0 w-100 slider-2">
                     <Sliders/>
 
                 </section>
