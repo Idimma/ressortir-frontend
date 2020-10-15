@@ -26,6 +26,10 @@ const items = [
         src: 'images/sliders/s-freight.jpg',
         altText: 'Slide 4',
     },
+    {
+        src: 'images/sliders/s-diesel-m.jpg',
+        altText: 'Slide 4',
+    },
     // {
         // src: 'images/sliders/bd.res.banner2.jpg',
         // altText: 'Slide 1',
