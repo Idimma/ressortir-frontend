@@ -39,6 +39,9 @@ class Gas extends Component {
                                     email: Yup.string().email().required('Email is required'),
                                 })}
                                 onSubmit={(values, actions) => {
+
+
+
                                     AppService.createOrder(values).then(() => {
                                         SweetAlert.fire('Success', 'Order Created Successfully', 'success');
                                         this.props.history.replace('/')
@@ -50,7 +53,6 @@ class Gas extends Component {
                                 {({handleSubmit, isSubmitting}) => (
                                     <form onSubmit={handleSubmit} className="request-quote-form">
                                         <DetailsForm
-                                            addEmail
                                             hideProfile={showProfile} service="gas"
                                             onClick={() => this.setState({showProfile: true})}
                                         />

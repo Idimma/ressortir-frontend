@@ -18,7 +18,7 @@ class Login extends Component {
                         <div className="col-md-6">
                             <div className="card">
                                 <Formik
-                                    initialValues={{}}
+                                    initialValues={{email: '', password: ''}}
                                     onSubmit={(values, {setSubmitting}) => {
                                         this.props.login(values,setSubmitting, this.props.history.replace);
                                     }}
@@ -47,7 +47,7 @@ class Login extends Component {
                                                 </div>
                                                 <div className="col-7 col-md-6">
 
-                                                    <NavLink className="btn btn-link" to="/password/reset">
+                                                    <NavLink className="btn btn-link" to="/password/forgot">
                                                         Forgot Your Password?
                                                     </NavLink>
                                                 </div>

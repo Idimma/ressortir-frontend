@@ -2,6 +2,7 @@ import {APP_TOKEN, EMAIL, IS_LOADING, IS_LOGGEDIN, PASSWORD, USER} from './types
 import {AuthService} from '../../../services';
 import Auth from "../../../utils/Auth.Model";
 import {toast} from "react-toastify";
+import * as SweetAlert from 'sweetalert2'
 import {closeLoaderModal, openLoaderModal} from "../app";
 import {catchError} from "../../../utils";
 import {persistor} from "../../index";
@@ -54,7 +55,7 @@ export const forgetPassword = (data, setSubmitting, replace) => async (dispatch,
             position: "top-right",
             autoClose: 15000,
         });
-        replace('/reset-password');
+        SweetAlert.fire('','Check your mail we have sent a password reset link', 'success');
     }).catch(error => {
         catchError(error);
         setSubmitting(false);

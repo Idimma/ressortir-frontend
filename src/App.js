@@ -5,7 +5,7 @@ import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import './assets/scss/main.scss';
 import store from "./store";
-import { GuestRoute} from "./components/AppRoute";
+import {AppRoute, GuestRoute} from "./components/AppRoute";
 import Login from "./pages/Login";
 import _404 from "./pages/_404";
 import HomePage from "./pages/Home";
@@ -17,14 +17,30 @@ import Freight from './pages/Freight';
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import DashFreight from "./pages/dashboard/Freight";
-import DashGas from "./pages/dashboard/Freight";
+import DashGas from "./pages/dashboard/Gas";
 import DashLpg from "./pages/dashboard/Lpg";
 import DashDiesel from "./pages/dashboard/Diesel";
 import SingleOrder from "./pages/Single";
 import {isMobile, isMobileSafari} from "react-device-detect";
 import Forget from "./pages/Forget";
+import Reset from "./pages/Reset";
+import NewUser from "./pages/NewUser";
+import {logout} from "./store/modules/auth";
 
 let installPromptEvent, notificationEvents;
+
+
+
+
+class Logout extends Component {
+    componentDidMount() {
+        store.dispatch(logout());
+    }
+    render() {
+       return <Redirect to="/login"/>
+    }
+
+}
 
 class Router extends Component {
     componentDidMount() {
@@ -158,19 +174,23 @@ class Router extends Component {
                     <Switch>
                         <GuestRoute exact path="/" component={HomePage}/>
                         <Route exact path="/requests" component={RequestPage}/>
-                        <Route exact path="/dashboard" component={Dashboard}/>
-                        <Route exact path="/dashboard/order/:id" component={SingleOrder}/>
-                        <Route exact path="/dashboard/freight" component={DashFreight}/>
-                        <Route exact path="/dashboard/lpg" component={DashLpg}/>
-                        <Route exact path="/dashboard/gas" component={DashGas}/>
-                        <Route exact path="/dashboard/diesel" component={DashDiesel}/>
-                        <Route exact path="/profile" component={Profile}/>
+                        <AppRoute exact path="/dashboard" component={Dashboard}/>
+                        <AppRoute exact path="/dashboard/order/:id" component={SingleOrder}/>
+                        <AppRoute exact path="/dashboard/freight" component={DashFreight}/>
+                        <AppRoute exact path="/dashboard/lpg" component={DashLpg}/>
+                        <AppRoute exact path="/dashboard/gas" component={DashGas}/>
+                        <AppRoute exact path="/dashboard/diesel" component={DashDiesel}/>
+                        <AppRoute exact path="/profile" component={Profile}/>
                         <GuestRoute exact path="/diesel" component={Diesel}/>
                         <GuestRoute exact path="/lpg" component={Lpg}/>
                         <GuestRoute exact path="/gas" component={Gas}/>
                         <GuestRoute exact path="/freight" component={Freight}/>
                         <GuestRoute exact path="/password/reset" component={Forget}/>
                         <GuestRoute exact path="/login" component={Login}/>
+                        <GuestRoute exact path="/password/forgot" component={Forget}/>
+                        <GuestRoute exact path="/password/reset/:email/:token" component={Reset}/>
+                        <GuestRoute exact path="/new-user" component={NewUser}/>
+                        <Route exact path="/logout" component={Logout}/>
                         <Route path="*" component={_404}/>
                         <Redirect to="/"/>
                     </Switch>

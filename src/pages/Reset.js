@@ -4,12 +4,27 @@ import {isMobileOnly} from 'react-device-detect';
 import {FormField} from "../components/FormElements";
 import {Formik} from "formik";
 import {connect} from "react-redux";
-import {forgetPassword} from "../store/modules/auth";
+import {login} from "../store/modules/auth";
 import {Spinner} from "reactstrap";
+import {AuthService} from "../services";
+import {catchError} from "../utils";
+import * as SweetAlert from 'sweetalert2';
 
 
-class Forget extends Component {
+class Reset extends Component {
+    componentDidMount() {
+        // const {email, token} = this.props.match.params
+        // AuthService.verifyToken(token).then(res => {
+        //     console.log(res)
+        // }).catch(e => {
+        //     console.log(e)
+        // });
+
+    }
+
     render() {
+        const {email, token} = this.props.match.params
+
         return (
             <Layout noFooter={isMobileOnly} padded title="My Accounts" innerClass="request-quote  login-form">
                 <div className="container pt-5 p-sm-0">
@@ -17,9 +32,19 @@ class Forget extends Component {
                         <div className="col-md-6">
                             <div className="card">
                                 <Formik
-                                    initialValues={{email: ''}}
+                                    initialValues={{email, token}}
                                     onSubmit={(values, {setSubmitting}) => {
-                                        this.props.forgetPassword(values, setSubmitting, this.props.history.replace);
+                                        // this.props.login(values, setSubmitting, this.props.history.replace);
+                                        AuthService.resetPassword(values).then(res => {
+                                            SweetAlert.fire('Success', 'Password reset was successful', 'success')
+                                                .then(() => {
+                                                this.props.history.replace('/login')
+                                            });
+                                        }).catch(e => {
+                                            catchError(e);
+                                        }).finally(() => {
+                                            setSubmitting(false);
+                                        })
                                     }}
                                 >
                                     {({handleSubmit, isSubmitting}) => (
@@ -28,14 +53,18 @@ class Forget extends Component {
                                                 <h2>Reset Password</h2>
                                             </div>
 
-                                            <FormField type="email" placeholder="Email Address" name="email"/>
+                                            <FormField type="email" disabled name="email"/>
+                                            <FormField type="password" placeholder="Password" name="password"/>
+                                            <FormField type="password" placeholder="Confirm Password"
+                                                       name="password_confirmation"/>
 
 
                                             <div className="form-group row mb-0">
                                                 <div className="col-md-10 offset-md-1">
                                                     <button type="submit" className="btn btn__block btn__primary">
-                                                        {isSubmitting ? <Spinner/> : 'Send Password Reset Link'}
+                                                        {isSubmitting ? <Spinner/> : 'Reset Password'}
                                                     </button>
+
                                                 </div>
                                             </div>
                                         </form>
@@ -51,4 +80,4 @@ class Forget extends Component {
     }
 }
 
-export default connect(null, {forgetPassword})(Forget)
+export default connect(null, {login})(Reset)

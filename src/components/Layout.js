@@ -199,12 +199,7 @@ class _WebHeader extends React.Component {
                             <div className="nav-form dash-head-link">
                                 <div className="dash-link">
                                     <div className="dash-message mr-3">Welcome, {user ? user.name : ' '}</div>
-                                    <NavLink to="#" onClick={()=>{
-                                        this.props.logout();
-                                        console.log(this.props)
-
-                                        // history.replace('/');
-                                    }} className="logout-link">
+                                    <NavLink to="/logout" className="logout-link">
                                         <i className="fa fa-power-off "/> Logout</NavLink>
                                 </div>
                             </div>
@@ -308,14 +303,15 @@ class Layout extends React.Component {
                                                         </li>
                                                         <li className="nav__item">
                                                             <NavLink to="/dashboard/lpg"
-                                                                     className="nav__item-link nav-icon-order_lpg">Request
-                                                                LPG
+                                                                     className="nav__item-link nav-icon-order_lpg">
+                                                                Request LPG
                                                             </NavLink>
                                                         </li>
                                                         <li className="nav__item">
                                                             <NavLink to="/dashboard/freight"
-                                                                     className="nav__item-link nav-icon-order_freight ">Request
-                                                                Freight</NavLink>
+                                                                     className="nav__item-link nav-icon-order_freight ">
+                                                                Request Freight
+                                                            </NavLink>
                                                         </li>
                                                         <li className=" nav__item">
                                                             <NavLink to="/profile"
@@ -324,21 +320,20 @@ class Layout extends React.Component {
                                                         </li>
                                                         <li className=" nav__item">
                                                             <NavLink to="/dashboard/gas"
-                                                                     className="nav__item-link nav-icon-order_gas ">Order
-                                                                Gas</NavLink>
+                                                                     className="nav__item-link nav-icon-order_gas ">
+                                                                Order Gas
+                                                            </NavLink>
                                                         </li>
 
                                                         {
                                                             isMobile &&
-                                                            <li className=" nav__item">
-                                                                <NavLink to="#" onClick={() => {
-                                                                    this.props.logout()
-                                                                    this.props.history.replace('/')
-                                                                }}
+                                                            <li className="nav__item">
+                                                                <NavLink to="/logout"
                                                                          className="nav__item-click px-6">
                                                                     <i className="fa fa-power-off fs-18 mr-2"/>Log Out
                                                                 </NavLink>
-                                                            </li>}
+                                                            </li>
+                                                        }
                                                     </ul>
                                                 </div>
                                             </div>
@@ -357,4 +352,4 @@ class Layout extends React.Component {
     }
 }
 
-export default connect(null, {logout})(Layout);
+export default connect(null, {logout})(withRouter(Layout));

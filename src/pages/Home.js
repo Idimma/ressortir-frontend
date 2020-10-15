@@ -31,11 +31,7 @@ const items = [
         altText: 'Slide 1',
     },
     {
-        src: 'images/sliders/workers.jpeg',
-        altText: 'Slide 1',
-    },
-    {
-        src: 'images/sliders/bdressortir-team3.jpg',
+        src: 'images/sliders/workers.png',
         altText: 'Slide 1',
     },
     {

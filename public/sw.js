@@ -40,7 +40,7 @@ var PRECACHE_URLS = [
     'images/sliders/bdressortir-team3.jpg',
     'images/sliders/bdressortir-team4.jpg',
     'images/sliders/diesel.jpg',
-    'images/sliders/workers.jpeg',
+    'images/sliders/workers.png',
     'images/sliders/page-gradient.png',
 
 

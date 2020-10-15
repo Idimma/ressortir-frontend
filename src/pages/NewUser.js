@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import Layout from "../components/Layout";
 import {isMobileOnly} from 'react-device-detect';
+import {NavLink} from "react-router-dom";
 import {FormField} from "../components/FormElements";
 import {Formik} from "formik";
 import {connect} from "react-redux";
-import {forgetPassword} from "../store/modules/auth";
+import {login} from "../store/modules/auth";
 import {Spinner} from "reactstrap";
 
 
-class Forget extends Component {
+class Login extends Component {
     render() {
         return (
             <Layout noFooter={isMobileOnly} padded title="My Accounts" innerClass="request-quote  login-form">
@@ -17,25 +18,47 @@ class Forget extends Component {
                         <div className="col-md-6">
                             <div className="card">
                                 <Formik
-                                    initialValues={{email: ''}}
+                                    initialValues={{}}
                                     onSubmit={(values, {setSubmitting}) => {
-                                        this.props.forgetPassword(values, setSubmitting, this.props.history.replace);
+                                        this.props.login(values,setSubmitting, this.props.history.replace);
                                     }}
                                 >
                                     {({handleSubmit, isSubmitting}) => (
                                         <form onSubmit={handleSubmit} className="request-quote-form">
                                             <div className="request-title">
-                                                <h2>Reset Password</h2>
+                                                <h2>Login</h2>
                                             </div>
 
                                             <FormField type="email" placeholder="Email Address" name="email"/>
+                                            <FormField type="password" placeholder="Password" name="password"/>
 
+
+                                            <div className="form-group row">
+                                                <div className="col-5 col-md-4 offset-md-1">
+                                                    <div className="form-check">
+                                                        <input className="form-check-input" type="checkbox"
+                                                               name="remember"
+                                                               id="remember"/>
+
+                                                        <label className="form-check-label" htmlFor="remember">
+                                                            Remember Me
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div className="col-7 col-md-6">
+
+                                                    <NavLink className="btn btn-link" to="/password/reset">
+                                                        Forgot Your Password?
+                                                    </NavLink>
+                                                </div>
+                                            </div>
 
                                             <div className="form-group row mb-0">
                                                 <div className="col-md-10 offset-md-1">
                                                     <button type="submit" className="btn btn__block btn__primary">
-                                                        {isSubmitting ? <Spinner/> : 'Send Password Reset Link'}
+                                                        {isSubmitting ? <Spinner/> : 'Login'}
                                                     </button>
+
                                                 </div>
                                             </div>
                                         </form>
@@ -51,4 +74,4 @@ class Forget extends Component {
     }
 }
 
-export default connect(null, {forgetPassword})(Forget)
+export default connect(null, {login})( Login)

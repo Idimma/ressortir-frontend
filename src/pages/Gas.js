@@ -23,7 +23,7 @@ class Gas extends Component {
 
     render() {
         const {showProfile} = this.state;
-        const {user: {name, email, phone}} = this.props;
+        const {user} = this.props;
         return (
             <Layout onBack={this.goBack} noFooter={isMobile} padded={isMobile} title="Request Gas"
                     innerClass={`request-quote request-gas`}>
