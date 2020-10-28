@@ -1,6 +1,7 @@
 import React from "react";
 import {Field} from "formik";
 import className from 'classname'
+import {Spinner} from "reactstrap";
 
 export const FormElements = ({message}) => (<span className="invalid-feedback"><strong>{message}</strong></span>);
 export const FormField = (props) => <Field component={CustomInputComponent} {...props} />
@@ -31,7 +32,8 @@ const CustomSelectComponent = ({field, form: {touched, errors, isValid}, title, 
     );
 }
 
-export const DetailsForm = ({service, hideProfile, onClick, addEmail}) => <div style={{display: hideProfile ? 'none' : 'block'}}>
+export const DetailsForm = ({service, hideProfile, onClick, title, isLoading, addEmail}) => <div
+    style={{display: hideProfile ? 'none' : 'block'}}>
     <input type="hidden" name="service" value={service}/>
     <div className="request-title">
 
@@ -51,18 +53,18 @@ export const DetailsForm = ({service, hideProfile, onClick, addEmail}) => <div s
             </div>
         </div>
         {
-           addEmail &&
-                <div className="col-12">
-            <div className="form-group">
-                <FormField type="email" className="form-control " name="email" placeholder="Email Address"/>
-            </div>
-        </div>}
+            addEmail &&
+            <div className="col-12">
+                <div className="form-group">
+                    <FormField type="email" className="form-control " name="email" placeholder="Email Address"/>
+                </div>
+            </div>}
     </div>
 
     <div className="row">
         <div className="col-sm-12 col-md-12 col-lg-12 text-center">
             <button type="button" onClick={onClick} className="btn btn__primary">
-                Request a Quote
+                {isLoading ? <Spinner/> : title || ' Request a Quote'}
             </button>
         </div>
     </div>

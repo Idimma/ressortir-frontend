@@ -8,7 +8,6 @@ import {catchError} from "../../utils";
 import {DetailsForm, FormField, FormSelect} from "../../components/FormElements";
 import * as SweetAlert from "sweetalert2";
 import {connect} from "react-redux";
-import {Spinner} from "reactstrap";
 
 class Gas extends Component {
     state = {
@@ -41,7 +40,6 @@ class Gas extends Component {
                                 onSubmit={(values, actions) => {
 
 
-
                                     AppService.createOrder(values).then(() => {
                                         SweetAlert.fire('Success', 'Order Created Successfully', 'success');
                                         this.props.history.replace('/')
@@ -51,13 +49,14 @@ class Gas extends Component {
                                 }}
                             >
                                 {({handleSubmit, isSubmitting}) => (
-                                    <form onSubmit={handleSubmit} className="request-quote-form">
+                                    <form onSubmit={handleSubmit} id="form-id" className="request-quote-form">
                                         <DetailsForm
-                                            hideProfile={showProfile} service="gas"
-                                            onClick={() => this.setState({showProfile: true})}
+                                            hideProfile={!showProfile} service="gas"
+                                            isLoading={isSubmitting}
+                                            title={' Confirm Your Order'}
+                                            onClick={() => document.getElementById('form-id').submit()}
                                         />
-                                        <div style={{display: showProfile ? 'block' : 'none'}}>
-
+                                        <div style={{display: !showProfile ? 'block' : 'none'}}>
                                             <div className="request-title mb-4">
                                                 <h2>Complete your Order</h2>
                                             </div>
@@ -248,7 +247,6 @@ class Gas extends Component {
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <div className="row mb-10">
                                                 <div className="col-sm-12">
                                                     <h5 className="form__title mb-5">Delivery Location</h5>
@@ -283,8 +281,10 @@ class Gas extends Component {
                                             </div>
                                             <div className="row">
                                                 <div className="col-sm-12 col-md-12 col-lg-12 text-center">
-                                                    <button type="submit" className="btn btn__primary">
-                                                        {isSubmitting ? <Spinner/> : 'Confirm Your Order'}
+                                                    <button type="button"
+                                                            onClick={() => this.setState({showProfile: true})}
+                                                            className="btn btn__primary">
+                                                        Request a Quote
                                                     </button>
                                                 </div>
                                             </div>

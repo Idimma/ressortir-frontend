@@ -80,6 +80,7 @@ const Sliders = (props) => {
                         <img src={item.src} className="imager" width="100%" height="100%" alt="slide img"/>
                     </div>
                     <div className="container d-flex align-items-center h-100">
+                        {index === 0 &&
                         <div className="col-sm-12 col-md-12 col-lg-8 ">
                             {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
                             <div className="slide-img"/>
@@ -96,6 +97,7 @@ const Sliders = (props) => {
                             </p>
                             {/* <a href="#" className="btn btn__primary btn__hover2 mr-30">Our Services</a> */}
                         </div>
+                        }
                     </div>
                 </div>
             </CarouselItem>
@@ -219,28 +221,23 @@ class HomePage extends Component {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </section>
                 <section className="mission pt-40 pb-30">
                     <div className="container">
                         <div className="row heading heading-2">
-
                             <div className="col-12">
                                 <h2 className="heading__title">
                                     <i className="heading__title-icon-mission"/> Our Mission
                                 </h2>
                             </div>
-                            {/* /.col-lg-5 */}
                             <div className="col-12">
-                                <p className="heading__desc pb-2">Our mission statement is simple, yet the foundation of
-                                    everything
-                                    we do at Ressortir , to provide outstanding services. </p>
+                                <p className="heading__desc pb-2">
+                                    Our mission statement is simple, yet the foundation of
+                                    everything we do at Ressortir , to provide outstanding services.
+                                </p>
                             </div>
-                            {/* /.col-lg-6 */}
                         </div>
-                        {/* /.row */}
                     </div>
                 </section>
                 <section id="mission" className="mission pt-30 pb-60">
@@ -248,25 +245,23 @@ class HomePage extends Component {
                         <div className="row heading heading-2">
                             <div className="col-12">
                                 <h2 className="heading__title">
-                                    <i className="heading__title-icon-policy"></i> Company Policy
+                                    <i className="heading__title-icon-policy"/> Company Policy
                                 </h2>
                             </div>
-                            {/* /.col-lg-5 */}
                             <div className="col-12">
-                                <p className="heading__desc pb-2">Cooperate Style of leadership with the greatest
-                                    possible
-                                    individual autonomy for our employees </p>
-                                <p className="heading__desc pb-2">Satisfied Customers and employees are prime company
-                                    targets </p>
+                                <p className="heading__desc pb-2">
+                                    Cooperate Style of leadership with the greatest possible individual autonomy for our
+                                    employees
+                                </p>
+                                <p className="heading__desc pb-2">
+                                    Satisfied Customers and employees are prime company targets
+                                </p>
 
-                                <p className="heading__desc pb-2">Permanent innovative adaption to industry changes and
-                                    economic
-                                    development
+                                <p className="heading__desc pb-2">
+                                    Permanent innovative adaption to industry changes and economic development
                                 </p>
                             </div>
-                            {/* /.col-lg-6 */}
                         </div>
-                        {/* /.row */}
                     </div>
 
                 </section>
