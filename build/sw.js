@@ -53,7 +53,7 @@ var PRECACHE_URLS = [
 ];
 
 const PRECACHE = 'ressortir-pwa-prod1';
-const RUNTIME = 'runtime-3';
+const RUNTIME = 'runtime-4';
 
 
 // The install handler takes care of precaching the resources we always need.

@@ -145,11 +145,7 @@ export const updateProfilePassword = (data) => (dispatch, getState) => {
 
 export const loadUserDetails = () => (dispatch, getState) => {
     const user = getState().User;
-    // if (!Auth.isAuthenticated()) {
-    //     return;
-    // }
-    dispatch(setToken(Auth.getStoredToken()));
-    if (Object.entries(user).length !== 0) {
+    if (Object.entries(user).includes('email')) {
         return;
     }
     dispatch(setLoggedin(true));

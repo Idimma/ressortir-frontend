@@ -288,12 +288,12 @@ class Layout extends React.Component {
                                 <div className="container">
                                     <div className="row">
                                         {(!noSideBar && Auth.isAuthenticated()) &&
-                                        <div className="col-12 col-md-2 dash-nav__col">
+                                        <div className=" col-md-2 dash-nav__col">
                                             <div className="dash-nav navbar navbar-expand-lg">
                                                 <div className="collapse navbar-collapse" id="mainNavigation">
                                                     <ul className="navbar-nav">
                                                         <li className="nav__item">
-                                                            <NavLink to="/dashboard"
+                                                            <NavLink to="/dashboard" exact
                                                                      className="nav__item-link nav-icon-orders ">Orders</NavLink>
                                                         </li>
                                                         <li className="nav__item">

@@ -10,9 +10,17 @@ import {catchError} from "../utils";
 import {Spinner} from "reactstrap";
 import {toast} from "react-toastify";
 import {setUser} from "../store/modules/user";
+import {loadUserDetails} from "../store/modules/auth";
 
 
 class ProfileScreen extends Component {
+    componentDidMount() {
+        if(!this.props.user.hasOwnProperty('email')){
+          this.props.loadUserDetails()
+        }
+
+    }
+
     render() {
         const {user: {email, phone, name}} = this.props
         return (
@@ -144,4 +152,4 @@ class ProfileScreen extends Component {
     }
 }
 
-export default connect(({Application, Auth, User}) => ({user: User}), {setUser})(ProfileScreen)
+export default connect(({Application, Auth, User}) => ({user: User}), {setUser, loadUserDetails})(ProfileScreen)

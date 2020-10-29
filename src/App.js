@@ -25,7 +25,7 @@ import {isMobile, isMobileSafari} from "react-device-detect";
 import Forget from "./pages/Forget";
 import Reset from "./pages/Reset";
 import NewUser from "./pages/NewUser";
-import {logout} from "./store/modules/auth";
+import {loadUserDetails, logout} from "./store/modules/auth";
 
 let installPromptEvent, notificationEvents;
 
@@ -82,6 +82,7 @@ class Router extends Component {
         }
         window.addEventListener('beforeinstallprompt', this.installPrompt);
         window.addEventListener('appinstalled', this.notificationPrompt);
+        store.dispatch(loadUserDetails());
     }
 
 
@@ -89,9 +90,6 @@ class Router extends Component {
         event.preventDefault();
         console.log(event);
         notificationEvents = event;
-
-
-
         const notification = document.getElementById("notificationBtn");
         if(notification){
             notification.addEventListener('click', function(e) {

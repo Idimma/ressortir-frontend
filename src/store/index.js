@@ -12,7 +12,7 @@ import {Application} from './modules/app';
 import {User} from './modules/user';
 
 
-const persistConfig = {key: 'root', storage,}
+const persistConfig = {key: 'ressortir-app', storage,}
 export const history = createBrowserHistory();
 // const loggerMiddleware = createLogger();
 

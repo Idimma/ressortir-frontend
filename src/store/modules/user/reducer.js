@@ -1,7 +1,7 @@
 import {DETAILS, USER} from './types';
 
 
-export default function reducer(state = {userdetail: {transport: []}}, action) {
+export default function reducer(state = { }, action) {
     switch (action.type) {
         case DETAILS:
             return {...state, userdetail: action.payload};

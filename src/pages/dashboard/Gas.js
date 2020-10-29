@@ -3,16 +3,19 @@ import {isMobile} from 'react-device-detect';
 import Layout from "../../components/Layout";
 import {Formik} from "formik";
 import * as Yup from "yup";
-import {AppService} from "../../services";
-import {catchError} from "../../utils";
-import {DetailsForm, FormField, FormSelect} from "../../components/FormElements";
+import {toast} from "react-toastify";
 import * as SweetAlert from "sweetalert2";
+import {DetailsForm, FormField, FormSelect} from "../../components/FormElements";
 import {connect} from "react-redux";
+import {catchError} from "../../utils";
+import {AppService} from '../../services'
+
 
 class Gas extends Component {
     state = {
         showProfile: false
-    }
+    };
+
     goBack = () => {
         if (this.state.showProfile) {
             return this.setState({showProfile: false})
@@ -20,25 +23,74 @@ class Gas extends Component {
         this.props.history.goBack();
     };
 
+
     render() {
         const {showProfile} = this.state;
         const {user: {name, email, phone}} = this.props;
         return (
             <Layout onBack={this.goBack} noFooter={isMobile} padded={isMobile} title="Request Gas"
                     innerClass={`request-quote request-gas`}>
-                <div className={`container  ${!isMobile && 'pt-110'} mb-5 pb-90`}>
+                <div className={`col-md-10  ${!isMobile && 'pt-0'} card mb-5 pb-90`}>
                     <div className="row">
-                        <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                        <div className="col-sm-12 col-md-12">
                             <Formik
-                                initialValues={{name, email, phone, service: 'gas'}}
-                                validationSchema={Yup.object().shape({
-                                    phone: Yup.string().min(9, 'Phone number is too short').required('Phone number is required'),
-                                    delivery_address: Yup.string().required('Delivery address is required'),
-                                    name: Yup.string().min(3, 'Name is too short').required('Name is required'),
-                                    email: Yup.string().email().required('Email is required'),
-                                })}
+                                initialValues={{
+                                    delivery_address: '', payment_option: 'Pay Online',
+                                    name, email, phone, service: 'gas', size:''
+                                }}
+                                enableReinitialize
+                                validationSchema={
+                                    Yup.object().shape({
+                                        phone: Yup.string().min(9, 'Phone number is too short').required('Phone number is required'),
+                                        delivery_address: Yup.string().required('Delivery address is required'),
+                                        name: Yup.string().min(3, 'Name is too short').required('Name is required'),
+                                        // size: Yup.string().required('Gas size is required'),
+                                    })}
                                 onSubmit={(values, actions) => {
+                                    console.log(values);
+                                    if (!values.name || !values.phone || !values.email) {
+                                        return this.setState({showProfile: true})
+                                    }
 
+                                    if (!values.size) {
+                                        this.setState({showProfile: false})
+                                        return toast('Gas size is required');
+                                    }
+
+                                    if (values.payment_option === 'Pay Online') {
+                                        const amount = {
+                                            '12.5KG': 4500,
+                                            '12.5KG + Cylinder': 15750,
+                                            '20KG': 7000,
+                                            '25KG': 8500,
+                                            '50KG': 17000
+                                        };
+
+                                        const data = {
+                                            email,
+                                            phone,
+                                            size: values.size,
+                                            amount: Number(amount[values.size])
+                                        };
+                                        try {
+                                            window.payWithPaystack(data, ({reference}) => {
+                                                values.transaction_reference = reference;
+                                                AppService.createOrder(values).then(() => {
+                                                    SweetAlert.fire('Success', 'Order Created Successfully', 'success');
+                                                    this.props.history.replace('/')
+                                                }).catch(catchError).finally(() => {
+                                                    actions.setSubmitting(false);
+                                                });
+                                            }, () => {
+                                                actions.setSubmitting(false);
+                                                catchError('Something went wrong during payment')
+                                            });
+                                        } catch (e) {
+                                            SweetAlert.fire('Alert', 'Something went wrong during payment', 'warning');
+                                            actions.setSubmitting(false);
+                                        }
+                                        return
+                                    }
 
                                     AppService.createOrder(values).then(() => {
                                         SweetAlert.fire('Success', 'Order Created Successfully', 'success');
@@ -48,18 +100,19 @@ class Gas extends Component {
                                     });
                                 }}
                             >
-                                {({handleSubmit, isSubmitting}) => (
-                                    <form onSubmit={handleSubmit} id="form-id" className="request-quote-form">
+                                {({handleSubmit, handleChange, isSubmitting}) => (
+                                    <form onSubmit={handleSubmit} className="request-quote-form">
                                         <DetailsForm
                                             hideProfile={!showProfile} service="gas"
                                             isLoading={isSubmitting}
                                             title={' Confirm Your Order'}
-                                            onClick={() => document.getElementById('form-id').submit()}
+                                            onClick={() => document.getElementById('form-id').click()}
                                         />
                                         <div style={{display: !showProfile ? 'block' : 'none'}}>
                                             <div className="request-title mb-4">
                                                 <h2>Complete your Order</h2>
                                             </div>
+                                            <button hidden type="submit" id="form-id"/>
                                             <div className="row">
                                                 <div
                                                     className="col-sm-12">
@@ -67,7 +120,6 @@ class Gas extends Component {
                                                 </div>
                                             </div>
                                             <div className="row mb-10 radio-wrapper">
-
                                                 <div
                                                     className="col-sm-12 col-md-3"
                                                     style={{zIndex: 10}}>
@@ -75,6 +127,7 @@ class Gas extends Component {
                                                         <input id="gas-12.5"
                                                                type="radio"
                                                                name="size"
+                                                               onChange={handleChange}
                                                                value="12.5KG"
                                                                data-size="12.5KG"
                                                                data-amount="4500"
@@ -82,7 +135,7 @@ class Gas extends Component {
                                                         <label
                                                             htmlFor="gas-12.5">
                                                             <img
-                                                                src="images/products/12.5kg.png"
+                                                                src="/images/products/12.5kg.png"
                                                                 alt=""/>
                                                             <div
                                                                 className="label-check_text-meta">12.5KG <span
@@ -95,7 +148,7 @@ class Gas extends Component {
                                                             <input
                                                                 id="gas-cylinder"
                                                                 type="radio"
-                                                                name="size"
+                                                                name="size" onChange={handleChange}
                                                                 value="12.5KG + Cylinder"
                                                                 data-size="12.5KG+cylinder"
                                                                 data-amount="15750"
@@ -114,14 +167,16 @@ class Gas extends Component {
                                                         <input id="gas-20"
                                                                type="radio"
                                                                name="size"
+                                                               onChange={handleChange}
                                                                value="20KG"
+
                                                                className="check-image"
                                                                data-size="20KG"
                                                                data-amount="7000"/>
                                                         <label
                                                             htmlFor="gas-20">
                                                             <img
-                                                                src="images/products/20kg.png"
+                                                                src="/images/products/20kg.png"
                                                                 alt=""/>
                                                             <div
                                                                 className="label-check_text-meta">20KG <span
@@ -137,6 +192,7 @@ class Gas extends Component {
                                                         <input id="gas-25"
                                                                type="radio"
                                                                name="size"
+                                                               onChange={handleChange}
                                                                value="25KG"
                                                                className="check-image"
                                                                data-size="25KG"
@@ -144,7 +200,7 @@ class Gas extends Component {
                                                         <label
                                                             htmlFor="gas-25">
                                                             <img
-                                                                src="images/products/25kg.png"
+                                                                src="/images/products/25kg.png"
                                                                 alt=""/>
                                                             <div
                                                                 className="label-check_text-meta">25KG <span
@@ -160,6 +216,7 @@ class Gas extends Component {
                                                         <input id="gas-50"
                                                                type="radio"
                                                                name="size"
+                                                               onChange={handleChange}
                                                                value="50KG"
                                                                className="check-image"
                                                                data-size="50KG"
@@ -167,7 +224,7 @@ class Gas extends Component {
                                                         <label
                                                             htmlFor="gas-50">
                                                             <img
-                                                                src="images/products/50kg.png"
+                                                                src="/images/products/50kg.png"
                                                                 alt=""/>
                                                             <div
                                                                 className="label-check_text-meta">50KG <span
@@ -196,7 +253,9 @@ class Gas extends Component {
                                                                 id="payment-option-online"
                                                                 type="radio"
                                                                 name="payment_option"
-                                                                value="Pay Online" checked
+                                                                value="Pay Online"
+                                                                defaultChecked
+                                                                onChange={handleChange}
                                                                 className="check-text"/>
                                                             <div className="label-check_text-meta">
                                                                 <span className="label-check_text-descr">
@@ -217,6 +276,7 @@ class Gas extends Component {
                                                                 id="payment-option-pos"
                                                                 type="radio"
                                                                 name="payment_option"
+                                                                onChange={handleChange}
                                                                 value="POS Machine on delivery"
                                                                 className="check-text"/>
                                                             <div className="label-check_text-meta">
@@ -235,7 +295,9 @@ class Gas extends Component {
                                                             <input
                                                                 id="payment-option-cash"
                                                                 type="radio"
+
                                                                 name="payment_option"
+                                                                onChange={handleChange}
                                                                 value="Cash on delivery"
                                                                 className="check-text"/>
                                                             <div className="label-check_text-meta">

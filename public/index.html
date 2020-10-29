@@ -113,6 +113,39 @@
             }
         ]
     </script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script>
+        const P_KEY = 'pk_test_bf7f7fd26a659d22a09510c20e98d7bc55151855';
+
+        function payWithPaystack({email, amount, phone, size}, success, error) {
+            var handler = PaystackPop.setup({
+                key: P_KEY, email, amount: amount * 100,
+                currency: "NGN",
+                metadata: {
+                    custom_fields: [
+                        {
+                            display_name: "Mobile Number",
+                            variable_name: "mobile_number",
+                            value: phone
+                        },
+                        {
+                            display_name: "Gas Size",
+                            variable_name: "size",
+                            value: size
+                        }
+                    ]
+                },
+                callback: function (response) {
+                    if (success) success(response)
+                },
+                onClose: function () {
+                    if (error) error()
+                }
+            });
+            handler.openIframe();
+        }
+        window.payWithPaystack = payWithPaystack
+    </script>
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>

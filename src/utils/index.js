@@ -3,6 +3,7 @@ import {toast as _toast} from 'react-toastify';
 import {push} from "react-router-redux";
 import store from '../store'
 import {logout} from "../store/modules/auth";
+
 export const toast = _toast;
 export const Auth = auth;
 export const isNull = (value) => (value === null || value === undefined || value === '' || value === 'null');
@@ -38,3 +39,5 @@ export const catchError = (error) => {
     }
     toast.error('ERROR: ' + error.message, {autoClose: 10000})
 }
+
+
