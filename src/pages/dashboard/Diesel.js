@@ -67,7 +67,7 @@ class DashDiesel extends Component {
                                             </div>
                                             <div className="col-sm-12 col-md-12 col-lg-12">
                                                 <FormField type="text" name="quantity"
-                                                           placeholder="Diesel Quantity (min: 2000 litres)"/>
+                                                           placeholder="Diesel Quantity (min: 500 litres)"/>
                                             </div>
                                         </div>
                                         <div className="row mb-10">

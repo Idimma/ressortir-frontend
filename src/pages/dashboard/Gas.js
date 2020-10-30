@@ -30,7 +30,7 @@ class Gas extends Component {
         return (
             <Layout onBack={this.goBack} noFooter={isMobile} padded={isMobile} title="Request Gas"
                     innerClass={`request-quote request-gas`}>
-                <div className={`col-md-10  ${!isMobile && 'pt-0'} card mb-5 pb-90`}>
+                <div className={`col-md-10  ${!isMobile && 'pt-0'}  mb-5 pb-90`}>
                     <div className="row">
                         <div className="col-sm-12 col-md-12">
                             <Formik

@@ -31,8 +31,8 @@ const items = [
         altText: 'Slide 4',
     },
     // {
-        // src: 'images/sliders/bd.res.banner2.jpg',
-        // altText: 'Slide 1',
+    // src: 'images/sliders/bd.res.banner2.jpg',
+    // altText: 'Slide 1',
     // },
     {
         src: 'images/sliders/workers.png',
@@ -80,23 +80,25 @@ const Sliders = (props) => {
                         <img src={item.src} className="imager" width="100%" height="100%" alt="slide img"/>
                     </div>
                     <div className="container d-flex align-items-center h-100">
-                        {index === 0 &&
-                        <div className="col-sm-12 col-md-12 col-lg-8 ">
-                            {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
-                            <div className="slide-img"/>
-                            <p className="sliderdesc d-none d-sm-block">
-                                Our core business at Ressortir is the sole-distribution of Automotive
-                                Gas Oil and Liquefied Petroleum Gas. In addition, Ressortir offers freight
-                                distribution across cities in Nigeria.
-                            </p>
-                            <p className="sliderdesc d-none d-sm-block">
-                                With reputable years of experience and reliable channel of distribution
-                                across the country, we always ensure fast and accurate delivery of your products.
-                                We can handle long and short term contracts for restaurants, factories, schools,
-                                offices, and other multinationals.
-                            </p>
-                            {/* <a href="#" className="btn btn__primary btn__hover2 mr-30">Our Services</a> */}
-                        </div>
+                        {index === 0 ?
+                            <div className="col-sm-12 col-md-12 col-lg-8 ">
+                                {/* <h2 className="slide__title">Fast and efficient energy & logistics services.</h2> */}
+                                <div className="slide-img"/>
+                                <p className="sliderdesc d-none d-sm-block">
+                                    Our core business at Ressortir is the sole-distribution of Automotive
+                                    Gas Oil and Liquefied Petroleum Gas. In addition, Ressortir offers freight
+                                    distribution across cities in Nigeria.
+                                </p>
+                                <p className="sliderdesc d-none d-sm-block">
+                                    With reputable years of experience and reliable channel of distribution
+                                    across the country, we always ensure fast and accurate delivery of your products.
+                                    We can handle long and short term contracts for restaurants, factories, schools,
+                                    offices, and other multinationals.
+                                </p>
+                                {/* <a href="#" className="btn btn__primary btn__hover2 mr-30">Our Services</a> */}
+                            </div>
+                            :
+                            <div style={{height: 286}}/>
                         }
                     </div>
                 </div>

@@ -13,7 +13,7 @@ class LpgPage extends Component {
     render() {
         return (
             <Layout noFooter={isMobile} padded={isMobile}
-                    innerClass={`request-quote request-diesel`} title="LPG Tank Refill">
+                    innerClass={`request-quote request-lpg`} title="LPG Tank Refill">
                 <div className={`container  ${!isMobile && 'pt-110'} mb-5 pb-90`}>
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">

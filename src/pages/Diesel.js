@@ -65,13 +65,13 @@ class Diesel extends Component {
                                             <div className="col-sm-12 col-md-12 col-lg-12">
                                                 <h5 className="form__title mb-5">Order Specification </h5>
                                                 <p className=" d-block mb-10">* Kindly note that the Minimum Quantity of
-                                                    Diesel that can be requested is <strong>2500Litres</strong></p>
+                                                    Diesel that can be requested is <strong>500Litres</strong></p>
 
                                             </div>
                                             <div className="col-sm-12 col-md-12 col-lg-12">
                                                 <div className="form-group">
                                                     <FormField type="text" name="quantity"
-                                                               placeholder="Diesel Quantity (min: 2000 litres)"/>
+                                                               placeholder="Diesel Quantity (min: 5000 litres)"/>
                                                 </div>
                                             </div>
                                             <div className="col-sm-12 col-md-12 col-lg-12">

@@ -14,7 +14,7 @@ class Freight extends Component {
     render() {
         return (
             <Layout noFooter={isMobile} padded={isMobile} title="Diesel Supply"
-                    innerClass="request-quote request-diesel">
+                    innerClass="request-quote request-freight">
                 <div className={`container  ${!isMobile && 'pt-110'} mb-5 pb-90`}>
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
