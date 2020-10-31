@@ -61,13 +61,13 @@ class DashDiesel extends Component {
                                                     <h2>Diesel Request Specification</h2>
                                                     <small className="d-block mt-10 mb-20">* Kindly note that the
                                                         Minimum Quantity of Diesel that can be requested
-                                                        is <strong>2500Litres</strong></small>
+                                                        is <strong>1000Litres</strong></small>
                                                 </div>
 
                                             </div>
                                             <div className="col-sm-12 col-md-12 col-lg-12">
                                                 <FormField type="text" name="quantity"
-                                                           placeholder="Diesel Quantity (min: 500 litres)"/>
+                                                           placeholder="Diesel Quantity (min: 1000 litres)"/>
                                             </div>
                                         </div>
                                         <div className="row mb-10">
