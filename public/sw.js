@@ -52,7 +52,7 @@ var PRECACHE_URLS = [
     '/512.png'
 ];
 
-const PRECACHE = 'ressortir-pwa-prod1';
+const PRECACHE = 'ressortir-pwa-prod2';
 const RUNTIME = 'runtime-4';
 
 
