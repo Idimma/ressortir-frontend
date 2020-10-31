@@ -118,7 +118,7 @@ class Gas extends Component {
                                                 </div>
                                             </div>
                                             <div className="row mb-10 radio-wrapper">
-                                                <div className="col-sm-12 col-md-3" style={{zIndex: 10}}>
+                                                <div className="col-sm-12 " style={{zIndex: 10}}>
                                                     <div className="form-group gas-option-wrapper">
 
                                                         <label
