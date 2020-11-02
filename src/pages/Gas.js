@@ -188,10 +188,7 @@ class Gas extends Component {
                                                 {/*</div>*/}
 
 
-
-
-                                                <div
-                                                    className="col-sm-12 col-md-3">
+                                                <div className="col-sm-12 col-md-3">
                                                     <div
                                                         className="form-group gas-option-wrapper">
                                                         <input id="gas-20"
@@ -199,7 +196,6 @@ class Gas extends Component {
                                                                name="size"
                                                                onChange={handleChange}
                                                                value="20KG"
-
                                                                className="check-image"
                                                                data-size="20KG"
                                                                data-amount="7000"/>

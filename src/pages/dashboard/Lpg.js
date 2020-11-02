@@ -64,9 +64,8 @@ class DashLpg extends Component {
                                                     <h2>lpg Request Specification</h2>
                                                     <small className="d-block mt-10 mb-20">* Kindly note that the
                                                         Minimum Quantity of lpg that can be requested
-                                                        is <strong>2000Litres</strong></small>
+                                                        is <strong>1000Litres</strong></small>
                                                 </div>
-
                                             </div>
                                             <div className="col-sm-12 col-md-12 col-lg-12">
                                                 <FormSelect name="quantity" id="quantity">
