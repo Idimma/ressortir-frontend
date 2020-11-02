@@ -165,7 +165,7 @@ class Gas extends Component {
                                                 {/*    className="col-sm-12 col-md-3"*/}
                                                 {/*    style={{zIndex: 10}}>*/}
                                                 {/*    <div className="form-group gas-option-wrapper">*/}
-                                                {/*        <input id="gas-12.5"*/}
+                                                  {/*        <input id="gas-12.5"*/}
                                                 {/*               type="radio"*/}
                                                 {/*               name="size"*/}
                                                 {/*               onChange={handleChange}*/}
