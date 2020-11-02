@@ -122,52 +122,47 @@ class Gas extends Component {
                                             <div className="row mb-10 radio-wrapper">
                                                 <div className="col-sm-12 col-md-3 " style={{zIndex: 10}}>
                                                     <div className="form-group gas-option-wrapper">
-                                                        <input
-                                                            id="gas-cylinder"
-                                                            type="radio"
-                                                            name="size" onChange={handleChange}
-                                                            value="12.5KG + Cylinder"
-                                                            data-size="12.5KG+cylinder"
-                                                            data-amount="15750"
-                                                            className="check-image"/>
-                                                        <label htmlFor="gas-cylinder">
+                                                        <input id="gas-12.5"
+                                                               type="radio"
+                                                               name="size"
+                                                               onChange={handleChange}
+                                                               value="12.5KG"
+                                                               data-size="12.5KG"
+                                                               data-amount="4500"
+                                                               className="check-image"/>
+                                                        <label htmlFor="gas-12.5">
                                                             <img src="/images/products/12_5kg.png" alt=""/>
                                                             <div
-                                                                className="label-check_text-meta">Purchase 12.5kg Ressortir branded Gas Cylinder<span
-                                                                className="price">₦15,750</span>
+                                                                className="label-check_text-meta">12.5KG <span
+                                                                className="price">₦4,500</span>
                                                             </div>
                                                             {/*<div className="label-check_text-meta">*/}
-                                                            {/*    <span className="label-check_text-descr">Purchase 12.5kg Ressortir branded Gas Cylinder </span>*/}
-                                                            {/*    <span className="price">₦15,750</span>*/}
+                                                            {/*    <span className="label-check_text-descr"> 12.5KG Refill</span>*/}
+                                                            {/*    <span className="price">₦4,500</span>*/}
                                                             {/*</div>*/}
-                                                        </label>
-                                                        <label
-                                                            htmlFor="gas-12.5"
-                                                            className="label-check_text"
-                                                        >
-                                                            <input id="gas-12.5"
-                                                                   type="radio"
-                                                                   name="size"
-                                                                   onChange={handleChange}
-                                                                   value="12.5KG"
-                                                                   data-size="12.5KG"
-                                                                   data-amount="4500"
-                                                                   className="check-text"/>
-                                                            {/*<img*/}
-                                                            {/*    src="/images/products/12.5kg.png"*/}
-                                                            {/*    alt=""/>*/}
-                                                            {/*<div*/}
-                                                            {/*    className="label-check_text-meta">12.5KG <span*/}
-                                                            {/*    className="price">₦4,500</span>*/}
-                                                            {/*</div>*/}
-                                                            <div className="label-check_text-meta">
-                                                                <span className="label-check_text-descr"> 12.5KG Refill</span>
-                                                                <span className="price">₦4,500</span>
-                                                            </div>
                                                         </label>
 
+                                                        <label className="label-check_text" htmlFor="gas-cylinder">
+                                                            <input
+                                                                id="gas-cylinder"
+                                                                type="radio"
+                                                                name="size" onChange={handleChange}
+                                                                value="12.5KG + Cylinder"
+                                                                data-size="12.5KG+cylinder"
+                                                                data-amount="15750"
+                                                                className="check-text"/>
+                                                            {/*<img src="/images/products/12_5kg.png" alt=""/>*/}
+                                                            {/*<div className="label-check_text-meta">Purchase 12.5kg Ressortir branded Gas Cylinder<span*/}
+                                                            {/*    className="price">₦15,750</span>*/}
+                                                            {/*</div>*/}
+                                                            <div className="label-check_text-meta">
+                                                                <span className="label-check_text-descr">Purchase 12.5kg Ressortir branded Gas Cylinder </span>
+                                                                <span className="price">₦15,750</span>
+                                                            </div>
+                                                        </label>
                                                     </div>
                                                 </div>
+
                                                 <div
                                                     className="col-sm-12 col-md-3">
                                                     <div
