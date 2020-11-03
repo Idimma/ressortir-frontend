@@ -13,7 +13,7 @@ import {FormField} from "../components/FormElements";
 class Freight extends Component {
     render() {
         return (
-            <Layout noFooter={isMobile} padded={isMobile} title="Diesel Supply"
+            <Layout noFooter={isMobile} padded={isMobile} title="Request Freight"
                     innerClass="request-quote request-freight">
                 <div className={`container  ${!isMobile && 'pt-110'} mb-5 pb-90`}>
                     <div className="row">
