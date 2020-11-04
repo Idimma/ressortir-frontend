@@ -72,7 +72,7 @@ class DashLpg extends Component {
                                                     <option value="">Select Quantity</option>
                                                     <option value="2.0 tons">2.0 tons</option>
                                                     <option value="2.5 tons">2.5 tons</option>
-                                                    <option value="5 tons">5 tons</option>
+                                                      <option value="5 tons">5 tons</option>
                                                     <option value="10 tons">10 tons</option>
                                                 </FormSelect>
                                             </div>
