@@ -228,7 +228,7 @@ class Contact extends React.Component {
                                 <ul className="contact__list list-unstyled">
                                     <li>10A Kafayat Abdulrasaq Street off Fola Osibo Lekki Phase 1, Lagos State.
                                     </li>
-                                    <li>Phone Number: +234 806 309 6005</li>
+                                    <li>Phone Number: +234 904 083 2762</li>
                                     <li>Email: info@ressortir.com</li>
                                 </ul>
                             </div>
@@ -240,7 +240,7 @@ class Contact extends React.Component {
                                 </div>
                                 <ul className="contact__list list-unstyled">
                                     <li>21, Marine Road, Liverpool Apapa, Lagos state.</li>
-                                    <li>Phone number: +234 905 123 7664</li>
+                                    <li>Phone number: +234 904 083 2766 </li>
                                 </ul>
                             </div>
                         </div>
