@@ -2,355 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ec640ec-2d97-497e-a93e-240ea646345e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ressortir.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/libraries.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/responsive1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont3e6e.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont3e6e.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont3e6e.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont3e6e.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont3e6e.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfontd41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/favicon-r.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/account.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/diesel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/freight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/gas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/history.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/lpg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/mission.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/policy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/lightbox/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/lightbox/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/lightbox/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/lightbox/prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logo/ressortir-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/12.5kg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/12.5kg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/20kg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/20kg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/25kg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/25kg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/50kg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/50kg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/1-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/1@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/dashboard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/diesel-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/diesel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/diesel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/freight-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/freight.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/freight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/gas-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/gas.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/logistic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/lpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/page-gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-1-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-diesel-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-diesel-m-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-diesel-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-diesel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-freight-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-freight.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-gas-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-gas.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-lpg-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-lpg-m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-lpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/s-lpg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/slider-gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sliders/slider1-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/google-map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/plugins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/libraries.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/responsive1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont3e6e.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont3e6e.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont3e6e.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont3e6e.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont3e6e.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfontd41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/clip-payment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/empty-list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/favicon/favicon-r.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/favicon/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/account.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/diesel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/freight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/gas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/history.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/lpg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/mission.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/policy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/lightbox/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/lightbox/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/lightbox/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/lightbox/prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo/ressortir-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/page-not-found-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/12.5kg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/12.5kg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/20kg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/20kg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/25kg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/25kg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/50kg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/50kg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/1-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/1@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/dashboard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/diesel-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/diesel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/diesel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/freight-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/freight.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/freight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/gas-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/gas.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/logistic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/lpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/page-gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-1-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-diesel-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-diesel-m-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-diesel-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-diesel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-freight-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-freight.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-gas-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-gas.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-lpg-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-lpg-m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-lpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/s-lpg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/slider-gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/sliders/slider1-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/google-map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/plugins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AppRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footers/AdminFooter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Headers/UnAuthenticatedHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modals/AccountStatus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modals/CancelAlert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modals/Loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modals/NewUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modals/PostATask.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Diesel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Freight.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Lpg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/_404.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/app.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/app/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/app/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/app/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/app/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/auth/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/auth/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/auth/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/auth/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/chat/action.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/chat/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/chat/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/chat/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/user/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/user/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/user/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/user/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Auth.Model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Colors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/EndPoints.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/helper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.83412cf0.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/js/main.83412cf0.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.83412cf0.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/js/main.83412cf0.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#77#0" expanded="true" />
-                <element signature="e#450#486#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#12396#15688#0" />
-                <element signature="e#15701#16651#0" />
-                <element signature="e#16664#18021#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Diesel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2181">
-              <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Freight.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="149" column="39" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/Lpg.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="114" column="52" lean-forward="true" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="52" />
-              <folding>
-                <element signature="e#590#764#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/AppRoute.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/Auth.Model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -419,6 +85,7 @@
     <option name="width" value="1280" />
     <option name="height" value="777" />
   </component>
+  <component name="ProjectId" id="1tIHMOyiOVB14ubZmXaoPPBpp79" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -471,6 +138,10 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -485,6 +156,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -501,18 +173,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -525,6 +186,7 @@
       <updated>1600407061468</updated>
       <workItem from="1600407103894" duration="7624000" />
       <workItem from="1600704409743" duration="3507000" />
+      <workItem from="1622449638124" duration="334000" />
     </task>
     <servers />
   </component>
@@ -614,7 +276,7 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/css/app.css" />
