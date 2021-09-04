@@ -15,7 +15,6 @@ class AppService {
     updateSingleTask = (id, form_data) => Request().post(SHOW_TASK(id), form_data);
     deleteSingleTask = id => Request().delete(SHOW_TASK(id));
     getTaskComments = id => Request().get(SHOW_TASK_COMMENTS(id));
-
     resendVerification = () => Request().get(RESEND_VERIFICATION);
     sendComment = (formData) => Request().post(SEND_COMMENT, formData);
 }

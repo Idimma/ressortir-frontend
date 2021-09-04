@@ -1,190 +1,181 @@
 @import "variables";
-
 .btn.btn-round {
-  border-radius: 50px;
+    border-radius: 50px;
 }
 
 .small {
-  font-size: 11px;
+    font-size: 11px;
 }
 
-
 .fw-100 {
-  font-weight: 100;
+    font-weight: 100;
 }
 
 .fw-500 {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .fw-300 {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .fw-700 {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .fw-bold {
-  font-weight: bold !important;
+    font-weight: bold !important;
 }
 
-
 .fs-6 {
-  font-size: 6px;
+    font-size: 6px;
 }
 
 .fs-8 {
-  font-size: 8px;
+    font-size: 8px;
 }
 
 .fs-10 {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 .fs-12 {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 .fs-14 {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .fs-16 {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .fs-18 {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .fs-24 {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .fs-26 {
-  font-size: 26px;
+    font-size: 26px;
 }
 
 .fs-28 {
-  font-size: 28px;
+    font-size: 28px;
 }
 
 .fs-30 {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .fs-32 {
-  font-size: 32px;
+    font-size: 32px;
 }
 
 .fs-34 {
-  font-size: 34px;
+    font-size: 34px;
 }
 
 .fs-36 {
-  font-size: 36px;
+    font-size: 36px;
 }
 
 .fs-38 {
-  font-size: 38px;
+    font-size: 38px;
 }
 
 .fs-40 {
-  font-size: 40px;
+    font-size: 40px;
 }
 
 .fs-45 {
-  font-size: 45px;
+    font-size: 45px;
 }
 
 .fs-50 {
-  font-size: 50px;
+    font-size: 50px;
 }
 
 .fs-55 {
-  font-size: 55px;
+    font-size: 55px;
 }
 
 .fs-60 {
-  font-size: 60px;
+    font-size: 60px;
 }
 
 .sticky-bottom {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 43537;
-  box-shadow: 0 -1px 6px 0px rgba(0, 0, 0, 0.22);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 43537;
+    box-shadow: 0 -1px 6px 0px rgba(0, 0, 0, 0.22);
 }
 
 .sticky-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 43537;
-  background-color: white;
-  color: rgb(23, 91, 170);
-  box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.22);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 43537;
+    background-color: white;
+    color: rgb(23, 91, 170);
+    box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.22);
 }
 
 .aligned {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .spaced {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .justified {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mobile-footer {
-  a {
-    text-decoration: none;
-    color: gray;
-
-  }
-
-
-  .active {
-    text-decoration: none;
-    color: rgb(23, 91, 170);
-  }
-
-  a:hover {
-    text-decoration: none;
-    color: rgb(23, 91, 170);
-  }
+    a {
+        text-decoration: none;
+        color: gray;
+    }
+    .active {
+        text-decoration: none;
+        color: rgb(23, 91, 170);
+    }
+    a:hover {
+        text-decoration: none;
+        color: rgb(23, 91, 170);
+    }
 }
 
 .request-item {
-  display: flex;
-  box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.22);
-  padding: 25px 18px;
-  align-items: center;
-  border-radius: 20px;
-  margin-bottom: 20px;
-
-  img {
-    height: 50px;
-    width: 50px;
-    object-position: center;
-    object-fit: none;
-  }
-
-  h1 {
-    margin: 0 7px 0;
-  }
+    display: flex;
+    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.22);
+    padding: 25px 18px;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    img {
+        height: 50px;
+        width: 50px;
+        object-position: center;
+        object-fit: none;
+    }
+    h1 {
+        margin: 0 7px 0;
+    }
 }
 
 input[type="color"],
@@ -203,160 +194,151 @@ input[type="url"],
 input[type="week"],
 select:focus,
 textarea {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  select:focus,
-  textarea:focus,
-  input:focus {
-    font-size: 16px;
-    //background: #eee;
-  }
-
-  select,
-  textarea,
-  input {
-    font-size: 16px;
-  }
+    select:focus,
+    textarea:focus,
+    input:focus {
+        font-size: 16px;
+        //background: #eee;
+    }
+    select,
+    textarea,
+    input {
+        font-size: 16px;
+    }
 }
 
 .athContainer {
-  background-color: #eeeeee;
-  color: #000000;
-  display: none;
-  position: sticky;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  padding: 2%;
+    background-color: #eeeeee;
+    color: #000000;
+    display: none;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 2%;
 }
 
 @media (min-width: 768px) {
-
-  .athContainer {
-    padding: 0.5%;
-    max-width: 530px;
-    margin: auto;
-    width: 75%;
-  }
-
+    .athContainer {
+        padding: 0.5%;
+        max-width: 530px;
+        margin: auto;
+        width: 75%;
+    }
 }
 
 @media (min-width: 1048px) {
-
-  .athContainer {
-    width: 100%;
-    position: fixed;
-    right: 0;
-  }
-
+    .athContainer {
+        width: 100%;
+        position: fixed;
+        right: 0;
+    }
 }
 
-
 .athContentCell {
-  align-items: center;
+    align-items: center;
 }
 
 .athLogoCell {
-  text-align: center;
-  grid-area: logo;
+    text-align: center;
+    grid-area: logo;
 }
 
 .athTitleCell {
-  align-self: center;
-  grid-area: content;
+    align-self: center;
+    grid-area: content;
 }
 
 .athInstallButtonCell {
-  text-align: right;
-  grid-area: install;
-
-  .button {
-    display: unset;
-  }
+    text-align: right;
+    grid-area: install;
+    .button {
+        display: unset;
+    }
 }
 
 .athGuidance {
-  display: none;
-  grid-template-areas: 'cancel' 'image';
-  position: relative;
-
-  .athCancelButtonCell {
-    grid-area: cancel;
-    text-align: right;
-  }
-
+    display: none;
+    grid-template-areas: 'cancel' 'image';
+    position: relative;
+    .athCancelButtonCell {
+        grid-area: cancel;
+        text-align: right;
+    }
 }
 
 .athGuidanceImageCell {
-  grid-area: image;
-  text-align: center;
+    grid-area: image;
+    text-align: center;
 }
 
 .athGuidanceCancelButton {
-  //background: url("images/icons/close.svg") no-repeat;
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-  border: 0;
+    //background: url("images/icons/close.svg") no-repeat;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: 0;
 }
 
 .athLogo {
-  border-radius: 30px;
-  border: 1px solid black;
+    border-radius: 30px;
+    border: 1px solid black;
 }
 
 .athTitle {
-  font-weight: bold;
-  font-size: large;
-  width: 90%;
+    font-weight: bold;
+    font-size: large;
+    width: 90%;
 }
 
 .d-grid {
-  display: grid !important;
+    display: grid !important;
 }
 
 .button {
-  text-decoration: none;
-  border: none;
-  display: flex;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 16px;
-  text-transform: uppercase;
-  height: 30px;
-  padding: 0 20px;
-  outline: none;
-  align-items: center;
-  background: #0000ff;
-  color: #ffffff;
-
+    text-decoration: none;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    height: 30px;
+    padding: 0 20px;
+    outline: none;
+    align-items: center;
+    background: #0000ff;
+    color: #ffffff;
 }
 
 .sliderdesc {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.8);
-  padding-right: 50px;
-  margin-bottom: 35px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    padding-right: 50px;
+    margin-bottom: 35px;
 }
 
 @media screen and (min-width: 991px) {
-  .slide-show-item{
-    height: calc(100vh - 90px);
-    min-height: 750px;
-    background-position: top center; //!important;
-  }
-}
-.slide-show-img{
-  position: absolute;
-  z-index: -1;
-  width: 100%;
+    .slide-show-item {
+        height: calc(100vh - 90px);
+        min-height: 750px;
+        background-position: top center; //!important;
+    }
 }
 
-.imager{
+.slide-show-img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.imager {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -364,39 +346,56 @@ textarea {
 }
 
 @media screen and (max-width: 500px) {
-  .Toastify {
-    margin-top: 68px;
-    z-index: 3099000;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    background: white;
-  }
-  .sliderdesc {
-    //margin-top: 40px;
-    font-size: 14px;
-    padding: 0;
-    color: #175baa;
-  }
-
-  .slide-img{
-    height: 288px;
-  }
-
+    .Toastify {
+        margin-top: 68px;
+        z-index: 3099000;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        background: white;
+    }
+    .sliderdesc {
+        //margin-top: 40px;
+        font-size: 14px;
+        padding: 0;
+        color: #175baa;
+    }
+    .slide-img {
+        height: 288px;
+    }
 }
 
 .navbar .nav__item .nav__item-click {
-  font-size: 12px;
-  font-weight: 500;
-  //text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  background-color: #EDF8FF;
+    font-size: 12px;
+    font-weight: 500;
+    //text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    background-color: #EDF8FF;
+    position: relative;
+    height: 45px;
+    padding-left: 18px;
+    color: #333;
+    //line-height: 80px;
+    //letter-spacing: .4px
+}
 
-  position: relative;
-  height: 45px;
-  padding-left: 18px;
-  color: #333;
-  //line-height: 80px;
-  //letter-spacing: .4px
+.privacy {
+    color: white !important;
+    h1 {
+        font-size: 23px;
+        color: white;
+    }
+    h2 {
+        font-size: 19px;
+        color: white;
+    }
+    h3 {
+        font-size: 17px;
+        color: white;
+    }
+    p {
+        color: white;
+        font-size: 14px;
+    }
 }

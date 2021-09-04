@@ -226,8 +226,7 @@ class Contact extends React.Component {
                                     <h4 className="contact__panel-title">Head Office</h4>
                                 </div>
                                 <ul className="contact__list list-unstyled">
-                                    <li>10A Kafayat Abdulrasaq Street off Fola Osibo Lekki Phase 1, Lagos State.
-                                    </li>
+                                    <li>10A Kafayat Abdulrasaq Street off Fola Osibo Lekki Phase 1, Lagos State.</li>
                                     <li>Phone Number: 09013744444 09013844444</li>
                                     <li>Email: info@ressortir.com</li>
                                 </ul>
@@ -260,7 +259,7 @@ class Contact extends React.Component {
                                        title="Follow us on Instagram"><i className="fa fa-instagram "/></a>
                                 </div>
                                 <div className="footer__copyright">
-                                    <span>Copyright © 2020 Ressortir</span>
+                                    <span>Copyright © 2021 Ressortir</span>
                                 </div>
                             </div>
                         </div>

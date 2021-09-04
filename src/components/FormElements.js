@@ -1,10 +1,11 @@
+import { Field } from "formik";
 import React from "react";
-import {Field} from "formik";
-import className from 'classname'
-import {Spinner} from "reactstrap";
+import { Spinner } from "reactstrap";
+import className from 'classname';
 
 export const FormElements = ({message}) => (<span className="invalid-feedback"><strong>{message}</strong></span>);
 export const FormField = (props) => <Field component={CustomInputComponent} {...props} />
+export const FormText = (props) => <Field component={CustomTextComponent} {...props} />
 export const FormSelect = (props) => <Field component={CustomSelectComponent} {...props} />
 
 const CustomInputComponent = ({field, form: {touched, errors, isValid}, title, ...props}) => {
@@ -19,6 +20,20 @@ const CustomInputComponent = ({field, form: {touched, errors, isValid}, title, .
         </div>
     );
 }
+
+const CustomTextComponent = ({field, form: {touched, errors, isValid}, title, ...props}) => {
+    const inputClass = className('form-control', {
+        'is-invalid': touched[field.name] && errors[field.name]
+    });
+    return (
+        <div className="form-group">
+            {title && <h5 className="form__title">{title}</h5>}
+            <textarea  className={inputClass} {...field} {...props} />
+            {errors[field.name] && touched[field.name] && <FormElements message={errors[field.name]}/>}
+        </div>
+    );
+}
+
 const CustomSelectComponent = ({field, form: {touched, errors, isValid}, title, ...props}) => {
     const inputClass = className('form-control', {
         'is-invalid': touched[field.name] && errors[field.name]

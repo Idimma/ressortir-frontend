@@ -1,33 +1,38 @@
-import React, {Component} from 'react';
-import {Provider} from 'react-redux';
-import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
-import {ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
+import 'react-toastify/dist/ReactToastify.css';
 import './assets/scss/main.scss';
-import store from "./store";
-import {AppRoute, GuestRoute} from "./components/AppRoute";
-import Login from "./pages/Login";
-import _404 from "./pages/_404";
-import HomePage from "./pages/Home";
-import RequestPage from "./pages/RequestPage";
-import Diesel from './pages/Diesel';
-import Lpg from './pages/Lpg';
-import Gas from './pages/Gas';
-import Freight from './pages/Freight';
-import Dashboard from "./pages/Dashboard";
-import Profile from "./pages/Profile";
+
+import { AppRoute, GuestRoute } from "./components/AppRoute";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import React, { Component } from 'react';
+import { isMobile, isMobileSafari } from "react-device-detect";
+import { loadUserDetails, logout } from "./store/modules/auth";
+
+import Contact from './pages/Contact';
+import DashDiesel from "./pages/dashboard/Diesel";
 import DashFreight from "./pages/dashboard/Freight";
 import DashGas from "./pages/dashboard/Gas";
 import DashLpg from "./pages/dashboard/Lpg";
-import DashDiesel from "./pages/dashboard/Diesel";
-import SingleOrder from "./pages/Single";
-import {isMobile, isMobileSafari} from "react-device-detect";
+import Dashboard from "./pages/Dashboard";
+import Diesel from './pages/Diesel';
 import Forget from "./pages/Forget";
-import Reset from "./pages/Reset";
+import Freight from './pages/Freight';
+import Gas from './pages/Gas';
+import HomePage from "./pages/Home";
+import Login from "./pages/Login";
+import Lpg from './pages/Lpg';
 import NewUser from "./pages/NewUser";
-import {loadUserDetails, logout} from "./store/modules/auth";
+import Privacy from './pages/Privacy';
+import Profile from "./pages/Profile";
+import { Provider } from 'react-redux';
+import RequestPage from "./pages/RequestPage";
+import Reset from "./pages/Reset";
+import SingleOrder from "./pages/Single";
+import Terms from './pages/Terms';
+import { ToastContainer } from 'react-toastify';
+import _404 from "./pages/_404";
+import store from "./store";
 
-let installPromptEvent, notificationEvents;
+let installPromptEvent;
 
 
 
@@ -88,8 +93,8 @@ class Router extends Component {
 
     notificationPrompt = (event) => {
         event.preventDefault();
-        console.log(event);
-        notificationEvents = event;
+        // console.log(event);
+        // notificationEvents = event;
         const notification = document.getElementById("notificationBtn");
         if(notification){
             notification.addEventListener('click', function(e) {
@@ -188,6 +193,9 @@ class Router extends Component {
                         <GuestRoute exact path="/password/forgot" component={Forget}/>
                         <GuestRoute exact path="/password/reset/:email/:token" component={Reset}/>
                         <GuestRoute exact path="/new-user" component={NewUser}/>
+                        <GuestRoute exact path="/terms" component={Terms}/>
+                        <GuestRoute exact path="/privacy" component={Privacy}/>
+                        <GuestRoute exact path="/support" component={Contact}/>
                         <Route exact path="/logout" component={Logout}/>
                         <Route path="*" component={_404}/>
                         <Redirect to="/"/>

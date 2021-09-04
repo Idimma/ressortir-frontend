@@ -1,14 +1,16 @@
-import React, {Component} from 'react';
-import {isMobile} from 'react-device-detect';
-import Layout from "../components/Layout";
-import {Formik} from "formik";
-import * as Yup from "yup";
-import {DetailsForm, FormField, FormSelect} from "../components/FormElements";
-import {connect} from "react-redux";
-import {toast} from "react-toastify";
-import {AppService} from "../services";
 import * as SweetAlert from "sweetalert2";
-import {catchError} from "../utils";
+import * as Yup from "yup";
+
+import { DetailsForm, FormField, FormSelect } from "../components/FormElements";
+import React, { Component } from 'react';
+
+import { AppService } from "../services";
+import { Formik } from "formik";
+import Layout from "../components/Layout";
+import { catchError } from "../utils";
+import { connect } from "react-redux";
+import { isMobile } from 'react-device-detect';
+import { toast } from "react-toastify";
 
 class Gas extends Component {
     state = {
@@ -23,7 +25,6 @@ class Gas extends Component {
 
     render() {
         const {showProfile} = this.state;
-        const {user} = this.props;
         return (
             <Layout onBack={this.goBack} noFooter={isMobile} padded={isMobile} title="Request Gas"
                     innerClass={`request-quote request-gas`}>

@@ -1,11 +1,12 @@
-import {APP_TOKEN, EMAIL, IS_LOADING, IS_LOGGEDIN, PASSWORD, USER} from './types';
-import {AuthService} from '../../../services';
-import Auth from "../../../utils/Auth.Model";
-import {toast} from "react-toastify";
-import * as SweetAlert from 'sweetalert2'
-import {closeLoaderModal, openLoaderModal} from "../app";
-import {catchError} from "../../../utils";
-import {persistor} from "../../index";
+import * as SweetAlert from 'sweetalert2';
+
+import { APP_TOKEN, EMAIL, IS_LOADING, IS_LOGGEDIN, PASSWORD, USER } from './types';
+import { closeLoaderModal, openLoaderModal } from "../app";
+
+import { AuthService } from '../../../services';
+import { catchError } from "../../../utils";
+import { persistor } from "../../index";
+import { toast } from "react-toastify";
 
 export const setLoading = isLoading => dispatch => dispatch({type: IS_LOADING, payload: isLoading});
 
